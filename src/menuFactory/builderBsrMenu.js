@@ -4,11 +4,12 @@ export const text = (text) => {
     return (<span style={{paddingLeft: 15}}>{text}</span>)
 }
 export const clickMenu=(tag,element)=>{
-   paint(tag,element)
+      paint(tag,element)
 }
-const paint=(tag,element)=>{
+const paint=(tag)=>{
    PaintClear();
-    element.classList.add('selected-menu');
+    document.querySelectorAll('[data-menu-tag="'+tag+'"]')[0]?.classList.add('selected-menu');
+
 }
  export const PaintClear=()=>{
     const list=document.querySelectorAll('[data-menu-tag]');
