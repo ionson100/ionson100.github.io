@@ -1,0 +1,118 @@
+
+.hr-123_vert{
+    border-left: 1px solid #dedcdc;
+}
+.hr-123{
+    margin-top: 2px;
+    border-top: 1px solid #dedcdc;
+    margin-bottom: 2px;
+}
+/* styles menu core*/
+.menu-123-item {
+    height: 30px;
+    width: 300px !important;
+    cursor: pointer;
+}
+.menu-123-item:hover{
+    background: #fafaf7;
+}
+.menu-123-item:active{
+    background: #f5f0f0 !important;
+}
+/*style disabled menu*/
+div[disabled]
+{
+    pointer-events: none;
+    opacity: 0.7;
+}
+/* override text */
+.t-over{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+/*style panel popup submenu*/
+.popup-123{
+    border: 0 solid white !important;
+    width: min-content;
+    background: white;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+}
+
+/*contents*/
+.content-123-left-10{
+    text-align: center;
+    width: 10%;
+}
+.content-123-center-80{
+    width: 80%;
+}
+.content-123-right-10{
+    text-align: center;
+    width: 10%;
+}
+.content-123-center-100{
+    width: 100%;
+}
+.content-123-center-90{
+    padding-left: 5px;
+    width: 90%;
+}
+.content-123-left-100{
+}
+
+.content-123-right-100{
+}
+/*contents*/
+
+
+
+
+.vertical-center {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/*usage only left or right container content  */
+.center-icon {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+/*background selected root menu */
+.root-123-selected{
+    background: #efecec !important;
+}
+/*background selected not root menu */
+.item-123-selected{
+    background: #e1dede;
+}
+
+.box {
+    display: flex;
+    height: 100%;
+    align-content: space-around;
+    align-items: center;
+    flex-direction:row;
+    justify-content: center;
+}
+/*background menu dropDow*/
+.drop-123-open{
+    background: #faf7f7 !important;
+    font-weight: bold;
+}
+.selected-menu{
+    background: #f1eeee;
+}
+
