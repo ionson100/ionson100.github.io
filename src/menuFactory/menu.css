@@ -115,4 +115,9 @@ div[disabled]
 .selected-menu{
     background: #f1eeee;
 }
+.band{
+    margin-top: 2px;
+    border-top: 1px solid white;
+    margin-bottom: 2px;
+}
 

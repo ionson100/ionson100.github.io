@@ -7,6 +7,7 @@ import {BuilderBsrOrm} from "./builderBsrOrm";
 import {useEffect} from "react";
 import {myState} from "../state";
 import {BuildContent, RunListenerHash} from "../hachActivator";
+import {ClickMenu} from "./actionClick";
 const sizeImage=12;
 let init=false;
 export function MenuFactory() {
@@ -22,8 +23,10 @@ export function MenuFactory() {
     return (
         <>
             <MenuItem
+
                 url={`#mode=1&page=${myState.dropMenuLabel}`}
                 id='drop1'
+                onClick={ClickMenu}
                 tag={myState.dropMenuLabel}
                 positionPopup="dropDown"
                 behavior="click"
@@ -36,6 +39,7 @@ export function MenuFactory() {
             </MenuItem>
             <MenuItem
                 url={`#mode=2&page=${myState.dropOrmLabel}`}
+                onClick={ClickMenu}
                 id='drop2'
                 tag={myState.dropOrmLabel}
                 positionPopup="dropDown"

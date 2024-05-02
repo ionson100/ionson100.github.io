@@ -21,12 +21,15 @@ export function BuildContent(urlString, isStart) {
 
             setTimeout(() => {
                 switch (mode) {
-                    case "1": {  alert(mode)
+                    case "1": {
                         document.getElementById('drop1')?.click()
                         break
                     }
                     case "2": {
                         document.getElementById('drop2')?.click()
+                        break
+                    }
+                    default:{
                         break
                     }
                 }
@@ -43,7 +46,6 @@ export function BuildContent(urlString, isStart) {
             }, 400)
 
         }
-        alert(tag)
         ContentFactory(tag)
     }
 }
