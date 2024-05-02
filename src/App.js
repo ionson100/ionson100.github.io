@@ -1,9 +1,10 @@
 import {MenuFactory} from "./menuFactory";
 
-function App() {
+function App( ) {
+
   return (
       <>
-          <div id='left-menu'>
+          <div id='left-menu not-select'>
               <MenuFactory/>
           </div>
           <div id='content'>

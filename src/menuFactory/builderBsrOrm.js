@@ -1,16 +1,18 @@
 import {MenuItem} from "bsr_menu";
-import {clickMenu, text} from "./builderBsrMenu";
+
+import {ClickMenu} from "./actionClick";
+import {SimpleText} from "./builderContent";
 
 
 
 export function BuilderBsrOrm() {
     return (
         <>
-            <MenuItem content={text('test')} tag={`2-1`} onClick={clickMenu}></MenuItem>
-            <MenuItem content={text('test')} tag={`2-2`} onClick={clickMenu}></MenuItem>
-            <MenuItem content={text('test')} tag={`2-3`} onClick={clickMenu}></MenuItem>
-            <MenuItem content={text('test')} tag={`2-4`} onClick={clickMenu}></MenuItem>
-            <MenuItem content={text('test')} tag={`2-5`} onClick={clickMenu}></MenuItem>
+            <MenuItem content={SimpleText('test')} tag={`2-1`} onClick={ClickMenu}></MenuItem>
+            <MenuItem content={SimpleText('test')} tag={`2-2`} onClick={ClickMenu}></MenuItem>
+            <MenuItem content={SimpleText('test')} tag={`2-3`} onClick={ClickMenu}></MenuItem>
+            <MenuItem content={SimpleText('test')} tag={`2-4`} onClick={ClickMenu}></MenuItem>
+            <MenuItem content={SimpleText('test')} tag={`2-5`} onClick={ClickMenu}></MenuItem>
         </>
     );
 
