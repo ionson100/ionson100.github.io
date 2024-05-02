@@ -4,7 +4,6 @@ import { FaAnglesRight } from "react-icons/fa6";
 import { FaAnglesDown } from "react-icons/fa6";
 import {BuilderBsrMenu} from "./builderBsrMenu";
 import {BuilderBsrOrm} from "./builderBsrOrm";
-import {ClickMenu} from "./actionClick";
 import {useEffect} from "react";
 import {myState} from "../state";
 import {BuildContent, RunListenerHash} from "../hachActivator";
@@ -23,8 +22,8 @@ export function MenuFactory() {
     return (
         <>
             <MenuItem
+                url={`#mode=1&page=${myState.dropMenuLabel}`}
                 id='drop1'
-                onClick={ClickMenu}
                 tag={myState.dropMenuLabel}
                 positionPopup="dropDown"
                 behavior="click"
@@ -36,8 +35,8 @@ export function MenuFactory() {
                 }
             </MenuItem>
             <MenuItem
+                url={`#mode=2&page=${myState.dropOrmLabel}`}
                 id='drop2'
-                onClick={ClickMenu}
                 tag={myState.dropOrmLabel}
                 positionPopup="dropDown"
                 behavior="click"

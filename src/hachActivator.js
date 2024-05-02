@@ -18,9 +18,10 @@ export function BuildContent(urlString, isStart) {
     const mode = myUrl.searchParams.get("mode");
     if (mode) {
         if (isStart) {
+
             setTimeout(() => {
                 switch (mode) {
-                    case "1": {
+                    case "1": {  alert(mode)
                         document.getElementById('drop1')?.click()
                         break
                     }
@@ -38,13 +39,11 @@ export function BuildContent(urlString, isStart) {
         if (isStart === true) {
             setTimeout(() => {
                 const s = `[data-menu-tag='${tag}']`
-                const d = document.querySelector(s)
-                if (d) {
-                    d.click()
-                }
+                document.querySelector(s)?.click()
             }, 400)
 
         }
+        alert(tag)
         ContentFactory(tag)
     }
 }
