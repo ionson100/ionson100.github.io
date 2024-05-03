@@ -4,18 +4,36 @@ import { FaAnglesRight } from "react-icons/fa6";
 import { FaAnglesDown } from "react-icons/fa6";
 import {BuilderBsrMenu} from "./builderBsrMenu";
 import {BuilderBsrOrm} from "./builderBsrOrm";
-import {useEffect} from "react";
-import {myState} from "../state";
-import {BuildContent, RunListenerHash} from "../hachActivator";
-import {ClickMenu} from "./actionClick";
+import {useEffect, useRef} from "react";
+import {BuildContent, RunListenerHash} from "../hachListener";
+
+export let MrfMenu=undefined
+export let MrfOrm=undefined
 const sizeImage=12;
 let init=false;
 export function MenuFactory() {
+
+    const mRefMenu=useRef()
+    const mRefOrm=useRef()
     useEffect(()=>{
+        MrfMenu=mRefMenu.current
+        MrfOrm=mRefOrm.current
         if(init===false){
-            BuildContent(window.location.href,true);
-            RunListenerHash()
             init=true;
+
+
+
+            RunListenerHash()
+            setTimeout(()=>{
+                if(window.location.hash){
+                    const url=window.location.toString()
+                    BuildContent(url)
+                }
+            },100)
+
+
+
+
         }
 
     })
@@ -24,10 +42,10 @@ export function MenuFactory() {
         <>
             <MenuItem
 
-                url={`#mode=1&page=${myState.dropMenuLabel}`}
+                ref={mRefMenu}
+                url={`#mode=bsrmenu&page=bsrmenu`}
                 id='drop1'
-                onClick={ClickMenu}
-                tag={myState.dropMenuLabel}
+                tag='bsrmenu'
                 positionPopup="dropDown"
                 behavior="click"
                 iconDropOpen={<FaAnglesDown size={sizeImage} style={{paddingTop:5,paddingRight:5}}/>}
@@ -38,10 +56,10 @@ export function MenuFactory() {
                 }
             </MenuItem>
             <MenuItem
-                url={`#mode=2&page=${myState.dropOrmLabel}`}
-                onClick={ClickMenu}
+                ref={mRefOrm}
+                url={`#mode=bsrorm&page=bsrorm`}
                 id='drop2'
-                tag={myState.dropOrmLabel}
+                tag='bsrorm'
                 positionPopup="dropDown"
                 behavior="click"
                 iconDropOpen={<FaAnglesDown size={sizeImage} style={{paddingTop:5,paddingRight:5}}/>}

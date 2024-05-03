@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import React from "react";
-import {myState} from "../state";
+
 import {PageBsrMenu, PageBsrOrm} from "../pages/page_bsr_menu";
 
 const ContentHub = {
@@ -8,6 +8,7 @@ const ContentHub = {
 }
 
 export function ContentFactory(tag) {
+    if(tag.length===0) return;
     if (!ContentHub.content) {
 
         ContentHub.content = ReactDOM.createRoot(document.getElementById('content'));
@@ -15,13 +16,13 @@ export function ContentFactory(tag) {
 
     switch (tag.trim()){
 
-        case myState.dropMenuLabel:{
+        case 'bsrmenu':{
             ContentHub.content.render(
                 <PageBsrMenu/>
             );
             break
         }
-        case myState.dropOrmLabel:{
+        case 'bsrorm':{
 
             ContentHub.content.render(
                 <PageBsrOrm/>
