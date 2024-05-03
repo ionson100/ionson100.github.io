@@ -23,8 +23,10 @@ export function RunListenerHash() {
 
     }
     const tag = myUrl.searchParams.get("page");
+
+     const state = myUrl.searchParams.get("state");
     if (mode && tag) {
-        PainterMenu(mode, tag)
+        PainterMenu(mode, tag,state)
         ContentFactory(tag);
 
     }
