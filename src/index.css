@@ -33,3 +33,26 @@ body {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+table, th, td {
+  font-size: 20px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+table{
+  width: 80%;
+  padding: 30px;
+  margin: 30px;
+}
+tr:nth-child(even) {
+  background-color: #f4fcfc;
+}
+th{
+  background: #dedcdc;
+}
+td[data-1] {
+  font-weight: bold;
+}
+

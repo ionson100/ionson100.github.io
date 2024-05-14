@@ -1,7 +1,9 @@
 import ReactDOM from "react-dom/client";
 import React from "react";
 
-import {PageBsrMenu, PageBsrOrm} from "../pages/page_bsr_menu";
+
+import {IndexBsrMenu} from "../htmlStorage/bsrMenu";
+
 
 const ContentHub = {
     content: undefined
@@ -14,31 +16,20 @@ export function ContentFactory(tag) {
         ContentHub.content = ReactDOM.createRoot(document.getElementById('content'));
     }
 
+    let data=tag;
     switch (tag.trim()){
 
         case 'bsrmenu':{
-            ContentHub.content.render(
-                <PageBsrMenu/>
-            );
-            break
-        }
-        case 'bsrorm':{
-
-            ContentHub.content.render(
-                <PageBsrOrm/>
-            );
-            break
-        }
-        default:{
-            ContentHub.content.render(
-                <div>{tag}</div>
-            );
-            break
+          data=  <IndexBsrMenu/>
+            break;
         }
     }
- // ContentHub.content.render(
- //
- //     <div>{tag}</div>
- // );
+
+
+
+ ContentHub.content.render(
+
+     <div>{data}</div>
+ );
 
 }

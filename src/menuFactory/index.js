@@ -1,23 +1,25 @@
-import {MenuItem} from "bsr_menu";
+import {MenuItem} from "bsr-menu";
 import "./menu.css"
 import { FaAnglesRight } from "react-icons/fa6";
 import { FaAnglesDown } from "react-icons/fa6";
-import {BuilderBsrMenu} from "./builderBsrMenu";
-import {BuilderBsrOrm} from "./builderBsrOrm";
+import {BuilderBsrMenu, BuilderBsrOrm, BuilderBsrSau} from "./builderBsrOrm";
 import {useEffect, useRef} from "react";
 import {BuildContent, RunListenerHash} from "../hachListener";
 
 export let MrfMenu=undefined
 export let MrfOrm=undefined
+export let MrfSau=undefined
 const sizeImage=12;
 let init=false;
 export function MenuFactory() {
 
     const mRefMenu=useRef()
     const mRefOrm=useRef()
+    const mRefSau=useRef()
     useEffect(()=>{
         MrfMenu=mRefMenu.current
         MrfOrm=mRefOrm.current
+        MrfSau=mRefSau.current;
         if(init===false){
             init=true;
 
@@ -67,6 +69,20 @@ export function MenuFactory() {
                 content="bsrOrm">
                 {
                     <BuilderBsrOrm/>
+                }
+            </MenuItem>
+            <MenuItem
+                ref={mRefSau}
+                url={`#mode=bsrsau&page=bsrsau`}
+                id='drop3'
+                tag='bsrsau'
+                positionPopup="dropDown"
+                behavior="click"
+                iconDropOpen={<FaAnglesDown size={sizeImage} style={{paddingTop:5,paddingRight:5}}/>}
+                iconDropClose={<FaAnglesRight size={sizeImage} style={{paddingTop:5}}/>}
+                content="bsrSau (Avatar Uploader)">
+                {
+                    <BuilderBsrSau/>
                 }
             </MenuItem>
 
