@@ -51,15 +51,15 @@ export function BuilderBsrSau() {
         <>
 
             <MenuHorizontalBand className='band'/>
-            <MenuItem url={`#mode=bsrsau&page=2-1`} tag={'3-1'} content={SimpleText('test')}/>
+            <MenuItem url={`#mode=bsrsau&page=3-1`} tag={'3-1'} content={SimpleText('test')}/>
             <MenuHorizontalBand/>
-            <MenuItem url={`#mode=bsrsau&page=2-2`} tag={'3-2'} content={SimpleText('test')}/>
+            <MenuItem url={`#mode=bsrsau&page=3-2`} tag={'3-2'} content={SimpleText('test')}/>
             <MenuHorizontalBand/>
-            <MenuItem url={`#mode=bsrsau&page=2-3`} tag={'3-3'} content={SimpleText('test')}/>
+            <MenuItem url={`#mode=bsrsau&page=3-3`} tag={'3-3'} content={SimpleText('test')}/>
             <MenuHorizontalBand/>
-            <MenuItem url={`#mode=bsrsau&page=2-4`} tag={'3-4'} content={SimpleText('test')}/>
+            <MenuItem url={`#mode=bsrsau&page=3-4`} tag={'3-4'} content={SimpleText('test')}/>
             <MenuHorizontalBand/>
-            <MenuItem url={`#mode=bsrsau&page=2-5`} tag={'3-5'} content={SimpleText('test23')}/>
+            <MenuItem url={`#mode=bsrsau&page=3-5`} tag={'3-5'} content={SimpleText('test23')}/>
             <MenuHorizontalBand className='band'/>
         </>
     );

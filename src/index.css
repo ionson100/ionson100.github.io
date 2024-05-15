@@ -34,12 +34,12 @@ body {
 }
 
 table, th, td {
-  font-size: 20px;
+  font-size: 18px;
   border: 1px solid black;
   border-collapse: collapse;
 }
 th, td {
-  padding: 15px;
+  padding: 10px;
 }
 table{
   width: 80%;
@@ -47,7 +47,7 @@ table{
   margin: 30px;
 }
 tr:nth-child(even) {
-  background-color: #f4fcfc;
+  background-color: #f7f8f8;
 }
 th{
   background: #dedcdc;

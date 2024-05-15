@@ -4,7 +4,7 @@ export function PainterMenu(mode, tag,state) {
 
 
     if (mode === 'bsrmenu') {
-        const menu = document.querySelector(`[data-memu-poopup="bsrmenu"]`)
+        const menu = document.querySelector(`[data-memu-popup="bsrmenu"]`)
         if (menu.style.visibility === "hidden") {
             if(state!=='false'){
                 MrfMenu.open()
@@ -13,7 +13,7 @@ export function PainterMenu(mode, tag,state) {
         }
     }
     if (mode === 'bsrorm') {
-        const menu = document.querySelector(`[data-memu-poopup="bsrorm"]`)
+        const menu = document.querySelector(`[data-memu-popup="bsrorm"]`)
         if (menu.style.visibility === "hidden") {
             if(state!=='false'){
                 MrfOrm.open();
@@ -22,7 +22,7 @@ export function PainterMenu(mode, tag,state) {
         }
     }
     if (mode === 'bsrsau') {
-        const menu = document.querySelector(`[data-memu-poopup="bsrsau"]`)
+        const menu = document.querySelector(`[data-memu-popup="bsrsau"]`)
         if (menu.style.visibility === "hidden") {
             if(state!=='false'){
                 MrfSau.open();
