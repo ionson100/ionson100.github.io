@@ -22,6 +22,7 @@ body {
   padding: 10px;
   width: 100%;
   background-color: white;
+  padding-left: 30px;
 }
 .not-select {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -52,7 +53,50 @@ tr:nth-child(even) {
 th{
   background: #dedcdc;
 }
-td[data-1] {
+td[data-d] {
   font-weight: bold;
+}
+caption {
+  font-size: 20px;
+  caption-side: top;
+  text-align: left;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.menu-example{
+  border-radius: 3px;
+  height: 30px;
+  width: 200px;
+  cursor: pointer;
+  background: #dfeaf5;
+  color: black;
+}
+.menu-example:hover{
+  background: #e2edf8;
+}
+.menu-example:active{
+  background: #dddfe2;
+}
+
+.sub-menu-example{
+
+  height: 30px;
+  width: 200px;
+  cursor: pointer;
+  background: #fff;
+  color: black;
+}
+.sub-menu-example:hover{
+  background: #f5f6f8;
+}
+.sub-menu-example:active{
+  background: #ebecec;
+}
+
+.popup-123{
+  border: 1px solid #757474 !important;
+
+  box-shadow: 2px  3px 3px 3px #e5e1e1 !important;
+
 }
 

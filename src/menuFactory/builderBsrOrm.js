@@ -11,7 +11,7 @@ export function BuilderBsrMenu() {
     return (
         <>
             <MenuHorizontalBand className='band'/>
-            <MenuItem url={`#mode=bsrmenu&page=1-1`} tag={'1-1'} content={SimpleText('test')}/>
+            <MenuItem url={`#mode=bsrmenu&page=1-1`} tag={'1-1'} content={SimpleText('Examples')}/>
             <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrmenu&page=1-2`} tag={'1-2'} content={SimpleText('test')}/>
             <MenuHorizontalBand/>

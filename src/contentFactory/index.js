@@ -2,7 +2,8 @@ import ReactDOM from "react-dom/client";
 import React from "react";
 
 
-import {IndexBsrMenu} from "../htmlStorage/bsrMenu";
+import {IndexBsrMenu} from "../ViewStorage/menu/bsrMenu";
+import {P1_1} from "../ViewStorage/menu/1-1";
 
 
 const ContentHub = {
@@ -17,11 +18,17 @@ export function ContentFactory(tag) {
     }
 
     let data=tag;
+
     switch (tag.trim()){
+
 
         case 'bsrmenu':{
           data=  <IndexBsrMenu/>
             break;
+        }
+        case '1-1':{
+            data=<P1_1/>
+            break
         }
     }
 
