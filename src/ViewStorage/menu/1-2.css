@@ -1,0 +1,12 @@
+.menu-123-item {
+    height: 30px;
+    width: 300px !important;
+    cursor: pointer;
+    background: #c2bdbd;
+}
+.menu-123-item:hover{
+    background: #d9d9c2;
+}
+.menu-123-item:active{
+    background: #807c7c !important;
+}

@@ -52,7 +52,7 @@ export function MenuFactory() {
                 behavior="click"
                 iconDropOpen={<FaAnglesDown size={sizeImage} style={{paddingTop:5,paddingRight:5}}/>}
                 iconDropClose={<FaAnglesRight size={sizeImage} style={{paddingTop:5}}/>}
-                content="bsr-menu">
+                content={()=>{return <span style={{paddingLeft:10}}>bsr-menu</span>}}>
                 {
                     <BuilderBsrMenu/>
                 }
@@ -66,7 +66,7 @@ export function MenuFactory() {
                 behavior="click"
                 iconDropOpen={<FaAnglesDown size={sizeImage} style={{paddingTop:5,paddingRight:5}}/>}
                 iconDropClose={<FaAnglesRight size={sizeImage} style={{paddingTop:5}}/>}
-                content="bsrOrm">
+                content={()=>{return <span style={{paddingLeft:10}}>bitnic.orm</span>}}>
                 {
                     <BuilderBsrOrm/>
                 }
@@ -80,7 +80,7 @@ export function MenuFactory() {
                 behavior="click"
                 iconDropOpen={<FaAnglesDown size={sizeImage} style={{paddingTop:5,paddingRight:5}}/>}
                 iconDropClose={<FaAnglesRight size={sizeImage} style={{paddingTop:5}}/>}
-                content="bsrSau (Avatar Uploader)">
+                content={()=>{return <span style={{paddingLeft:10}}>bsr-sau (simple avatar uploader)</span>}}>
                 {
                     <BuilderBsrSau/>
                 }

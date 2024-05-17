@@ -13,11 +13,11 @@ export function BuilderBsrMenu() {
             <MenuHorizontalBand className='band'/>
             <MenuItem url={`#mode=bsrmenu&page=1-1`} tag={'1-1'} content={SimpleText('Examples')}/>
             <MenuHorizontalBand/>
-            <MenuItem url={`#mode=bsrmenu&page=1-2`} tag={'1-2'} content={SimpleText('test')}/>
+            <MenuItem url={`#mode=bsrmenu&page=1-2`} tag={'1-2'} content={SimpleText('Quick start')}/>
             <MenuHorizontalBand/>
-            <MenuItem url={`#mode=bsrmenu&page=1-3`} tag={'1-3'} content={SimpleText('test')}/>
+            <MenuItem url={`#mode=bsrmenu&page=1-3`} tag={'1-3'} content={SimpleText('Behavior')}/>
             <MenuHorizontalBand/>
-            <MenuItem url={`#mode=bsrmenu&page=1-4`} tag={'1-4'} content={SimpleText('test')}/>
+            <MenuItem url={`#mode=bsrmenu&page=1-4`} tag={'1-4'} content={SimpleText('Disabled')}/>
             <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrmenu&page=1-5`} tag={'1-5'} content={SimpleText('test')}/>
             <MenuHorizontalBand className='band'/>
