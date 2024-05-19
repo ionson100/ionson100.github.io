@@ -1,7 +1,7 @@
 body {
   background: white;
   margin: 0;
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", serif;
 
 
 
@@ -99,12 +99,12 @@ caption {
   background: #ebecec;
 }
 
-.popup-123{
-  border: 1px solid #757474 !important;
+/*.popup-123{*/
+/*  border: 1px solid #757474 !important;*/
 
-  box-shadow:  2px 2px 2px #e5e1e1 !important;
+/*  box-shadow:  2px 2px 2px #e5e1e1 !important;*/
 
-}
+/*}*/
 .popup-123-form{
   border: 1px solid #b8b5b5 !important;
 
@@ -114,6 +114,12 @@ caption {
 .drop-example{
   height: 30px;
   width: 200px;
+}
+.FormExample{
+  padding: 10px;
+  background: #d7d4d4;
+  width: 180px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 

@@ -1,17 +1,18 @@
 import React, {useRef} from "react";
-import {MenuItem} from "bsr-menu";
-import Code from "./codePrism";
+import MenuItem from "bsr-menu";
+import CodeSnippetJavaScript from "../codeSnippetJavaScript";
 
 const code = `
-import React from "react";
-import {MenuItem} from "bsr-menu";
+
+import MenuItem from "bsr-menu";
 
 
 const App = () => {
     const mRefMenu=useRef();
     // for ts: const mRefMenu = useRef<InstanceType<typeof MenuItem>>(null);
   return (
-           <div style={{display:'flex'}}>
+      <>
+       <div style={{display:'flex'}}>
                 <button style={{marginRight:10}} onClick={()=>{
                     mRefMenu.current.setDisabled(true)
                 }}>disable</button>
@@ -21,6 +22,8 @@ const App = () => {
             </div>
             <MenuItem  ref={mRefMenu} content="Simple  disable" behavior='click'>
             </MenuItem>
+      </>
+          
   );
 };
 `;
@@ -38,7 +41,7 @@ export function P1_4() {
                 }}>undisable</button>
             </div>
             <MenuItem  ref={mRefMenu} content="Simple  disable" behavior='click'>
-                <MenuItem content='level 1' positionPopup='downRight' behavior='click'>
+                <MenuItem  content='level 1' positionPopup='downRight' behavior='click'>
                     <MenuItem content='level 2'/>
                     <MenuItem content='level 2'/>
                 </MenuItem>
@@ -50,7 +53,7 @@ export function P1_4() {
             <br/>
             <br/>
             <div >
-                <Code code={code} language="js"/>
+                <CodeSnippetJavaScript code={code}/>
             </div>
         </>
     )

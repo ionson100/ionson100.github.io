@@ -4,6 +4,8 @@ export function PainterMenu(mode, tag,state) {
 
 
     if (mode === 'bsrmenu') {
+       const as=document.querySelectorAll(`[data-memu-popup]`)
+        console.log(as)
         const menu = document.querySelector(`[data-memu-popup="bsrmenu"]`)
         if (menu.style.visibility === "hidden") {
             if(state!=='false'){

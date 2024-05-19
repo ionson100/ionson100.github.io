@@ -1,16 +1,16 @@
 import React from "react";
-import {MenuItem} from "bsr-menu";
-import Code from "./codePrism";
+import MenuItem from "bsr-menu";
+import CodeSnippetJavaScript from "../codeSnippetJavaScript";
 
 const code = `
 import React from "react";
-import {MenuItem} from "bsr-menu";
+import MenuItem from "bsr-menu";
 
 
 const App = () => {
   return (
       <MenuItem content="Simple  behavior" behavior='click'>
-                <MenuItem content='level 1' positionPopup='downRight' behavior='click'>
+                <MenuItem content='level 1'  positionPopup='downRight' behavior='click'>
                     <MenuItem content='level 2'/>
                     <MenuItem content='level 2'/>
                 </MenuItem>
@@ -40,7 +40,7 @@ export function P1_3() {
             <br/>
             <br/>
             <div >
-                <Code code={code} language="js"/>
+                <CodeSnippetJavaScript code={code}/>
             </div>
         </>
     )
