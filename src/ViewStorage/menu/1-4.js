@@ -2,8 +2,10 @@ import React, {useRef} from "react";
 import MenuItem from "bsr-menu";
 import CodeSnippetJavaScript from "../codeSnippetJavaScript";
 
-const code = `
 
+/*--------------------------------*/
+const code = `
+import React, {useRef} from "react";
 import MenuItem from "bsr-menu";
 
 
@@ -12,21 +14,22 @@ const App = () => {
     // for ts: const mRefMenu = useRef<InstanceType<typeof MenuItem>>(null);
   return (
       <>
-       <div style={{display:'flex'}}>
-                <button style={{marginRight:10}} onClick={()=>{
+     
+            <button style={{marginRight:10}} onClick={()=>{
                     mRefMenu.current.setDisabled(true)
-                }}>disable</button>
-                <button onClick={() => {
+            }}>disable</button>
+            
+            <button onClick={() => {
                     mRefMenu.current.setDisabled(false)
-                }}>undisable</button>
-            </div>
-            <MenuItem  ref={mRefMenu} content="Simple  disable" behavior='click'>
-            </MenuItem>
+            }}>unDisable</button>
+            
+            <MenuItem  ref={mRefMenu} content="Simple  disable"/>
       </>
           
   );
 };
 `;
+/*--------------------------------*/
 
 export function P1_4() {
     const mRefMenu=useRef();

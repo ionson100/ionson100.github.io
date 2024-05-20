@@ -2,9 +2,19 @@ body {
   background: white;
   margin: 0;
   font-family: "Times New Roman", serif;
+  font-size: 20px;
 
 
 
+}
+.band{
+  height: 1px;
+  background: #dedcdc;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+.selected-menu{
+  background: #dedcdc;
 }
 
 
