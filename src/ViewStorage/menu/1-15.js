@@ -22,9 +22,9 @@ export function P1_15() {
 
     return (
         <MenuItem
-            contentLeft="left"
-            content={'center'}
-            contentRight={'right'}
+            contentLeft='left'
+            content='center'
+            contentRight='right'
             buildContent={myBuildContent} style={{ width: 200}}>
         </MenuItem>    
     )

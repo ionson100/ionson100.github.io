@@ -19,7 +19,7 @@ export function P1_9() {
             </button>
            
 
-            <MenuItem content="Menu" positionPopup={'downRight'}>
+            <MenuItem contentLeft="Menu" positionPopup={'downRight'}>
                 <MenuItem content='level 1' positionPopup='downRight'>
                     <MenuItem content='level 2' positionPopup={'downRight'}>
                         <MenuItem content='level 3' positionPopup={'downRight'}>
@@ -51,7 +51,7 @@ export function P1_9() {
             <br/>
 
 
-            <MenuItem content="Menu" positionPopup={'downRight'}>
+            <MenuItem contentLeft="Menu" positionPopup={'downRight'}>
                 <MenuItem content='level 1' positionPopup='downRight'>
                     <MenuItem content='level 2' positionPopup={'downRight'}>
                         <MenuItem content='level 3' positionPopup={'downRight'}>

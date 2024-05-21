@@ -88,7 +88,6 @@ const styleImageR={
 
 function InnerDrop({message,title}: { message: string,title?:string }) {
     return(<MenuItem
-
         title={title?title:undefined}
         contentLeft={<GiAbstract039 style={styleImageL}/>}
         content={<Content message={message}/>}
@@ -106,7 +105,7 @@ export function P1_1() {
                         <BandWait/>
                         <MenuItem className='sub-menu-example'
 
-                                  contentLeft={' '} positionPopup={'downRight'} content={'Open'}
+                                  contentLeft={' '} positionPopup={'downRight'} content={(<span style={{paddingLeft:5}}>Open</span>)}
                                   contentRight={<FaRegFolderOpen/>}>
                             <BandWait/>
                             <FileMenu message={'Open File1'}/>
@@ -122,7 +121,7 @@ export function P1_1() {
                             <BandWait/>
                         </MenuItem>
                         <Band/>
-                        <MenuItem className='sub-menu-example' contentLeft={' '} content={'Close'}
+                        <MenuItem className='sub-menu-example' contentLeft={' '} content={(<span style={{paddingLeft:5}}>Close</span>)}
                                   positionPopup={'downRight'}
                                   contentRight={<FaRegFolderClosed/>}>
                             <BandWait/>
@@ -143,7 +142,7 @@ export function P1_1() {
                         <MenuItem
                             className='sub-menu-example'
                             contentLeft={' '}
-                            content={'Download'}
+                            content={(<span style={{paddingLeft:5}}>Download</span>)}
                             positionPopup={'middleRight5'}
                             popupClassName={'popup-123-form'}
                             contentRight={<RiFolderDownloadLine/>}>
@@ -158,7 +157,7 @@ export function P1_1() {
                     <MenuItem className='menu-example' behavior={'click'} contentLeft={'Form'} style={{width: 50}}>
                         <BandWait/>
                         <MenuItem className='sub-menu-example' contentLeft={' '} positionPopup={'downRight'}
-                                  content={'CheckBox'} contentRight={<IoMdCheckboxOutline style={styleImageR}/>}>
+                                  content={(<span style={{paddingLeft:5}}>CheckBox</span>)} contentRight={<IoMdCheckboxOutline style={styleImageR}/>}>
                             <MenuItem
                                 className='sub-menu-example'
                                 content={<Content message={'Simple'}/>}
@@ -169,14 +168,14 @@ export function P1_1() {
                         <Band/>
                         <MenuItem positionPopup={'downRight'}
                                   popupClassName={'popup-123-form'}
-                                  className='sub-menu-example' contentLeft={' '} content={'Form'}
+                                  className='sub-menu-example'  content={<span style={{paddingLeft:5}}>Form</span>}
                                   contentRight={<FaWpforms style={styleImageR}/>}>
                             {
                                 FormBox()
                             }
                         </MenuItem>
                         <Band/>
-                        <MenuItem className='sub-menu-example' contentLeft={' '} content={'Radio'}
+                        <MenuItem className='sub-menu-example' contentLeft={' '} content={(<span style={{paddingLeft:5}}>Radio</span>)}
                                   contentRight={<BsUiRadios  style={styleImageR}/>}></MenuItem>
                         <BandWait/>
                     </MenuItem>
@@ -190,7 +189,7 @@ export function P1_1() {
                             <BandWait/>
                             <MenuItem className='sub-menu-example'
 
-                                      contentLeft={' '} positionPopup={'downLeft'} content={'Open'}
+                                      contentLeft={' '} positionPopup={'downLeft'} content={(<span style={{paddingLeft:5}}>Open</span>)}
                                       contentRight={<FaRegFolderOpen  style={styleImageR}/>}>
                                 <BandWait/>
                                 <FileMenu message={'Open File1'}/>
@@ -206,7 +205,7 @@ export function P1_1() {
                                 <BandWait/>
                             </MenuItem>
                             <Band/>
-                            <MenuItem className='sub-menu-example' contentLeft={' '} content={'Close'}
+                            <MenuItem className='sub-menu-example' contentLeft={' '} content={(<span style={{paddingLeft:5}}>Close</span>)}
                                       positionPopup={'downLeft'}
                                       contentRight={<FaRegFolderClosed  style={styleImageR}/>}>
                                 <BandWait/>
@@ -224,7 +223,7 @@ export function P1_1() {
 
                             </MenuItem>
                             <Band/>
-                            <MenuItem className='sub-menu-example' contentLeft={' '} content={'Download'} positionPopup={'middleLeft5'}
+                            <MenuItem className='sub-menu-example' contentLeft={' '} content={(<span style={{paddingLeft:5}}>Download</span>)} positionPopup={'middleLeft5'}
                                       contentRight={<RiFolderDownloadLine  style={styleImageR}/>}>
                                 {Middle()}
                             </MenuItem>
@@ -234,7 +233,7 @@ export function P1_1() {
                         <MenuItem className='menu-example' behavior={'click'} contentLeft={'Form'} style={{width: 50}}>
                             <BandWait/>
                             <MenuItem className='sub-menu-example' contentLeft={' '} positionPopup={'downLeft'}
-                                      content={'CheckBox'} contentRight={<IoMdCheckboxOutline style={styleImageR}/>}>
+                                      content={(<span style={{paddingLeft:5}}>CheckBox</span>)} contentRight={<IoMdCheckboxOutline style={styleImageR}/>}>
                                 <MenuItem
                                     className='sub-menu-example'
                                     content={<Content message={'Simple'}/>}
@@ -245,14 +244,14 @@ export function P1_1() {
                             <Band/>
                             <MenuItem positionPopup={'downLeft'}
                                       popupClassName={'popup-123-form'}
-                                      className='sub-menu-example' contentLeft={' '} content={'Form'}
+                                      className='sub-menu-example'  content={(<span style={{paddingLeft:5}}>Form</span>)}
                                       contentRight={<FaWpforms  style={styleImageR}/>}>
                                 {
                                     FormBox()
                                 }
                             </MenuItem>
                             <Band/>
-                            <MenuItem className='sub-menu-example' contentLeft={' '} content={'Radio'}
+                            <MenuItem className='sub-menu-example' contentLeft={' '} content={(<span style={{paddingLeft:5}}>Radio</span>)}
                                       contentRight={<BsUiRadios  style={styleImageR}/>}></MenuItem>
                             <BandWait/>
                         </MenuItem>
@@ -285,14 +284,15 @@ export function P1_1() {
                     <BandWait/>
 
                 </MenuItem>
-                <MenuItem content={<Content message={'Test'}/>}></MenuItem>
                 <Band/>
-                <MenuItem content={<Content message={'Test'}/>}></MenuItem>
+                <MenuItem  style={{width:250}} content={<Content message={'Test'}/>}></MenuItem>
+                <Band/>
+                <MenuItem   style={{width:250}} content={<Content message={'Test'}/>}></MenuItem>
                 <Band/>
 
-                <MenuItem content={<Content message={'Test'}/>}></MenuItem>
+                <MenuItem style={{width:250}}  content={<Content message={'Test'}/>}></MenuItem>
                 <Band/>
-                <MenuItem content={<Content message={'Test'}/>}></MenuItem>
+                <MenuItem  style={{width:250}} content={<Content message={'Test'}/>}></MenuItem>
                 <Band/>
 
             </div>
@@ -306,7 +306,7 @@ export function P1_1() {
                         <BandWait/>
                         <MenuItem className='sub-menu-example'
 
-                                  contentLeft={' '} positionPopup={'topRight'} content={'Open'}
+                                  contentLeft={' '} positionPopup={'topRight'} content={(<span style={{paddingLeft:5}}>Open</span>)}
                                   contentRight={<FaRegFolderOpen  style={styleImageR}/>}>
                             <BandWait/>
                             <FileMenu message={'Open File1'}/>
@@ -322,7 +322,7 @@ export function P1_1() {
                             <BandWait/>
                         </MenuItem>
                         <Band/>
-                        <MenuItem className='sub-menu-example' contentLeft={' '} content={'Close'}
+                        <MenuItem className='sub-menu-example' contentLeft={' '} content={(<span style={{paddingLeft:5}}>Close</span>)}
                                   positionPopup={'topRight'}
                                   contentRight={<FaRegFolderClosed/>}>
                             <BandWait/>
@@ -343,7 +343,7 @@ export function P1_1() {
                         <MenuItem
                             className='sub-menu-example'
                             contentLeft={' '}
-                            content={'Download'}
+                            content={(<span style={{paddingLeft:5}}>Download</span>)}
                             positionPopup={'middleRight'}
                             popupClassName={'popup-123-form'}
                             contentRight={<RiFolderDownloadLine  style={styleImageR}/>}>
@@ -359,7 +359,7 @@ export function P1_1() {
                               style={{width: 50}}>
                         <BandWait/>
                         <MenuItem className='sub-menu-example' contentLeft={' '} positionPopup={'topRight'}
-                                  content={'CheckBox'} contentRight={<IoMdCheckboxOutline style={styleImageR}/>}>
+                                  content={(<span style={{paddingLeft:5}}>CheckBox</span>)} contentRight={<IoMdCheckboxOutline style={styleImageR}/>}>
                             <MenuItem
                                 className='sub-menu-example'
                                 content={<Content message={'Simple'}/>}
@@ -370,14 +370,14 @@ export function P1_1() {
                         <Band/>
                         <MenuItem positionPopup={'topRight'}
                                   popupClassName={'popup-123-form'}
-                                  className='sub-menu-example' contentLeft={' '} content={'Form'}
+                                  className='sub-menu-example'  content={<span style={{paddingLeft:5}}>Form</span>}
                                   contentRight={<FaWpforms  style={styleImageR}/>}>
                             {
                                 FormBox()
                             }
                         </MenuItem>
                         <Band/>
-                        <MenuItem className='sub-menu-example' contentLeft={' '} content={'Radio'}
+                        <MenuItem className='sub-menu-example' contentLeft={' '} content={(<span style={{paddingLeft:5}}>Radio</span>)}
                                   contentRight={<BsUiRadios  style={styleImageR}/>}></MenuItem>
                         <BandWait/>
                     </MenuItem>
@@ -388,7 +388,7 @@ export function P1_1() {
                             <BandWait/>
                             <MenuItem className='sub-menu-example'
 
-                                      contentLeft={' '} positionPopup={'topLeft'} content={'Open'}
+                                      contentLeft={' '} positionPopup={'topLeft'} content={(<span style={{paddingLeft:5}}>Open</span>)}
                                       contentRight={<FaRegFolderOpen  style={styleImageR}/>}>
                                 <BandWait/>
                                 <FileMenu message={'Open File1'}/>
@@ -404,7 +404,7 @@ export function P1_1() {
                                 <BandWait/>
                             </MenuItem>
                             <Band/>
-                            <MenuItem className='sub-menu-example' contentLeft={' '} content={'Close'}
+                            <MenuItem className='sub-menu-example' contentLeft={' '} content={(<span style={{paddingLeft:5}}>Close</span>)}
                                       positionPopup={'topLeft'}
                                       contentRight={<FaRegFolderClosed  style={styleImageR}/>}>
                                 <BandWait/>
@@ -422,7 +422,7 @@ export function P1_1() {
 
                             </MenuItem>
                             <Band/>
-                            <MenuItem className='sub-menu-example' contentLeft={' '} content={'Download'}
+                            <MenuItem className='sub-menu-example' contentLeft={' '} content={(<span style={{paddingLeft:5}}>Download</span>)}
                                       contentRight={<RiFolderDownloadLine  style={styleImageR}/>} positionPopup={'middleLeft5'}>
                                 {
                                     Middle()
@@ -436,8 +436,8 @@ export function P1_1() {
                         <MenuItem positionPopup={'top'} className='menu-example' behavior={'click'} contentLeft={'Form'}
                                   style={{width: 50}}>
                             <BandWait/>
-                            <MenuItem className='sub-menu-example' contentLeft={' '} positionPopup={'topLeft'}
-                                      content={'CheckBox'} contentRight={<IoMdCheckboxOutline style={styleImageR}/>}>
+                            <MenuItem className='sub-menu-example' positionPopup={'topLeft'}
+                                      content={(<span style={{paddingLeft:5}}>CheckBox</span>)} contentRight={<IoMdCheckboxOutline style={styleImageR}/>}>
                                 <MenuItem
                                     className='sub-menu-example'
                                     content={<Content message={'Simple'}/>}
@@ -448,14 +448,14 @@ export function P1_1() {
                             <Band/>
                             <MenuItem positionPopup={'topLeft'}
                                       popupClassName={'popup-123-form'}
-                                      className='sub-menu-example' contentLeft={' '} content={'Form'}
+                                      className='sub-menu-example'  content={<span style={{paddingLeft:5}}>Form</span>}
                                       contentRight={<FaWpforms  style={styleImageR}/>}>
                                 {
                                     FormBox()
                                 }
                             </MenuItem>
                             <Band/>
-                            <MenuItem className='sub-menu-example' contentLeft={' '} content={'Radio'}
+                            <MenuItem className='sub-menu-example' contentLeft={' '} content={(<span style={{paddingLeft:5}}>Radio</span>)}
                                       contentRight={<BsUiRadios  style={styleImageR}/>}></MenuItem>
                             <BandWait/>
                         </MenuItem>

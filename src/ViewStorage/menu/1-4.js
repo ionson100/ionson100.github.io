@@ -23,7 +23,7 @@ const App = () => {
                     mRefMenu.current.setDisabled(false)
             }}>unDisable</button>
             
-            <MenuItem  ref={mRefMenu} content="Simple  disable"/>
+            <MenuItem  ref={mRefMenu} contentLeft="Simple  disable"/>
       </>
           
   );
@@ -43,7 +43,8 @@ export function P1_4() {
                     mRefMenu.current.setDisabled(false)
                 }}>undisable</button>
             </div>
-            <MenuItem  ref={mRefMenu} content="Simple  disable" behavior='click'>
+            <br/>
+            <MenuItem  ref={mRefMenu} contentLeft="Simple  disable" behavior='click'>
                 <MenuItem  content='level 1' positionPopup='downRight' behavior='click'>
                     <MenuItem content='level 2'/>
                     <MenuItem content='level 2'/>

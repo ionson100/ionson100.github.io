@@ -9,7 +9,7 @@ import MenuItem from "bsr-menu";
 
 const App = () => {
   return (
-      <MenuItem content="Simple  behavior" behavior='click'>
+      <MenuItem contentLeft="Simple  behavior" behavior='click'>
                 <MenuItem content='level 1'  positionPopup='downRight' behavior='click'>
                     <MenuItem content='level 2'/>
                     <MenuItem content='level 2'/>
@@ -27,7 +27,7 @@ export function P1_3() {
     return (
 
         <>
-            <MenuItem content="Simple  behavior" behavior='click'>
+            <MenuItem contentLeft="Simple  behavior" behavior='click'>
                 <MenuItem content='level 1' positionPopup='downRight' behavior='click'>
                     <MenuItem content='level 2'/>
                     <MenuItem content='level 2'/>

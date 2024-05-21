@@ -1,4 +1,4 @@
-import {MrfMenu, MrfOrm, MrfSau} from "./index";
+import {HtmlMenu, HtmlOrm, HtmlSau} from "./index";
 
 export function PainterMenu(mode, tag,state) {
 
@@ -9,7 +9,7 @@ export function PainterMenu(mode, tag,state) {
         const menu = document.querySelector(`[data-memu-popup="bsrmenu"]`)
         if (menu.style.visibility === "hidden") {
             if(state!=='false'){
-                MrfMenu.open()
+                HtmlMenu.open()
             }
 
         }
@@ -18,7 +18,7 @@ export function PainterMenu(mode, tag,state) {
         const menu = document.querySelector(`[data-memu-popup="bsrorm"]`)
         if (menu.style.visibility === "hidden") {
             if(state!=='false'){
-                MrfOrm.open();
+                HtmlOrm.open();
             }
 
         }
@@ -27,7 +27,7 @@ export function PainterMenu(mode, tag,state) {
         const menu = document.querySelector(`[data-memu-popup="bsrsau"]`)
         if (menu.style.visibility === "hidden") {
             if(state!=='false'){
-                MrfSau.open();
+                HtmlSau.open();
             }
 
         }

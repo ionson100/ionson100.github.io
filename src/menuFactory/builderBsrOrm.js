@@ -1,8 +1,7 @@
 import MenuItem from "bsr-menu";
 import {SimpleText} from "./builderContent";
-import "./menu.css"
 
-export const widthM = 200
+export const widthM = 250
 
 export function MenuHorizontalBand() {
     return (<div className={'band'}></div>)

@@ -26,11 +26,12 @@ body {
 }
 #left-menu {
 
+
   max-width: 300px;
   min-width: 300px;
   width: 10%;
   height: 100%;
-  background-color: #eee8e8;
+
 }
 
 #content {
@@ -51,7 +52,7 @@ body {
 }
 
 table, th, td {
-  font-size: 18px;
+
   border: 1px solid black;
   border-collapse: collapse;
 }
@@ -117,9 +118,7 @@ caption {
 /*}*/
 .popup-123-form{
   border: 1px solid #b8b5b5 !important;
-
   box-shadow:  2px 2px 2px #e5e1e1 !important;
-
 }
 .drop-example{
   height: 30px;
@@ -130,6 +129,12 @@ caption {
   background: #d7d4d4;
   width: 180px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.menu-123-item {
+ background: rgba(243, 241, 241, 0.94);
+}
+.selected-menu{
+  background: rgba(206, 206, 206, 0.94);
 }
 
 
