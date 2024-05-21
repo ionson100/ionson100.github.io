@@ -1,3 +1,9 @@
+:root{
+  --hover: rgb(230, 230, 228);
+  --root-selectr: rgb(220, 220, 218);
+
+}
+
 body {
   background: white;
   margin: 0;
@@ -13,9 +19,7 @@ body {
   margin-top: 1px;
   margin-bottom: 1px;
 }
-.selected-menu{
-  background: #dedcdc;
-}
+
 
 
 #root {
@@ -24,13 +28,11 @@ body {
   display: flex;
   background: #faf7f7;
 }
-#left-menu {
-
-
-  max-width: 300px;
-  min-width: 300px;
-  width: 10%;
+.left-menu {
+  overflow-x: hidden;
+  overflow-y: auto;
   height: 100%;
+  width: 300px;
 
 }
 
@@ -131,10 +133,10 @@ caption {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 .menu-123-item {
- background: rgba(243, 241, 241, 0.94);
+ background: rgb(241, 241, 240);
 }
 .selected-menu{
-  background: rgba(206, 206, 206, 0.94);
+  background: var(--root-selectr)
 }
 
 

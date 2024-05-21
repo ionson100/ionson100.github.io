@@ -1,0 +1,12 @@
+:root{--hover:#e6e6e4;--root-selectr:#dcdcda}body{background:#fff;font-family:Times New Roman,serif;font-size:20px;margin:0}.band{background:#dedcdc;height:1px;margin-bottom:1px;margin-top:1px}#root{background:#faf7f7;display:flex;height:100vh;width:100vw}.left-menu{height:100%;width:300px}#content,.left-menu{overflow-x:hidden;overflow-y:auto}#content{background-color:#faf7f7;padding:10px 10px 10px 30px;width:100%}.not-select{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}table,td,th{border:1px solid #000;border-collapse:collapse}td,th{padding:10px}table{margin:30px;padding:30px;width:80%}tr:nth-child(2n){background-color:#f7f8f8}th{background:#dedcdc}caption,td[data-d]{font-weight:700}caption{caption-side:top;font-size:20px;padding-bottom:10px;text-align:left}.menu-example{background:#dfeaf5;border-radius:3px;color:#000;cursor:pointer;height:30px;width:200px}.menu-example:hover{background:#e2edf8}.menu-example:active{background:#dddfe2}.sub-menu-example{background:#fff;color:#000;cursor:pointer;height:30px;width:200px}.sub-menu-example:hover{background:#f5f6f8}.sub-menu-example:active{background:#ebecec}.popup-123-form{border:1px solid #b8b5b5!important;box-shadow:2px 2px 2px #e5e1e1!important}.drop-example{height:30px;width:200px}.FormExample{background:#d7d4d4;box-shadow:0 30px 60px -12px #32325d40,0 18px 36px -18px #0000004d;padding:10px;width:180px}.menu-123-item{background:#f1f1f0}.selected-menu{background:#dcdcda;background:var(--root-selectr)}
+
+
+
+
+/*!
+ * StackOverflow.com dark style
+ *
+ * @stackoverflow/stacks v0.56.0
+ * https://github.com/StackExchange/Stacks
+ */.hljs{background:#1c1b1b;color:#fff;display:block;overflow-x:auto;padding:.5em}.hljs-comment{color:#999}.hljs-attr,.hljs-doctag,.hljs-keyword,.hljs-meta,.hljs-meta-keyword,.hljs-section,.hljs-selector-class,.hljs-selector-pseudo,.hljs-selector-tag{color:#88aece}.hljs-attribute{color:v#c59bc1}.hljs-built_in,.hljs-literal,.hljs-name,.hljs-number,.hljs-quote,.hljs-selector-id,.hljs-template-tag,.hljs-title,.hljs-type{color:#f08d49}.hljs-link,.hljs-meta-string,.hljs-regexp,.hljs-selector-attr,.hljs-string,.hljs-symbol,.hljs-template-variable,.hljs-variable{color:#b5bd68}.hljs-bullet,.hljs-code{color:#ccc}.hljs-deletion{color:#de7176}.hljs-addition{color:#76c490}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+/*# sourceMappingURL=main.8c9c9168.css.map*/
