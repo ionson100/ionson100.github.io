@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import MenuItem from "bsr-menu";
 import {FaRegFolderOpen, FaRegFolderClosed} from "react-icons/fa6";
 import {RiFolderDownloadLine} from "react-icons/ri";
@@ -96,8 +96,10 @@ function InnerDrop({message,title}: { message: string,title?:string }) {
 }
 
 export function P1_1() {
+    const  mRef=useRef<InstanceType<typeof MenuItem>>(null);
     return (
         <>
+
             <div>
                 <Band/>
                 <div style={{display: 'flex'}}>
@@ -260,9 +262,17 @@ export function P1_1() {
                 <Band/>
             </div>
             <div style={{height: 100}}></div>
+
+            <button onClick={()=>{
+                mRef.current!.menu?.click();
+            }}>toggle drop</button>
+            <br/>
+            <br/>
+            <br/>
             <div style={{width: 200}}>
                 <MenuItem
 
+                    ref={mRef}
                     behavior={'click'}
                     style={{width:250}}
                     content={<Content  message={'drop'}/>}

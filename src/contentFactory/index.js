@@ -20,6 +20,8 @@ import {P1_14} from "../ViewStorage/menu/1-14";
 import {P1_15} from "../ViewStorage/menu/1-15";
 import {P1_16} from "../ViewStorage/menu/1-16";
 import {P1_17} from "../ViewStorage/menu/1-17";
+import {IndexBsrSau} from "../ViewStorage/menu/bsrSau";
+import P3_1 from "../ViewStorage/menu/3-1";
 
 
 
@@ -110,6 +112,14 @@ export function ContentFactory(tag) {
         case '1-17':{
             data=<P1_17/>
             break
+        }
+        case "bsrsau":{
+            data=<IndexBsrSau/>
+            break
+        }
+        case '3-1':{
+            data=<P3_1/>
+            break;
         }
     }
 

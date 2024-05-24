@@ -103,7 +103,7 @@ export function BuilderBsrSau() {
 
             <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrsau&page=3-1`} tag={'3-1'} style={{width: innerWidth}}
-                      content={SimpleText('test')}/>
+                      content={SimpleText('selectedFile')}/>
             <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrsau&page=3-2`} tag={'3-2'} style={{width: innerWidth}}
                       content={SimpleText('test')}/>

@@ -50,6 +50,7 @@ export function MenuFactory() {
         <>
             <MenuItem
 
+                tabIndex={1}
                 style={styleMenu}
                 ref={mRefMenu}
                 url={`#mode=bsrmenu&page=bsrmenu`}
@@ -68,6 +69,7 @@ export function MenuFactory() {
             </MenuItem>
 
             <MenuItem
+                tabIndex={2}
                 style={styleMenu}
                 ref={mRefOrm}
                 url={`#mode=bsrorm&page=bsrorm`}
@@ -86,6 +88,7 @@ export function MenuFactory() {
             </MenuItem>
 
             <MenuItem
+                tabIndex={3}
                 style={styleMenu}
                 ref={mRefSau}
                 url={`#mode=bsrsau&page=bsrsau`}

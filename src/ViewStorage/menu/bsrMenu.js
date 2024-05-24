@@ -83,7 +83,7 @@ export function IndexBsrMenu() {
                 <tr>
                     <td data-d={1}><a href="#mode=bsrmenu&page=1-11">contentLeft</a></td>
                     <td>any</td>
-                    <td>'undefined'</td>
+                    <td>undefined</td>
                     <td>The visual content of the menu consists of three horizontal areas: contentLeft - content -
                         contentRight. Can be determined individually.
                     </td>
@@ -91,7 +91,7 @@ export function IndexBsrMenu() {
                 <tr>
                     <td data-d={1}><a href="#mode=bsrmenu&page=1-11">content</a></td>
                     <td>any</td>
-                    <td>'undefined'</td>
+                    <td>undefined</td>
                     <td>The visual content of the menu consists of three horizontal areas: contentLeft - content -
                         contentRight. Can be determined individually.
                     </td>
@@ -99,7 +99,7 @@ export function IndexBsrMenu() {
                 <tr>
                     <td data-d={1}><a href="#mode=bsrmenu&page=1-11">contentRight</a></td>
                     <td>any</td>
-                    <td>'undefined'</td>
+                    <td>undefined</td>
                     <td>The visual content of the menu consists of three horizontal areas: contentLeft - content -
                         contentRight. Can be determined individually.
                     </td>
