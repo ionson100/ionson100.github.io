@@ -15,8 +15,9 @@ export function IndexBsrSau() {
                     <th style={{width: "20%"}}>Default</th>
                     <th style={{width: "20%"}}>Description</th>
                 </tr>
+
                 <tr>
-                    <td data-d={1}>canvasSize</td>
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-7">canvasSize</a></td>
                     <td>number</td>
                     <td>200</td>
                     <td>Canvas size (square)</td>
@@ -30,7 +31,8 @@ export function IndexBsrSau() {
                     <td>Event selected file,if you return false, the choice will not be legal</td>
                 </tr>
                 <tr>
-                    <td data-d={1}>callbackFormData</td>
+
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-4">callbackFormData</a></td>
                     <td>object | string | undefined</td>
                     <td>undefined</td>
                     <td>User data that the user wants to send to the server along with the file</td>
@@ -46,7 +48,8 @@ export function IndexBsrSau() {
 
 
                 <tr>
-                    <td data-d={1}>headerKeyValue</td>
+
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-1">headerKeyValue</a></td>
                     <td>([key: string]: string) | undefined</td>
                     <td>undefined</td>
                     <td>An object with key - value fields that are inserted into the request header</td>
@@ -54,7 +57,7 @@ export function IndexBsrSau() {
 
 
                 <tr>
-                    <td data-d={1}> beforeUpload</td>
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-6">beforeUpload</a></td>
                     <td>?: (() =&rang; void) | undefined</td>
                     <td>undefined</td>
                     <td>Event marker before transferring the file to the server</td>
@@ -62,7 +65,7 @@ export function IndexBsrSau() {
 
 
                 <tr>
-                    <td data-d={1}>clientError</td>
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-2">clientError</a></td>
                     <td>((event: string) =&rang; void) | undefined</td>
                     <td>undefined</td>
                     <td>Browser side error event</td>
@@ -70,7 +73,8 @@ export function IndexBsrSau() {
 
 
                 <tr>
-                    <td data-d={1}>serverError</td>
+
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-2">serverError</a></td>
                     <td>((events: string) =&rang; void) | undefined</td>
                     <td> undefined</td>
                     <td>Server side error event</td>
@@ -78,7 +82,7 @@ export function IndexBsrSau() {
 
 
                 <tr>
-                    <td data-d={1}> progress</td>
+                    <td data-d={1}>progress</td>
                     <td>((events: ProgressEvent(XMLHttpRequestEventTarget)) =&rang;void) | undefined</td>
                     <td>undefined</td>
                     <td>Attributes for plotting download progress</td>
@@ -86,7 +90,7 @@ export function IndexBsrSau() {
 
 
                 <tr>
-                    <td data-d={1}>preview</td>
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-5">preview</a></td>
                     <td>((events: string) =&rang; void,) | undefined</td>
                     <td></td>
                     <td>Click preview</td>
@@ -94,7 +98,7 @@ export function IndexBsrSau() {
 
 
                 <tr>
-                    <td data-d={1}>previewAsync</td>
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-5">previewAsync</a></td>
                     <td>((events: string) =&rang; void,) |</td>
                     <td>undefined</td>
                     <td>Continuous preview</td>
@@ -111,7 +115,8 @@ export function IndexBsrSau() {
 
 
                 <tr>
-                    <td data-d={1}>visibleLinkPreview</td>
+
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-5">visibleLinkPreview</a></td>
                     <td>boolean | undefined</td>
                     <td>undefined</td>
                     <td>Show button Preview</td>
@@ -142,13 +147,15 @@ export function IndexBsrSau() {
                     <th style={{width: "30%"}}>Type</th>
                     <th style={{width: "50%"}}>Description</th>
                 </tr>
+
                 <tr>
-                    <td data-d={1}>clear()</td>
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-8">clear</a></td>
                     <td>()=&rang;void</td>
                     <td>Clear all params avatar component</td>
                 </tr>
+
                 <tr>
-                    <td data-d={1}>getCanvasFormData()</td>
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-9">getCanvasFormData</a></td>
                     <td>()=&rang;string |undefined</td>
                     <td>Returns a link to the modified image</td>
                 </tr>

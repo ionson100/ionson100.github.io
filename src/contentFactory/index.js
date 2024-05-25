@@ -22,6 +22,14 @@ import {P1_16} from "../ViewStorage/menu/1-16";
 import {P1_17} from "../ViewStorage/menu/1-17";
 import {IndexBsrSau} from "../ViewStorage/menu/bsrSau";
 import P3_1 from "../ViewStorage/menu/3-1";
+import P3_2 from "../ViewStorage/menu/3-2";
+import P3_3 from "../ViewStorage/menu/3-3";
+import P3_4 from "../ViewStorage/menu/3-4";
+import P3_5 from "../ViewStorage/menu/3-5";
+import P3_6 from "../ViewStorage/menu/3-6";
+import P3_7 from "../ViewStorage/menu/3-7";
+import P3_8 from "../ViewStorage/menu/3-8";
+import P3_9 from "../ViewStorage/menu/3-9";
 
 
 
@@ -120,6 +128,38 @@ export function ContentFactory(tag) {
         case '3-1':{
             data=<P3_1/>
             break;
+        }
+        case '3-2':{
+            data=<P3_2/>
+            break
+        }
+        case '3-3':{
+            data=<P3_3/>
+            break
+        }
+        case '3-4':{
+            data=<P3_4/>
+            break
+        }
+        case '3-5':{
+            data=<P3_5/>
+            break
+        }
+        case '3-6':{
+            data=<P3_6/>
+            break
+        }
+        case '3-7':{
+            data=<P3_7/>
+            break
+        }
+        case '3-8':{
+            data=<P3_8/>
+            break
+        }
+        case '3-9':{
+            data=<P3_9/>
+            break
         }
     }
 

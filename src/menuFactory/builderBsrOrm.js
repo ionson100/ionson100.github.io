@@ -61,9 +61,9 @@ export function BuilderBsrMenu() {
             <MenuItem url={`#mode=bsrmenu&page=1-16`} tag={'1-16'} style={{width: innerWidth}}
                       content={SimpleText('add checkBox')}/>
             <MenuHorizontalBand/>
-                <MenuItem url={`#mode=bsrmenu&page=1-17`} tag={'1-17'} style={{width: innerWidth}}
-                          content={SimpleText('add any content')}/>
-                <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrmenu&page=1-17`} tag={'1-17'} style={{width: innerWidth}}
+                      content={SimpleText('add any content')}/>
+            <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrmenu&page=1-13`} tag={'1-13'} style={{width: innerWidth}}
                       content={SimpleText('Default Style')}/>
             <MenuHorizontalBand/>
@@ -106,17 +106,30 @@ export function BuilderBsrSau() {
                       content={SimpleText('selectedFile')}/>
             <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrsau&page=3-2`} tag={'3-2'} style={{width: innerWidth}}
-                      content={SimpleText('test')}/>
+                      content={SimpleText('clientError severError')} title={'clientError severError'}/>
             <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrsau&page=3-3`} tag={'3-3'} style={{width: innerWidth}}
-                      content={SimpleText('test')}/>
+                      content={SimpleText('headerKeyValue')}/>
             <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrsau&page=3-4`} tag={'3-4'} style={{width: innerWidth}}
-                      content={SimpleText('test')}/>
+                      content={SimpleText('callbackFormData')}/>
             <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrsau&page=3-5`} tag={'3-5'} style={{width: innerWidth}}
-                      content={SimpleText('test23')}/>
+                      content={SimpleText('preview previewAsync')} title={'preview previewAsync'}/>
             <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrsau&page=3-6`} tag={'3-6'} style={{width: innerWidth}}
+                      content={SimpleText('beforeUpload')}/>
+            <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrsau&page=3-7`} tag={'3-7'} style={{width: innerWidth}}
+                      content={SimpleText('canvasSize')}/>
+            <MenuHorizontalBand/>
+                <MenuItem url={`#mode=bsrsau&page=3-8`} tag={'3-8'} style={{width: innerWidth}}
+                          content={SimpleText('clear()')}/>
+                <MenuHorizontalBand/>
+                <MenuItem url={`#mode=bsrsau&page=3-9`} tag={'3-9'} style={{width: innerWidth}}
+                          content={SimpleText('getCanvasFormData()')}/>
+                <MenuHorizontalBand/>
+
         </>
     );
 
