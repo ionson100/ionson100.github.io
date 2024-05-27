@@ -40,7 +40,7 @@ export function IndexBsrSau() {
 
 
                 <tr>
-                    <td data-d={1}>url</td>
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-10">url</a></td>
                     <td>string | undefined</td>
                     <td>undefined</td>
                     <td>Server side address where we send data</td>
@@ -105,7 +105,7 @@ export function IndexBsrSau() {
 
                 </tr>
                 <tr>
-                    <td data-d={1}>done</td>
+                    <td data-d={1}><a href="#mode=bsrsau&page=3-10">done</a></td>
                     <td>((events: any) =&rang; void) | undefined</td>
                     <td>undefined</td>
                     <td>Successful sending event to the server

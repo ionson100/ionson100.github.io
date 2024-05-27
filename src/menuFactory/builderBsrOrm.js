@@ -123,12 +123,14 @@ export function BuilderBsrSau() {
             <MenuItem url={`#mode=bsrsau&page=3-7`} tag={'3-7'} style={{width: innerWidth}}
                       content={SimpleText('canvasSize')}/>
             <MenuHorizontalBand/>
-                <MenuItem url={`#mode=bsrsau&page=3-8`} tag={'3-8'} style={{width: innerWidth}}
-                          content={SimpleText('clear()')}/>
-                <MenuHorizontalBand/>
-                <MenuItem url={`#mode=bsrsau&page=3-9`} tag={'3-9'} style={{width: innerWidth}}
-                          content={SimpleText('getCanvasFormData()')}/>
-                <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrsau&page=3-8`} tag={'3-8'} style={{width: innerWidth}}
+                      content={SimpleText('clear()')}/>
+            <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrsau&page=3-9`} tag={'3-9'} style={{width: innerWidth}}
+                      content={SimpleText('getCanvasFormData()')}/>
+            <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrsau&page=3-10`} tag={'3-10'} style={{width: innerWidth}}
+                      content={SimpleText('Example ASP.NET Core')}/>
 
         </>
     );

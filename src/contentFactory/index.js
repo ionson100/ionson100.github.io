@@ -30,6 +30,7 @@ import P3_6 from "../ViewStorage/menu/3-6";
 import P3_7 from "../ViewStorage/menu/3-7";
 import P3_8 from "../ViewStorage/menu/3-8";
 import P3_9 from "../ViewStorage/menu/3-9";
+import P3_10 from "../ViewStorage/menu/3-10";
 
 
 
@@ -159,6 +160,10 @@ export function ContentFactory(tag) {
         }
         case '3-9':{
             data=<P3_9/>
+            break
+        }
+        case '3-10':{
+            data=<P3_10/>
             break
         }
     }
