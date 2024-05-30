@@ -31,6 +31,15 @@ import P3_7 from "../ViewStorage/menu/3-7";
 import P3_8 from "../ViewStorage/menu/3-8";
 import P3_9 from "../ViewStorage/menu/3-9";
 import P3_10 from "../ViewStorage/menu/3-10";
+import P4_1 from "../ViewStorage/menu/4-1";
+import {IndexBsrDialog} from "../ViewStorage/menu/bsrdialog";
+import {P4_2} from "../ViewStorage/menu/4-2";
+import {P4_3} from "../ViewStorage/menu/4-3";
+import {P4_4} from "../ViewStorage/menu/4-4";
+import {P4_5} from "../ViewStorage/menu/4-5";
+import {P4_6} from "../ViewStorage/menu/4-6";
+import {P4_7} from "../ViewStorage/menu/4-7";
+import {P4_8} from "../ViewStorage/menu/4-8";
 
 
 
@@ -53,6 +62,10 @@ export function ContentFactory(tag) {
         case 'bsrmenu':{
           data=  <IndexBsrMenu/>
             break;
+        }
+        case 'bsrdialog':{
+            data=<IndexBsrDialog/>
+            break
         }
         case '1-1':{
             data=<P1_1/>
@@ -164,6 +177,38 @@ export function ContentFactory(tag) {
         }
         case '3-10':{
             data=<P3_10/>
+            break
+        }
+        case '4-1':{
+            data=<P4_1/>
+            break
+        }
+        case '4-2':{
+            data=<P4_2/>
+            break
+        }
+        case '4-3':{
+            data=<P4_3/>
+            break
+        }
+        case '4-4':{
+            data=<P4_4/>
+            break
+        }
+        case '4-5':{
+            data=<P4_5/>
+            break
+        }
+        case '4-6':{
+            data=<P4_6/>
+            break
+        }
+        case '4-7':{
+            data=<P4_7/>
+            break
+        }
+        case '4-8':{
+            data=<P4_8/>
             break
         }
     }

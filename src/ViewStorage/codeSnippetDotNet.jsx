@@ -1,6 +1,6 @@
 
 import Highlight from 'react-highlight';
-import 'highlight.js/styles/a11y-dark.css'
+import 'highlight.js/styles/hybrid.css'
 
 
 

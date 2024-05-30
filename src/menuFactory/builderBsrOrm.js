@@ -136,3 +136,38 @@ export function BuilderBsrSau() {
     );
 
 }
+
+export function BuilderBsrDialog() {
+    return (
+        <>
+
+            <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrdialog&page=4-1`} tag={'4-1'} style={{width: innerWidth}}
+                      content={SimpleText('Examples')}/>
+            <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrdialog&page=4-2`} tag={'4-2'} style={{width: innerWidth}}
+                      content={SimpleText('closeModalDialogClickForeignArea')}/>
+            <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrdialog&page=4-3`} tag={'4-3'} style={{width: innerWidth}}
+                      content={SimpleText('refDialog')}/>
+            <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrdialog&page=4-4`} tag={'4-4'} style={{width: innerWidth}}
+                      content={SimpleText('icon')}/>
+            <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrdialog&page=4-5`} tag={'4-5'} style={{width: innerWidth}}
+                      content={SimpleText('header body buttons')}/>
+            <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrdialog&page=4-6`} tag={'4-6'} style={{width: innerWidth}}
+                      content={SimpleText('styles')}/>
+            <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrdialog&page=4-7`} tag={'4-7'} style={{width: innerWidth}}
+                      content={SimpleText('onShow onClose')}/>
+            <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrdialog&page=4-8`} tag={'4-8'} style={{width: innerWidth}}
+                      content={SimpleText('onCancel')}/>
+
+
+        </>
+    );
+
+}

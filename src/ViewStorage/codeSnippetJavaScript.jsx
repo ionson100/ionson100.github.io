@@ -1,6 +1,6 @@
 
 import Highlight from 'react-highlight';
-import 'highlight.js/styles/paraiso-dark.css'
+import 'highlight.js/styles/hybrid.css'
 
 
 

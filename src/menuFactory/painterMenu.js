@@ -1,4 +1,4 @@
-import {HtmlMenu, HtmlOrm, HtmlSau} from "./index";
+import {HtmlDialog, HtmlMenu, HtmlOrm, HtmlSau} from "./index";
 
 export function PainterMenu(mode, tag,state) {
 
@@ -28,6 +28,16 @@ export function PainterMenu(mode, tag,state) {
         if (menu.style.visibility === "hidden") {
             if(state!=='false'){
                 HtmlSau.open();
+            }
+
+        }
+    }
+
+    if (mode === 'bsrdialog') {
+        const menu = document.querySelector(`[data-memu-popup="bsrdialog"]`)
+        if (menu.style.visibility === "hidden") {
+            if(state!=='false'){
+                HtmlDialog.open();
             }
 
         }

@@ -1,13 +1,14 @@
 import MenuItem from "bsr-menu";
 import {FaAnglesRight} from "react-icons/fa6";
 import {FaAnglesDown} from "react-icons/fa6";
-import {BuilderBsrMenu, BuilderBsrOrm, BuilderBsrSau, widthM} from "./builderBsrOrm";
+import {BuilderBsrDialog, BuilderBsrMenu, BuilderBsrOrm, BuilderBsrSau, widthM} from "./builderBsrOrm";
 import {useEffect, useRef} from "react";
 import {BuildContent, RunListenerHash} from "../hachListener";
 
 export let HtmlMenu = undefined
 export let HtmlOrm = undefined
 export let HtmlSau = undefined
+export let HtmlDialog = undefined
 const sizeImage = 12;
 let init = false;
 const styleImage = {
@@ -25,10 +26,12 @@ export function MenuFactory() {
     const mRefMenu = useRef()
     const mRefOrm = useRef()
     const mRefSau = useRef()
+    const mRefDialog = useRef()
     useEffect(() => {
         HtmlMenu = mRefMenu.current
         HtmlOrm = mRefOrm.current
         HtmlSau = mRefSau.current;
+        HtmlDialog=mRefDialog.current;
         if (init === false) {
             init = true;
 
@@ -103,6 +106,25 @@ export function MenuFactory() {
                 }}>
                 {
                     <BuilderBsrSau/>
+                }
+            </MenuItem>
+
+            <MenuItem
+                tabIndex={4}
+                style={styleMenu}
+                ref={mRefDialog}
+                url={`#mode=bsrdialog&page=bsrdialog`}
+                id='drop4'
+                tag='bsrdialog'
+                positionPopup="dropDown"
+                behavior="click"
+                iconDropOpen={<FaAnglesDown size={sizeImage} style={styleImage}/>}
+                iconDropClose={<FaAnglesRight size={sizeImage} style={styleImage}/>}
+                content={() => {
+                    return <span style={{paddingLeft: 10}}>bsr-modaldialog</span>
+                }}>
+                {
+                    <BuilderBsrDialog/>
                 }
             </MenuItem>
 
