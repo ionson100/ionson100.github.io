@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import {ShowBsrDialog,ModalDialog} from "bsr-modaldialog";
 import 'bsr-modaldialog/dist/index.css'
-import CodeSnippetJavaScript from "../codeSnippetJavaScript";
+import {CodeSnippetJavaScript} from "../codeSnippetJavaScript";
 
 /*-------------------------------------*/
 const code = `
@@ -53,7 +53,7 @@ export function P4_3() {
     return (
         <>
             <label ref={mRefLabel}></label>
-            <br/>
+            <br/> <br/>
             <button onClick={() => {
                 mRefLabel.current!.innerText=''
                 ShowBsrDialog({
@@ -67,7 +67,7 @@ export function P4_3() {
                 })
             }}>show
             </button>
-            <br/>
+            <br/> <br/>
             <button onClick={()=>{
                 if(!mRefDialog.current){
                     alert("First open the dialog")

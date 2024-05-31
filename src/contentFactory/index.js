@@ -40,6 +40,11 @@ import {P4_5} from "../ViewStorage/menu/4-5";
 import {P4_6} from "../ViewStorage/menu/4-6";
 import {P4_7} from "../ViewStorage/menu/4-7";
 import {P4_8} from "../ViewStorage/menu/4-8";
+import {P4_9} from "../ViewStorage/menu/4-9";
+import {P4_10} from "../ViewStorage/menu/4-10";
+import {P4_11} from "../ViewStorage/menu/4-11";
+import {P4_12} from "../ViewStorage/menu/4-12";
+import {P4_14} from "../ViewStorage/menu/4-14";
 
 
 
@@ -209,6 +214,26 @@ export function ContentFactory(tag) {
         }
         case '4-8':{
             data=<P4_8/>
+            break
+        }
+        case '4-9':{
+            data=<P4_9/>
+            break
+        }
+        case '4-10':{
+            data=<P4_10/>
+            break
+        }
+        case '4-11':{
+            data=<P4_11/>
+            break
+        }
+        case '4-12':{
+            data=<P4_12/>
+            break
+        }
+        case '4-14':{
+            data=<P4_14/>
             break
         }
     }

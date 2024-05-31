@@ -1,5 +1,5 @@
 import React  from "react";
-import CodeSnippetCss from "../codeSnippetCss";
+import {CodeSnippetCss} from "../codeSnippetJavaScript";
 
 
 const code=`

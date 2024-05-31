@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import AvatarUploader from 'bsr-sau'
 import 'bsr-sau/dist/index.css'
-import CodeSnippetJavaScript from "../codeSnippetJavaScript";
+import {CodeSnippetJavaScript} from "../codeSnippetJavaScript";
 /*-----------------------------------*/
 const code = `
 import React, {useRef} from "react";

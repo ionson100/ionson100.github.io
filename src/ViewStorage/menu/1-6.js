@@ -1,6 +1,6 @@
 import React, {useRef} from "react";
 import MenuItem from "bsr-menu";
-import CodeSnippetJavaScript from "../codeSnippetJavaScript";
+import {CodeSnippetJavaScript} from "../codeSnippetJavaScript";
 import {FaAnglesDown, FaAnglesRight} from "react-icons/fa6";
 
 const styleImage={

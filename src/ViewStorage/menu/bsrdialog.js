@@ -117,7 +117,7 @@ export function IndexBsrDialog() {
                     <td>Only for menu where positionPopup='dropDown'.</td>
                 </tr>
                 <tr>
-                    <td data-d={1}>timeOut</td>
+                    <td data-d={1}><a href="#mode=bsrdialog&page=4-9">timeOut</a></td>
                     <td>number | undefined</td>
                     <td>undefined</td>
                     <td>Time in milliseconds until the dialog is automatically closed if the dialog is used as an

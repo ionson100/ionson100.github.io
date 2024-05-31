@@ -1,5 +1,5 @@
 import MenuItem from "bsr-menu";
-import CodeSnippetJavaScript from "../codeSnippetJavaScript";
+import {CodeSnippetJavaScript} from "../codeSnippetJavaScript";
 import React, {useRef} from "react";
 
 const myContent = ({message}: { message: string }) => {

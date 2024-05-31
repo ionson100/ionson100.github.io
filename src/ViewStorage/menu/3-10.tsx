@@ -1,7 +1,7 @@
 import React from "react";
 import 'bsr-sau/dist/index.css'
-import CodeSnippetJavaScript from "../codeSnippetJavaScript";
-import CodeSnippetDotNet from "../codeSnippetDotNet";
+import {CodeSnippetJavaScript} from "../codeSnippetJavaScript";
+import {CodeSnippetDotNet} from "../codeSnippetJavaScript";
 /*-----------------------------------*/
 const code = `
 

@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import {ShowBsrDialog} from "bsr-modaldialog";
 import 'bsr-modaldialog/dist/index.css'
-import CodeSnippetJavaScript from "../codeSnippetJavaScript";
+import {CodeSnippetJavaScript} from "../codeSnippetJavaScript";
 
 /*-------------------------------------*/
 const code = `
@@ -43,7 +43,7 @@ export function P4_2() {
     return (
         <>
             <label ref={mRefLabel}></label>
-            <br/>
+            <br/> <br/>
             <button onClick={() => {
                 mRefLabel.current.innerText=''
                 ShowBsrDialog({

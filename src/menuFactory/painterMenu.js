@@ -1,47 +1,64 @@
 import {HtmlDialog, HtmlMenu, HtmlOrm, HtmlSau} from "./index";
 
-export function PainterMenu(mode, tag,state) {
+export function PainterMenu(mode, tag, state) {
 
 
-    if (mode === 'bsrmenu') {
-       const as=document.querySelectorAll(`[data-memu-popup]`)
-        console.log(as)
-        const menu = document.querySelector(`[data-memu-popup="bsrmenu"]`)
-        if (menu.style.visibility === "hidden") {
-            if(state!=='false'){
-                HtmlMenu.open()
+    HtmlMenu.menu.style.display="none";
+    HtmlOrm.menu.style.display="none";
+    HtmlSau.menu.style.display="none";
+    HtmlDialog.menu.style.display="none";
+
+    switch (mode) {
+        case 'bsrmenu': {
+            HtmlMenu.menu.style.display="block";
+            const menu = document.querySelector(`[data-memu-popup="bsrmenu"]`)
+
+            if (menu.style.visibility === "hidden") {
+                if (state !== 'false') {
+                    HtmlMenu.open()
+                }
             }
-
+            break
+        }
+        case 'bsrorm': {
+            HtmlOrm.menu.style.display="block";
+            const menu = document.querySelector(`[data-memu-popup="bsrorm"]`)
+            if (menu.style.visibility === "hidden") {
+                if (state !== 'false') {
+                    HtmlOrm.open();
+                }
+            }
+            break
+        }
+        case 'bsrsau': {
+            HtmlSau.menu.style.display="block";
+            const menu = document.querySelector(`[data-memu-popup="bsrsau"]`)
+            if (menu.style.visibility === "hidden") {
+                if (state !== 'false') {
+                    HtmlSau.open();
+                }
+            }
+            break
+        }
+        case 'bsrdialog': {
+            HtmlDialog.menu.style.display="block";
+            const menu = document.querySelector(`[data-memu-popup="bsrdialog"]`)
+            if (menu.style.visibility === "hidden") {
+                if (state !== 'false') {
+                    HtmlDialog.open();
+                }
+            }
+            break
+        }
+        default:{
+            HtmlMenu.menu.style.display="block";
+            HtmlOrm.menu.style.display="block";
+            HtmlSau.menu.style.display="block";
+            HtmlDialog.menu.style.display="block";
+            break
         }
     }
-    if (mode === 'bsrorm') {
-        const menu = document.querySelector(`[data-memu-popup="bsrorm"]`)
-        if (menu.style.visibility === "hidden") {
-            if(state!=='false'){
-                HtmlOrm.open();
-            }
 
-        }
-    }
-    if (mode === 'bsrsau') {
-        const menu = document.querySelector(`[data-memu-popup="bsrsau"]`)
-        if (menu.style.visibility === "hidden") {
-            if(state!=='false'){
-                HtmlSau.open();
-            }
-
-        }
-    }
-
-    if (mode === 'bsrdialog') {
-        const menu = document.querySelector(`[data-memu-popup="bsrdialog"]`)
-        if (menu.style.visibility === "hidden") {
-            if(state!=='false'){
-                HtmlDialog.open();
-            }
-
-        }
-    }
 
     const list = document.querySelectorAll('[data-menu-tag]');
     for (let item of list) {

@@ -1,6 +1,6 @@
 import React from "react";
 import MenuItem from "bsr-menu";
-import CodeSnippetJavaScript from "../codeSnippetJavaScript";
+import {CodeSnippetJavaScript} from "../codeSnippetJavaScript";
 
 
 const code = `
