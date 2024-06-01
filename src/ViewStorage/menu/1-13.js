@@ -121,7 +121,7 @@ a[data-wrapper]:hover, a[data-wrapper]:visited, a[data-wrapper]:link, a[data-wra
 `
 
 
-export function P1_13() {
+export default  function P1_13() {
 
     return (
       <CodeSnippetCss code={code}/>

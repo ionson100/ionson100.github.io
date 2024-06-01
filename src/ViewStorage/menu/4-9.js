@@ -77,7 +77,7 @@ const codeCss=`
 /*-------------------------------------*/
 
 
-export function P4_9() {
+export default function P4_9() {
     const mRefLabel = useRef();
 
     return (

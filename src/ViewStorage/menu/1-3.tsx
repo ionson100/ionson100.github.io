@@ -23,7 +23,7 @@ const App = () => {
 };
 `;
 
-export function P1_3() {
+export  default function P1_3() {
     return (
 
         <>

@@ -37,7 +37,7 @@ function myCheckBox(){
     </div>
 }
 
-export function P1_16() {
+export default  function P1_16() {
 
     return (
         <>

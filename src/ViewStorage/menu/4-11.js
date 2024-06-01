@@ -133,7 +133,7 @@ class BodyDialog extends BaseBodyDialog {
     }
 }
 
-export function P4_11() {
+export default function P4_11() {
     const mRefLabel = useRef();
 
     return (

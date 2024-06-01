@@ -4,7 +4,12 @@ import {SimpleText, SimpleTextRed} from "./builderContent";
 export const widthM = 250
 
 export function MenuHorizontalBand() {
-    return (<div className={'band'}></div>)
+    return (
+        <div onClick={e => {
+            e.preventDefault();
+            e.stopPropagation()
+        }} className={'band'}></div>
+    )
 }
 
 const innerWidth = widthM - 2
@@ -146,7 +151,8 @@ export function BuilderBsrDialog() {
             <MenuItem url={`#mode=bsrdialog&page=4-1`} tag={'4-1'} style={{width: innerWidth}}
                       content={SimpleText('Examples')}/>
             <MenuHorizontalBand/>
-            <MenuItem url={`#mode=bsrdialog&page=4-2`} tag={'4-2'} style={{width: innerWidth}} title={'closeModalDialogClickForeignArea'}
+            <MenuItem url={`#mode=bsrdialog&page=4-2`} tag={'4-2'} style={{width: innerWidth}}
+                      title={'closeModalDialogClickForeignArea'}
                       content={SimpleText('closeModalDialogClickForeignArea')}/>
             <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrdialog&page=4-3`} tag={'4-3'} style={{width: innerWidth}}
@@ -173,7 +179,8 @@ export function BuilderBsrDialog() {
             <MenuItem url={`#mode=bsrdialog&page=4-10`} tag={'4-10'} style={{width: innerWidth}}
                       content={SimpleText('Difficult dialogues')}/>
             <MenuHorizontalBand/>
-            <MenuItem url={`#mode=bsrdialog&page=4-11`} tag={'4-11'} style={{width: innerWidth}} title={'Difficult dialogues SelfClose'}
+            <MenuItem url={`#mode=bsrdialog&page=4-11`} tag={'4-11'} style={{width: innerWidth}}
+                      title={'Difficult dialogues SelfClose'}
                       content={SimpleText('Difficult dialogues SelfClose')}/>
             <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrdialog&page=4-12`} tag={'4-12'} style={{width: innerWidth}}

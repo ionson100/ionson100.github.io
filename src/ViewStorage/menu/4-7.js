@@ -45,7 +45,7 @@ export function P4_7() {
 /*-------------------------------------*/
 
 
-export function P4_7() {
+export default function P4_7() {
     const mRefLabel = useRef();
     const mRefLabel2 = useRef();
     return (

@@ -24,7 +24,7 @@ const App = () => {
 };
 `;
 
-export function P1_2() {
+export default  function P1_2() {
     return (
 
         <>

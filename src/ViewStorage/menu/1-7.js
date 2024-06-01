@@ -19,7 +19,7 @@ import {FaAnglesDown, FaAnglesRight} from "react-icons/fa6";
 
 const styleImage={
     paddingTop:5,
-    paddingRight:5,
+    paddingRight:5
 }
 
 
@@ -70,7 +70,7 @@ export function P1_5(){
 
 
 
-export function P1_7(){
+export  default function P1_7(){
     const mRefMenu=useRef();
     return(
         <>

@@ -1,6 +1,6 @@
 import React from "react";
 
-export function IndexBsrMenu() {
+export default function IndexBsrMenu() {
 
 
     return (
@@ -9,6 +9,7 @@ export function IndexBsrMenu() {
                 <caption>
                     props bsr-menu
                 </caption>
+                <tbody>
                 <tr>
                     <th style={{width: "20%"}}>Name</th>
                     <th style={{width: "30%"}}>Type</th>
@@ -206,19 +207,19 @@ export function IndexBsrMenu() {
                     <td>undefined</td>
                     <td>User rendering content menu</td>
                 </tr>
+                </tbody>
             </table>
             <br/>
             <table style={{width: "80%"}}>
                 <caption>
                     Instance functions
                 </caption>
+                <tbody>
                 <tr>
                     <th style={{width: "20%"}}>Name</th>
                     <th style={{width: "30%"}}>Type</th>
                     <th style={{width: "50%"}}>Description</th>
                 </tr>
-
-
                 <tr>
                     <td data-d={1}><a href="#mode=bsrmenu&page=1-6">open()</a></td>
                     <td>()=&rang;void</td>
@@ -229,8 +230,6 @@ export function IndexBsrMenu() {
                     <td>()=&rang;void</td>
                     <td>Open menu (positionPopup: dropDown)</td>
                 </tr>
-
-
                 <tr>
                     <td data-d={1}><a href="#mode=bsrmenu&page=1-8">menu</a></td>
                     <td>get menu(): HTMLDivElement | null</td>
@@ -246,8 +245,6 @@ export function IndexBsrMenu() {
                     <td>get wrapper(): HTMLAnchorElement | null</td>
                     <td>Return element (a) composition menu</td>
                 </tr>
-
-
                 <tr>
                     <td data-d={1}><a href="#mode=bsrmenu&page=1-7">setShow(boolean)</a></td>
                     <td>(a:boolean)=&rang;void</td>
@@ -259,26 +256,22 @@ export function IndexBsrMenu() {
                     <td>(a:boolean)=&rang;void</td>
                     <td>Set disable menu</td>
                 </tr>
-
-
                 <tr>
                     <td data-d={1}><a href="#mode=bsrmenu&page=1-10">setContent( any,any,any)</a></td>
                     <td>(contentLeft?: any, content?: any, contentRich?: any): void</td>
                     <td>Changing menu content</td>
                 </tr>
-
-
                 <tr>
                     <td data-d={1}>setUrl(string)</td>
                     <td>(url: string | undefined): void</td>
                     <td>Changing menu url</td>
                 </tr>
-
                 <tr>
                     <td data-d={1}>setTag(string)</td>
                     <td>(tag: any | undefined): void</td>
                     <td>Changing menu tag</td>
                 </tr>
+                </tbody>
 
             </table>
 
@@ -286,6 +279,7 @@ export function IndexBsrMenu() {
                 <caption>
                     Static functions
                 </caption>
+                <tbody>
                 <tr>
                     <th style={{width: "20%"}}>Name</th>
                     <th style={{width: "30%"}}>Type</th>
@@ -298,8 +292,7 @@ export function IndexBsrMenu() {
                     <td>(callback:(()=&rang;void) | undefined)=&rang;void</td>
                     <td>Closes the menu chain</td>
                 </tr>
-
-
+                </tbody>
             </table>
         </>
 

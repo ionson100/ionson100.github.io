@@ -5,7 +5,7 @@ import {CodeSnippetJavaScript} from "../codeSnippetJavaScript";
 import {AiFillCaretLeft, AiFillCaretRight} from "react-icons/ai";
 
 
-export function P1_11() {
+export  default function P1_11() {
 
     return (
         <>

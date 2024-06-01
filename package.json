@@ -48,6 +48,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "rc-table": "^7.45.5",
+    "react-scroll-to-top": "^3.0.0",
     "react-syntax-highlighter": "^15.5.0"
   }
 }

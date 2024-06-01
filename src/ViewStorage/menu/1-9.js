@@ -35,7 +35,7 @@ export function P1_9() {
 `
 
 /*-------------------------------------*/
-export function P1_9() {
+export default  function P1_9() {
     return (
         <>
 

@@ -122,7 +122,7 @@ export function GetRegisterDialog() {
     but.push(<button className={'button-10'} data-mode={100} onClick={()=>{
         ConfirmDialogF()
     }
-    }>showmodal</button>)
+    }>showModal</button>)
     but.push(<button className={'button-10'} data-mode={1}>register</button>)
     but.push(< button className={'button-10'} data-mode={-1} data-focus={true}>close</button>);
 

@@ -31,7 +31,7 @@ const App = () => {
 `;
 /*--------------------------------*/
 
-export function P1_4() {
+export default  function P1_4() {
     const mRefMenu=useRef();
     return (
         <>

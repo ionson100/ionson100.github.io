@@ -46,7 +46,7 @@ function myBuildContent({contentLeft, contentCenter, contentRight, iconDropOpen,
     )
 }
 
-export function P1_15() {
+export  default function P1_15() {
 
     return (
         <>

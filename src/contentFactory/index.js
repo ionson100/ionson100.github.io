@@ -1,50 +1,66 @@
 import ReactDOM from "react-dom/client";
-import React from "react";
+import React, {lazy, Suspense } from "react";
 
 
-import {IndexBsrMenu} from "../ViewStorage/menu/bsrMenu";
-import {P1_1} from "../ViewStorage/menu/1-1";
-import {P1_2} from "../ViewStorage/menu/1-2";
-import {P1_3} from "../ViewStorage/menu/1-3";
-import {P1_4} from "../ViewStorage/menu/1-4";
-import {P1_5} from "../ViewStorage/menu/1-5";
-import {P1_6} from "../ViewStorage/menu/1-6";
-import {P1_7} from "../ViewStorage/menu/1-7";
-import {P1_8} from "../ViewStorage/menu/1-8";
-import {P1_9} from "../ViewStorage/menu/1-9";
-import {P1_10_} from "../ViewStorage/menu/1-10_";
-import {P1_11} from "../ViewStorage/menu/1-11";
-import {P1_13} from "../ViewStorage/menu/1-13";
-import {P1_12} from "../ViewStorage/menu/1-12";
-import {P1_14} from "../ViewStorage/menu/1-14";
-import {P1_15} from "../ViewStorage/menu/1-15";
-import {P1_16} from "../ViewStorage/menu/1-16";
-import {P1_17} from "../ViewStorage/menu/1-17";
-import {IndexBsrSau} from "../ViewStorage/menu/bsrSau";
-import P3_1 from "../ViewStorage/menu/3-1";
-import P3_2 from "../ViewStorage/menu/3-2";
-import P3_3 from "../ViewStorage/menu/3-3";
-import P3_4 from "../ViewStorage/menu/3-4";
-import P3_5 from "../ViewStorage/menu/3-5";
-import P3_6 from "../ViewStorage/menu/3-6";
-import P3_7 from "../ViewStorage/menu/3-7";
-import P3_8 from "../ViewStorage/menu/3-8";
-import P3_9 from "../ViewStorage/menu/3-9";
-import P3_10 from "../ViewStorage/menu/3-10";
-import P4_1 from "../ViewStorage/menu/4-1";
-import {IndexBsrDialog} from "../ViewStorage/menu/bsrdialog";
-import {P4_2} from "../ViewStorage/menu/4-2";
-import {P4_3} from "../ViewStorage/menu/4-3";
-import {P4_4} from "../ViewStorage/menu/4-4";
-import {P4_5} from "../ViewStorage/menu/4-5";
-import {P4_6} from "../ViewStorage/menu/4-6";
-import {P4_7} from "../ViewStorage/menu/4-7";
-import {P4_8} from "../ViewStorage/menu/4-8";
-import {P4_9} from "../ViewStorage/menu/4-9";
-import {P4_10} from "../ViewStorage/menu/4-10";
-import {P4_11} from "../ViewStorage/menu/4-11";
-import {P4_12} from "../ViewStorage/menu/4-12";
-import {P4_14} from "../ViewStorage/menu/4-14";
+
+const IndexBsrMenu = lazy(() => import("../ViewStorage/menu/bsrMenu"));
+const IndexBsrSau = lazy(() => import("../ViewStorage/menu/bsrSau"));
+const IndexBsrDialog = lazy(() => import("../ViewStorage/menu/bsrdialog"));
+
+const P1_1 = lazy(() => import("../ViewStorage/menu/1-1"));
+const P1_2 = lazy(() => import("../ViewStorage/menu/1-2"));
+const P1_3 = lazy(() => import("../ViewStorage/menu/1-3"));
+const P1_4 = lazy(() => import("../ViewStorage/menu/1-4"));
+const P1_5 = lazy(() => import("../ViewStorage/menu/1-5"));
+const P1_6 = lazy(() => import("../ViewStorage/menu/1-6"));
+const P1_7 = lazy(() => import("../ViewStorage/menu/1-7"));
+const P1_8 = lazy(() => import("../ViewStorage/menu/1-8"));
+const P1_9 = lazy(() => import("../ViewStorage/menu/1-9"));
+const P1_10_ = lazy(() => import("../ViewStorage/menu/1-10_"));
+const P1_11 = lazy(() => import( "../ViewStorage/menu/1-11"));
+const P1_13 = lazy(() => import("../ViewStorage/menu/1-13"));
+const P1_12 = lazy(() => import("../ViewStorage/menu/1-12"));
+const P1_14 = lazy(() => import("../ViewStorage/menu/1-14"));
+const P1_15 = lazy(() => import("../ViewStorage/menu/1-15"));
+const P1_16 = lazy(() => import("../ViewStorage/menu/1-16"));
+const P1_17 = lazy(() => import("../ViewStorage/menu/1-17"));
+
+
+
+
+const P3_1 = lazy(() => import('../ViewStorage/menu/3-1'));
+const P3_2 = lazy(() => import("../ViewStorage/menu/3-2"));
+const P3_3 = lazy(() => import("../ViewStorage/menu/3-3"));
+
+
+const P3_4 = lazy(() => import("../ViewStorage/menu/3-4"));
+const P3_5 = lazy(() => import("../ViewStorage/menu/3-5"));
+const P3_6 = lazy(() => import("../ViewStorage/menu/3-6"));
+const P3_7 = lazy(() => import("../ViewStorage/menu/3-7"));
+const P3_8 = lazy(() => import("../ViewStorage/menu/3-8"));
+const P3_9 = lazy(() => import("../ViewStorage/menu/3-9"));
+const P3_10 = lazy(() => import("../ViewStorage/menu/3-10"));
+const P4_1 = lazy(() => import("../ViewStorage/menu/4-1"));
+
+
+const P4_2 = lazy(() => import("../ViewStorage/menu/4-2"));
+const P4_3 = lazy(() => import("../ViewStorage/menu/4-3"));
+
+
+const P4_4 = lazy(() => import("../ViewStorage/menu/4-4"));
+const P4_5 = lazy(() => import("../ViewStorage/menu/4-5"));
+const P4_6 = lazy(() => import("../ViewStorage/menu/4-6"));
+const P4_7 = lazy(() => import("../ViewStorage/menu/4-7"));
+
+
+
+const P4_8 = lazy(() => import('../ViewStorage/menu/4-8'));
+const P4_9 = lazy(() => import('../ViewStorage/menu/4-9'));
+const P4_10 = lazy(() => import('../ViewStorage/menu/4-10'));
+const P4_11 = lazy(() => import('../ViewStorage/menu/4-11'));
+const P4_12 = lazy(() => import('../ViewStorage/menu/4-12'));
+const P4_14 = lazy(() => import('../ViewStorage/menu/4-14'));
+
 
 
 
@@ -53,6 +69,8 @@ const ContentHub = {
 }
 
 export function ContentFactory(tag) {
+
+
     if(tag.length===0) return;
     if (!ContentHub.content) {
 
@@ -241,8 +259,13 @@ export function ContentFactory(tag) {
 
 
  ContentHub.content.render(
-
-     <div>{data}</div>
+     <Suspense  fallback={<div>load page</div>}>
+         <div id={'sc-123'}>{data}</div>
+     </Suspense>
  );
+    setTimeout(() => {
+        document.getElementById('sc-123')?.scrollIntoView({ behavior: "smooth" });
+    },100)
+
 
 }

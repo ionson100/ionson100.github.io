@@ -3,14 +3,15 @@ import {HtmlDialog, HtmlMenu, HtmlOrm, HtmlSau} from "./index";
 export function PainterMenu(mode, tag, state) {
 
 
-    HtmlMenu.menu.style.display="none";
-    HtmlOrm.menu.style.display="none";
-    HtmlSau.menu.style.display="none";
-    HtmlDialog.menu.style.display="none";
+    HtmlMenu.setShow(false)
+    HtmlOrm.setShow(false)
+    HtmlSau.setShow(false)
+    HtmlDialog.setShow(false)
+
 
     switch (mode) {
         case 'bsrmenu': {
-            HtmlMenu.menu.style.display="block";
+            HtmlMenu.setShow(true)
             const menu = document.querySelector(`[data-memu-popup="bsrmenu"]`)
 
             if (menu.style.visibility === "hidden") {
@@ -21,7 +22,7 @@ export function PainterMenu(mode, tag, state) {
             break
         }
         case 'bsrorm': {
-            HtmlOrm.menu.style.display="block";
+            HtmlOrm.setShow(true)
             const menu = document.querySelector(`[data-memu-popup="bsrorm"]`)
             if (menu.style.visibility === "hidden") {
                 if (state !== 'false') {
@@ -31,7 +32,7 @@ export function PainterMenu(mode, tag, state) {
             break
         }
         case 'bsrsau': {
-            HtmlSau.menu.style.display="block";
+            HtmlSau.setShow(true)
             const menu = document.querySelector(`[data-memu-popup="bsrsau"]`)
             if (menu.style.visibility === "hidden") {
                 if (state !== 'false') {
@@ -41,7 +42,7 @@ export function PainterMenu(mode, tag, state) {
             break
         }
         case 'bsrdialog': {
-            HtmlDialog.menu.style.display="block";
+            HtmlDialog.setShow(true)
             const menu = document.querySelector(`[data-memu-popup="bsrdialog"]`)
             if (menu.style.visibility === "hidden") {
                 if (state !== 'false') {
@@ -51,13 +52,14 @@ export function PainterMenu(mode, tag, state) {
             break
         }
         default:{
-            HtmlMenu.menu.style.display="block";
-            HtmlOrm.menu.style.display="block";
-            HtmlSau.menu.style.display="block";
-            HtmlDialog.menu.style.display="block";
+            HtmlMenu.setShow(true)
+            HtmlOrm.setShow(true)
+            HtmlSau.setShow(true)
+            HtmlDialog.setShow(true)
             break
         }
     }
+
 
 
     const list = document.querySelectorAll('[data-menu-tag]');

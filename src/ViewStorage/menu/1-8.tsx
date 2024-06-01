@@ -37,7 +37,7 @@ export function P1_8() {
 `
 
 /*------------------------------------*/
-export function P1_8() {
+export default  function P1_8() {
 
     const mRefMenu = useRef<InstanceType<typeof MenuItem>>(null)
 

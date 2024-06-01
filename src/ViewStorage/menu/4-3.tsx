@@ -9,7 +9,7 @@ import React, {useRef} from "react";
 import {ShowBsrDialog,ModalDialog} from "bsr-modaldialog";
 import 'bsr-modaldialog/dist/index.css'
 
-export function P4_3() {
+export  function P4_3() {
     const mRefLabel=useRef<HTMLLabelElement>(null);
     const mRefDialog=React.useRef<InstanceType<typeof ModalDialog>>(null)
     return (
@@ -47,7 +47,7 @@ export function P4_3() {
 /*-------------------------------------*/
 
 
-export function P4_3() {
+export default function P4_3() {
     const mRefLabel=useRef<HTMLLabelElement>(null);
     let mRefDialog=React.useRef<InstanceType<typeof ModalDialog>>(null)
     return (

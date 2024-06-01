@@ -1,6 +1,6 @@
 import React from "react";
 
-export function IndexBsrDialog() {
+export default function IndexBsrDialog() {
 
 
     return (
@@ -9,6 +9,7 @@ export function IndexBsrDialog() {
                 <caption>
                     props bsr-menu
                 </caption>
+                <tbody>
                 <tr>
                     <th style={{width: "20%"}}>Name</th>
                     <th style={{width: "30%"}}>Type</th>
@@ -180,7 +181,7 @@ export function IndexBsrDialog() {
                     <td>'bottom-stripe'</td>
                     <td>dialogue bottom stripe style class</td>
                 </tr>
-
+                </tbody>
             </table>
             <br/>
 
@@ -189,6 +190,7 @@ export function IndexBsrDialog() {
                 <caption>
                     Instance functions
                 </caption>
+                <tbody>
                 <tr>
                     <th style={{width: "20%"}}>Name</th>
                     <th style={{width: "30%"}}>Type</th>
@@ -201,6 +203,7 @@ export function IndexBsrDialog() {
                     <td>()=&rang;void</td>
                     <td>Closing a dialog programmatically</td>
                 </tr>
+                </tbody>
 
             </table>
         </>

@@ -24,7 +24,7 @@ export function P1_12() {
 function MyClick(e:InstanceType<typeof MenuItem>){
     alert( e.props.tag)
 }
-export function P1_12() {
+export default  function P1_12() {
 
     return (
         <>

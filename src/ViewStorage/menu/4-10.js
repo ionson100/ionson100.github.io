@@ -23,7 +23,7 @@ class BodyDialog extends BaseBodyDialog {
     validate(mode) {
         if(mode==="1"){
             const text=this.mRefInput.current.value;
-            if(text.length==0){
+            if(text.length===0){
                 alert(" input value empty")
                 return false;
             }
@@ -110,7 +110,7 @@ class BodyDialog extends BaseBodyDialog {
     validate(mode) {
         if(mode==="1"){
             const text=this.mRefInput.current.value;
-            if(text.length==0){
+            if(text.length===0){
                 alert(" input value empty")
                 return false;
             }
@@ -147,7 +147,7 @@ class BodyDialog extends BaseBodyDialog {
     }
 }
 
-export function P4_10() {
+export default function P4_10() {
     const mRefLabel = useRef();
 
     return (

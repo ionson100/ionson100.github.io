@@ -45,7 +45,7 @@ export function P1_5(){
 `;
 
 /*--------------------------------*/
-export function P1_5(){
+export default  function P1_5(){
     return(
       <>
           <div style={{padding:5,background:"#f1efef",width:"fit-content"}}>

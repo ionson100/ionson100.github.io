@@ -33,7 +33,7 @@ function MyVisible(e: InstanceType<typeof MenuItem>) {
     })
 }
 
-export function P1_14() {
+export default  function P1_14() {
 
     return (
         <>

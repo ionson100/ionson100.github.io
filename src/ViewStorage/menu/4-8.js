@@ -48,7 +48,7 @@ export function P4_8() {
 /*-------------------------------------*/
 
 
-export function P4_8() {
+export default function P4_8() {
     const mRefLabel = useRef();
 
     return (

@@ -95,7 +95,7 @@ function InnerDrop({message,title}: { message: string,title?:string }) {
         style={{width:250}}/> )
 }
 
-export function P1_1() {
+export default function P1_1() {
     const  mRef=useRef<InstanceType<typeof MenuItem>>(null);
     return (
         <>

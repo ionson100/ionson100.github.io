@@ -73,7 +73,7 @@ function FormBox() {
     </div>
 }
 
-export function P1_17() {
+export  default function P1_17() {
 
     return (
         <>

@@ -4,7 +4,7 @@ const code=`<form method="dialog">
  <button>Close Dialog</button>
 </form>
 `
-export function P4_14(){
+export default function P4_14(){
     return(
         <p>
             1. The code to close the form doesn't work<br/>

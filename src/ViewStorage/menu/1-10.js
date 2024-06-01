@@ -44,7 +44,7 @@ const  content={
     content:<span style={{paddingLeft:10}}>Test</span>,
     contentRich:<AiFillCaretRight/>
 }
-export function P1_10() {
+export default  function P1_10() {
     const mRefMenu=useRef();
     return (
         <>
