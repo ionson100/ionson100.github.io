@@ -1,6 +1,5 @@
 import React from "react";
 import {ShowBsrDialog} from "bsr-modaldialog";
-import 'bsr-modaldialog/dist/index.css'
 import { FaReact } from "react-icons/fa6";
 export default function SimpleModalClickPage ({callback}){
 

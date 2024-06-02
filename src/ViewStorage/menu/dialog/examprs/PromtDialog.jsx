@@ -1,6 +1,5 @@
 
 import {ShowBsrDialog,BaseBodyDialog} from "bsr-modaldialog";
-import 'bsr-modaldialog/dist/index.css'
 import { FaReact } from "react-icons/fa6";
 import React from "react";
 import SimpleAlert from "./Alert";

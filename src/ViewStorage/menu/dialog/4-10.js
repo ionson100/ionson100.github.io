@@ -1,6 +1,5 @@
 import React, {useRef} from "react";
 import {ShowBsrDialog, BaseBodyDialog} from "bsr-modaldialog";
-import 'bsr-modaldialog/dist/index.css'
 import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 
 /*-------------------------------------*/

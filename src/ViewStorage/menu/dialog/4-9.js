@@ -1,6 +1,5 @@
 import React, {useRef} from "react";
 import {ShowBsrDialog} from "bsr-modaldialog";
-import 'bsr-modaldialog/dist/index.css'
 import {CodeSnippetCss, CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 import { FcOk } from "react-icons/fc";
 

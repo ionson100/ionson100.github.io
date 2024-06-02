@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wwwroot/static/css/main.cf302741.css",
+    "main.js": "/wwwroot/static/js/main.df20351b.js",
+    "index.html": "/wwwroot/index.html",
+    "main.cf302741.css.map": "/wwwroot/static/css/main.cf302741.css.map",
+    "main.df20351b.js.map": "/wwwroot/static/js/main.df20351b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf302741.css",
+    "static/js/main.df20351b.js"
+  ]
+}

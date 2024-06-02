@@ -1,6 +1,5 @@
 import React, {useRef} from "react";
 import {ShowBsrDialog} from "bsr-modaldialog";
-import 'bsr-modaldialog/dist/index.css'
 import {FaReact} from "react-icons/fa6";
 import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 

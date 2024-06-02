@@ -1,6 +1,5 @@
 import React from "react";
 import {ShowBsrDialog} from "bsr-modaldialog";
-import 'bsr-modaldialog/dist/index.css'
 import { BiSolidErrorAlt } from "react-icons/bi";
 export default async function  SimpleAlert (text){
            await ShowBsrDialog({

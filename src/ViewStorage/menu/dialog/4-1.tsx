@@ -1,6 +1,5 @@
 import React, {useRef} from "react";
 import {ModalDialog} from "bsr-modaldialog";
-import 'bsr-modaldialog/dist/index.css'
 
 import SimpleModal from "./examprs/SimpleDialog";
 import SimpleModalClickPage from "./examprs/SinpleModalClickPage";

@@ -1,7 +1,5 @@
 import React from "react";
 import {ShowBsrDialog} from "bsr-modaldialog";
-import 'bsr-modaldialog/dist/index.css'
-import { FaReact } from "react-icons/fa6";
 import {FcOk} from "react-icons/fc";
 export default function AlertPanel ({callback}){
 

@@ -1,6 +1,6 @@
 import React from "react";
 import AvatarUploader from 'bsr-sau'
-import 'bsr-sau/dist/index.css'
+
 import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 /*-----------------------------------*/
 const code=`
