@@ -7,59 +7,60 @@ const IndexBsrMenu = lazy(() => import("../ViewStorage/menu/bsrMenu"));
 const IndexBsrSau = lazy(() => import("../ViewStorage/menu/bsrSau"));
 const IndexBsrDialog = lazy(() => import("../ViewStorage/menu/bsrdialog"));
 
-const P1_1 = lazy(() => import("../ViewStorage/menu/1-1"));
-const P1_2 = lazy(() => import("../ViewStorage/menu/1-2"));
-const P1_3 = lazy(() => import("../ViewStorage/menu/1-3"));
-const P1_4 = lazy(() => import("../ViewStorage/menu/1-4"));
-const P1_5 = lazy(() => import("../ViewStorage/menu/1-5"));
-const P1_6 = lazy(() => import("../ViewStorage/menu/1-6"));
-const P1_7 = lazy(() => import("../ViewStorage/menu/1-7"));
-const P1_8 = lazy(() => import("../ViewStorage/menu/1-8"));
-const P1_9 = lazy(() => import("../ViewStorage/menu/1-9"));
-const P1_10_ = lazy(() => import("../ViewStorage/menu/1-10_"));
-const P1_11 = lazy(() => import( "../ViewStorage/menu/1-11"));
-const P1_13 = lazy(() => import("../ViewStorage/menu/1-13"));
-const P1_12 = lazy(() => import("../ViewStorage/menu/1-12"));
-const P1_14 = lazy(() => import("../ViewStorage/menu/1-14"));
-const P1_15 = lazy(() => import("../ViewStorage/menu/1-15"));
-const P1_16 = lazy(() => import("../ViewStorage/menu/1-16"));
-const P1_17 = lazy(() => import("../ViewStorage/menu/1-17"));
+
+const P1_1 = lazy(() => import("../ViewStorage/menu/menuCore/1-1"));
+const P1_2 = lazy(() => import("../ViewStorage/menu/menuCore/1-2"));
+const P1_3 = lazy(() => import("../ViewStorage/menu/menuCore/1-3"));
+const P1_4 = lazy(() => import("../ViewStorage/menu/menuCore/1-4"));
+const P1_5 = lazy(() => import("../ViewStorage/menu/menuCore/1-5"));
+const P1_6 = lazy(() => import("../ViewStorage/menu/menuCore/1-6"));
+const P1_7 = lazy(() => import("../ViewStorage/menu/menuCore/1-7"));
+const P1_8 = lazy(() => import("../ViewStorage/menu/menuCore/1-8"));
+const P1_9 = lazy(() => import("../ViewStorage/menu/menuCore/1-9"));
+const P1_10_ = lazy(() => import("../ViewStorage/menu/menuCore/1-10_"));
+const P1_11 = lazy(() => import( "../ViewStorage/menu/menuCore/1-11"));
+const P1_13 = lazy(() => import("../ViewStorage/menu/menuCore/1-13"));
+const P1_12 = lazy(() => import("../ViewStorage/menu/menuCore/1-12"));
+const P1_14 = lazy(() => import("../ViewStorage/menu/menuCore/1-14"));
+const P1_15 = lazy(() => import("../ViewStorage/menu/menuCore/1-15"));
+const P1_16 = lazy(() => import("../ViewStorage/menu/menuCore/1-16"));
+const P1_17 = lazy(() => import("../ViewStorage/menu/menuCore/1-17"));
 
 
 
 
-const P3_1 = lazy(() => import('../ViewStorage/menu/3-1'));
-const P3_2 = lazy(() => import("../ViewStorage/menu/3-2"));
-const P3_3 = lazy(() => import("../ViewStorage/menu/3-3"));
+const P3_1 = lazy(() => import('../ViewStorage/menu/sau/3-1'));
+const P3_2 = lazy(() => import("../ViewStorage/menu/sau/3-2"));
+const P3_3 = lazy(() => import("../ViewStorage/menu/sau/3-3"));
 
 
-const P3_4 = lazy(() => import("../ViewStorage/menu/3-4"));
-const P3_5 = lazy(() => import("../ViewStorage/menu/3-5"));
-const P3_6 = lazy(() => import("../ViewStorage/menu/3-6"));
-const P3_7 = lazy(() => import("../ViewStorage/menu/3-7"));
-const P3_8 = lazy(() => import("../ViewStorage/menu/3-8"));
-const P3_9 = lazy(() => import("../ViewStorage/menu/3-9"));
-const P3_10 = lazy(() => import("../ViewStorage/menu/3-10"));
-const P4_1 = lazy(() => import("../ViewStorage/menu/4-1"));
+const P3_4 = lazy(() => import("../ViewStorage/menu/sau/3-4"));
+const P3_5 = lazy(() => import("../ViewStorage/menu/sau/3-5"));
+const P3_6 = lazy(() => import("../ViewStorage/menu/sau/3-6"));
+const P3_7 = lazy(() => import("../ViewStorage/menu/sau/3-7"));
+const P3_8 = lazy(() => import("../ViewStorage/menu/sau/3-8"));
+const P3_9 = lazy(() => import("../ViewStorage/menu/sau/3-9"));
+const P3_10 = lazy(() => import("../ViewStorage/menu/sau/3-10"));
+const P4_1 = lazy(() => import("../ViewStorage/menu/dialog/4-1"));
 
 
-const P4_2 = lazy(() => import("../ViewStorage/menu/4-2"));
-const P4_3 = lazy(() => import("../ViewStorage/menu/4-3"));
+const P4_2 = lazy(() => import("../ViewStorage/menu/dialog/4-2"));
+const P4_3 = lazy(() => import("../ViewStorage/menu/dialog/4-3"));
 
 
-const P4_4 = lazy(() => import("../ViewStorage/menu/4-4"));
-const P4_5 = lazy(() => import("../ViewStorage/menu/4-5"));
-const P4_6 = lazy(() => import("../ViewStorage/menu/4-6"));
-const P4_7 = lazy(() => import("../ViewStorage/menu/4-7"));
+const P4_4 = lazy(() => import("../ViewStorage/menu/dialog/4-4"));
+const P4_5 = lazy(() => import("../ViewStorage/menu/dialog/4-5"));
+const P4_6 = lazy(() => import("../ViewStorage/menu/dialog/4-6"));
+const P4_7 = lazy(() => import("../ViewStorage/menu/dialog/4-7"));
 
 
 
-const P4_8 = lazy(() => import('../ViewStorage/menu/4-8'));
-const P4_9 = lazy(() => import('../ViewStorage/menu/4-9'));
-const P4_10 = lazy(() => import('../ViewStorage/menu/4-10'));
-const P4_11 = lazy(() => import('../ViewStorage/menu/4-11'));
-const P4_12 = lazy(() => import('../ViewStorage/menu/4-12'));
-const P4_14 = lazy(() => import('../ViewStorage/menu/4-14'));
+const P4_8 = lazy(() => import('../ViewStorage/menu/dialog/4-8'));
+const P4_9 = lazy(() => import('../ViewStorage/menu/dialog/4-9'));
+const P4_10 = lazy(() => import('../ViewStorage/menu/dialog/4-10'));
+const P4_11 = lazy(() => import('../ViewStorage/menu/dialog/4-11'));
+const P4_12 = lazy(() => import('../ViewStorage/menu/dialog/4-12'));
+const P4_14 = lazy(() => import('../ViewStorage/menu/dialog/4-14'));
 
 
 

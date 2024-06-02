@@ -1,8 +1,14 @@
+import React, {useRef} from "react";
+import {ShowBsrDialog, BaseBodyDialog} from "bsr-modaldialog";
+import 'bsr-modaldialog/dist/index.css'
+import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
+import {GetRegisterDialog} from "../registerForm";
+
+/*-------------------------------------*/
+const code = `
 import {BaseBodyDialog, ShowBsrDialog} from "bsr-modaldialog";
 import React, {ReactElement, useRef} from "react";
 import {FaUserSecret} from "react-icons/fa";
-import {ConfirmDialogF} from "./confirmDialog";
-
 
 export class MyForm extends BaseBodyDialog {
 
@@ -17,10 +23,6 @@ export class MyForm extends BaseBodyDialog {
         this.mRefError.current!.innerText = ''
 
 
-        if (mode === '100') {
-            return false;
-        }
-
         if (!mode || mode === '-2' || mode === '-1') {
             return true;
         }
@@ -28,7 +30,7 @@ export class MyForm extends BaseBodyDialog {
         if (mode === '1') {// click register
 
 
-            if (this.mRefFirstName.current!.value === '') {
+           f (this.mRefFirstName.current!.value === '') {
                 this.mRefError.current!.innerText = 'First name empty.'
                 this.mRefFirstName.current?.focus()
                 return false;
@@ -72,9 +74,8 @@ export class MyForm extends BaseBodyDialog {
     }
 
     componentDidMount() {
-        // this.validate = this.validate.bind(this);
         setTimeout(() => {
-            this.mRefFirstName!.current!.focus()// override focus button dialog :close
+            this.mRefFirstName!.current!.focus()// override focus button dialog :close (if there)
         }, 100)
     }
 
@@ -119,19 +120,19 @@ export class MyForm extends BaseBodyDialog {
 export function GetRegisterDialog() {
     const mRefLabel = useRef<HTMLLabelElement>(null)
     const but: ReactElement[] = []
-    but.push(<a style={{fontSize:20}} href="https://medium.com/@ericapantojacs/react-registration-form-d298b3b7e75d">Visit source code</a>)
-    but.push(<button className={'button-10'} data-mode={100} onClick={()=>{
+    but.push(<a data-mode={2} href="https://medium.com/@ericapantojacs/react-registration-form-d298b3b7e75d">Visit source code</a>)
+     but.push(<button className={'button-10'} data-mode={100} onClick={()=>{
         ConfirmDialogF()
     }
     }>showModal</button>)
     but.push(<button className={'button-10'} data-mode={1}>register</button>)
     but.push(< button className={'button-10'} data-mode={-1} data-focus={true}>close</button>);
 
-
     return (
         <>
             <label ref={mRefLabel}></label>
-            <br/> <br/>
+            <br/>
+            
             <button onClick={() => {
                 mRefLabel.current!.innerText = ''
 
@@ -147,6 +148,72 @@ export function GetRegisterDialog() {
                 })
             }}> Click
             </button>
+            
         </>
     )
 }
+
+`
+
+
+
+/*-------------------------------------*/
+class BodyDialog extends BaseBodyDialog {
+    constructor(props) {
+        super(props);
+    }
+
+    /**
+     * Checking the completion of data, making a decision to continue
+     * @param mode data-mode attribute value
+     * @returns {boolean} true - continue false break
+     */
+    validate(mode) {
+        alert(mode)
+        return false; //Prevent closing dialog
+    }
+
+
+    /**
+     * Receiving data from a dialog to pass it outside
+     * @param mode data-mode attribute value
+     * @returns {object} data body
+     */
+    getData(mode) {
+
+        return {
+            data: 'self close',
+            mode: mode
+        }
+
+    }
+
+    selfClose(mode) {
+        super.selfClose(mode);
+    }
+
+
+    render() {
+        return (
+            <button onClick={() => {
+                this.selfClose('123')
+            }}> Self Close (mode:123)</button>
+        )
+    }
+}
+
+export default function P4_12() {
+
+    return(
+            <>
+                <GetRegisterDialog/>
+                <br/>
+                <div>
+                    <CodeSnippetJavaScript code={code}/>
+                </div>
+            </>
+        )
+
+
+}
+
