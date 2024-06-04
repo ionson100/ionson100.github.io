@@ -111,6 +111,7 @@ class BodyDialog extends BaseBodyDialog {
             const text=this.mRefInput.current.value;
             if(text.length===0){
                 alert(" input value empty")
+                this.mRefInput.current.focus()
                 return false;
             }
             return true;
@@ -163,7 +164,7 @@ export default function P4_10() {
                 4. Formation of a response to the promise and closing the dialogue.<br/>
                 <span style={{fontWeight:"bold"}}>Attention: in all procedures the mode argument, the value of the data-mode attribute<br/></span>
             </p>
-            <label ref={mRefLabel}></label>
+            <label  className={'label-then'}  ref={mRefLabel}></label>
 
             <br/> <br/>
             <button onClick={() => {

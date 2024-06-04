@@ -8,15 +8,17 @@ import ConfirmDialog from "./examprs/ConfirmDialog";
 import SimpleConfirm from "./examprs/PromtDialog";
 import FormRegister from "./examprs/FormRegister";
 import AlertPanel from "./examprs/Panel";
+import InnerScroll from "./examprs/InnerScroll";
+import OuterScroll from "./examprs/OuterScroll";
 
-let dialog:HTMLDialogElement|undefined=undefined;
+let dialog:HTMLDivElement|undefined=undefined;
 
 export default function P4_1(){
     const mRefLabel=useRef<HTMLLabelElement>(null);
     const mRefDialog:React.RefObject<InstanceType<typeof ModalDialog>> | null=React.useRef<InstanceType<typeof ModalDialog>>(null)
     return (
         <>
-            <label ref={mRefLabel}></label>
+            <label className={'label-then'} ref={mRefLabel}></label>
             <br/><br/>
             <div style={{display: "flex"}}>
                 <SimpleModal callback={(s: string) => {
@@ -42,6 +44,18 @@ export default function P4_1(){
                         mRefLabel.current.innerText = s;
                 }}/>
                 <AlertPanel callback={(s: string) => {
+                    if(mRefLabel.current)
+                        mRefLabel.current.innerText = s;
+                }}/>
+
+            </div>
+            <br/>
+            <div style={{display: "flex"}}>
+                <InnerScroll callback={(s: string) => {
+                    if(mRefLabel.current)
+                        mRefLabel.current.innerText = s;
+                }}/>
+                <OuterScroll callback={(s: string) => {
                     if(mRefLabel.current)
                         mRefLabel.current.innerText = s;
                 }}/>

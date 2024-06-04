@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 import React, {lazy, Suspense } from "react";
+import P4_15 from "../ViewStorage/menu/dialog/4-15";
 
 
 
@@ -253,6 +254,10 @@ export function ContentFactory(tag) {
         }
         case '4-14':{
             data=<P4_14/>
+            break
+        }
+        case '4-15':{
+            data=<P4_15/>
             break
         }
     }

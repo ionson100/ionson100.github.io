@@ -52,7 +52,7 @@ export default function P4_8() {
 
     return (
         <>
-            <label ref={mRefLabel}></label>
+            <label className={'label-then'}  ref={mRefLabel}></label>
 
             <br/> <br/>
             <button onClick={() => {

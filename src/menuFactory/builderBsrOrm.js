@@ -183,6 +183,10 @@ export function BuilderBsrDialog() {
                       title={'Difficult dialogues SelfClose'}
                       content={SimpleText('Difficult dialogues SelfClose')}/>
             <MenuHorizontalBand/>
+            <MenuItem url={`#mode=bsrdialog&page=4-15`} tag={'4-15'} style={{width: innerWidth}}
+                      title={'Close Dialog from Form'}
+                      content={SimpleText('Close Dialog from Form')}/>
+            <MenuHorizontalBand/>
             <MenuItem url={`#mode=bsrdialog&page=4-12`} tag={'4-12'} style={{width: innerWidth}}
                       content={SimpleText('Register Dialog')}/>
             <MenuHorizontalBand/>

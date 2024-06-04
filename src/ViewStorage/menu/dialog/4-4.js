@@ -42,7 +42,7 @@ export default function P4_4() {
     const mRefLabel = useRef();
     return (
         <>
-            <label ref={mRefLabel}></label>
+            <label className={'label-then'}  ref={mRefLabel}></label>
             <br/> <br/>
             <button onClick={() => {
                 mRefLabel.current.innerText = ''

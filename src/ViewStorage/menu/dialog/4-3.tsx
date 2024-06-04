@@ -51,7 +51,7 @@ export default function P4_3() {
     let mRefDialog=React.useRef<InstanceType<typeof ModalDialog>>(null)
     return (
         <>
-            <label ref={mRefLabel}></label>
+            <label  className={'label-then'}  ref={mRefLabel}></label>
             <br/> <br/>
             <button onClick={() => {
                 mRefLabel.current!.innerText=''

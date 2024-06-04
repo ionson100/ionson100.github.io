@@ -129,7 +129,7 @@ export function GetRegisterDialog() {
 
     return (
         <>
-            <label ref={mRefLabel}></label>
+            <label  className={'label-then'}  ref={mRefLabel}></label>
             <br/>
             
             <button onClick={() => {

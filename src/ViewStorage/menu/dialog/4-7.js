@@ -49,7 +49,7 @@ export default function P4_7() {
     const mRefLabel2 = useRef();
     return (
         <>
-            <label ref={mRefLabel}></label>
+            <label className={'label-then'}  ref={mRefLabel}></label>
             <br/> <br/>
             <label ref={mRefLabel2}></label>
             <br/> <br/>

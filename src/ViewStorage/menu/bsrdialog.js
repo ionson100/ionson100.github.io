@@ -100,20 +100,20 @@ export default function IndexBsrDialog() {
                 </tr>
                 <tr>
                     <td data-d={1}>onCancel</td>
-                    <td>(d:HTMLDialogElement| undefined)=&gt;boolean</td>
+                    <td>(d:HTMLDivElement| undefined)=&gt;boolean</td>
                     <td>()=&gt; return true</td>
                     <td>The event occurs before the modal dialog is closed using the Esc button</td>
                 </tr>
                 <tr>
 
                     <td data-d={1}><a href="#mode=bsrdialog&page=4-7">onClose</a></td>
-                    <td>(dialog: HTMLDialogElement | undefined) =&gt; void</td>
+                    <td>(dialog: HTMLDivElement | undefined) =&gt; void</td>
                     <td>undefined</td>
                     <td>Event when closing a dialog</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#mode=bsrdialog&page=4-7">onShow</a></td>
-                    <td>(dialog: HTMLDialogElement | undefined) =&gt; void</td>
+                    <td>(dialog: HTMLDivElement | undefined) =&gt; void</td>
                     <td>undefined</td>
                     <td>Only for menu where positionPopup='dropDown'.</td>
                 </tr>

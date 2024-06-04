@@ -144,7 +144,7 @@ export default function P4_11() {
                 3. Formation of a promise.<br/>
                 4. Closing the dialogue.<br/>
             </p>
-            <label ref={mRefLabel}></label>
+            <label className={'label-then'}  ref={mRefLabel}></label>
 
             <br/> <br/>
 
