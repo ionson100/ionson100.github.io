@@ -80,7 +80,7 @@ export function P4_10() {
                     styleBody:{padding:20},
                     buttons: [
                         (<button data-mode={1}>ok</button>),
-                        (<button data-mode={-1}>close</button>)
+                        (<button data-mode={-1}  data-focus={1}>close</button>)
                     ]
                 }).then(a => {
                     mRefLabel.current.innerText = JSON.stringify(a)
@@ -176,7 +176,7 @@ export default function P4_10() {
                     styleBody:{padding:20},
                     buttons: [
                         (<button data-mode={1}>ok</button>),
-                        (<button data-mode={-1}>close</button>)
+                        (<button data-mode={-1} data-focus={1}>close</button>)
                     ]
                 }).then(a => {
                     mRefLabel.current.innerText = JSON.stringify(a)

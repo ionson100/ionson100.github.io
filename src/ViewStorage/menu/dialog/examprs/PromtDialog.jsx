@@ -12,6 +12,7 @@ class ConfirmDialog extends BaseBodyDialog {
     }
     validate(mode) {
         this.mRefError.current.innerText=''
+
         if(mode==="1"){
              const text=this.mRefFirstName.current.value;
              if(text.length===0){

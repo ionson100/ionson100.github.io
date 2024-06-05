@@ -19,8 +19,7 @@ class BodyDialog extends BaseBodyDialog {
      * @returns {boolean} true - continue false break
      */
     validate(mode) {
-        alert(mode)
-        return false; //Prevent closing dialog
+        return true
     }
 
 
@@ -99,8 +98,7 @@ class BodyDialog extends BaseBodyDialog {
      * @returns {boolean} true - continue false break
      */
     validate(mode) {
-        alert(mode)
-        return false; //Prevent closing dialog
+       return true
     }
 
 
@@ -140,9 +138,10 @@ export default function P4_11() {
             <p>
                 Self close:<br/>
                 1. call SelfClose.<br/>
-                2. call getData.<br/>
-                3. Formation of a promise.<br/>
-                4. Closing the dialogue.<br/>
+                2. call validate.<br/>
+                3. call getData.<br/>
+                4. Formation of a promise.<br/>
+                5. Closing the dialogue.<br/>
             </p>
             <label className={'label-then'}  ref={mRefLabel}></label>
 

@@ -55,10 +55,10 @@ export default function P4_1(){
                     if(mRefLabel.current)
                         mRefLabel.current.innerText = s;
                 }}/>
-                <OuterScroll callback={(s: string) => {
-                    if(mRefLabel.current)
-                        mRefLabel.current.innerText = s;
-                }}/>
+                {/*<OuterScroll callback={(s: string) => {*/}
+                {/*    if(mRefLabel.current)*/}
+                {/*        mRefLabel.current.innerText = s;*/}
+                {/*}}/>*/}
             </div>
         </>
 

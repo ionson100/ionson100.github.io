@@ -167,20 +167,6 @@ export default function IndexBsrDialog() {
                     <td>'m-footer'</td>
                     <td>dialogue footer style class</td>
                 </tr>
-
-                <tr>
-                    <td data-d={1}>classNameTopStripe</td>
-                    <td>string | undefined</td>
-                    <td>'top-stripe'</td>
-                    <td>dialogue top stripe style class</td>
-                </tr>
-
-                <tr>
-                    <td data-d={1}>classNameBottomStripe</td>
-                    <td>string | undefined</td>
-                    <td>'bottom-stripe'</td>
-                    <td>dialogue bottom stripe style class</td>
-                </tr>
                 </tbody>
             </table>
             <br/>
