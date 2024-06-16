@@ -1,4 +1,4 @@
-import {HtmlDialog, HtmlMenu, HtmlOrm, HtmlSau, MenuFactory} from "./menuFactory";
+import {HtmlDialog, HtmlMenu, HtmlOrm, HtmlSau, HtmlTree, MenuFactory} from "./menuFactory";
 import { RiMenuFill } from "react-icons/ri";
 
 function App( ) {
@@ -18,10 +18,12 @@ function App( ) {
                   HtmlOrm.close()
                   HtmlSau.close()
                   HtmlDialog.close()
+                  HtmlTree.close()
                   HtmlMenu.setShow(true)
                   HtmlOrm.setShow(true)
                   HtmlSau.setShow(true)
                   HtmlDialog.setShow(true)
+                  HtmlTree.setShow(true)
 
               }}/>
           </div>

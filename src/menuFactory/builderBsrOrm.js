@@ -198,3 +198,19 @@ export function BuilderBsrDialog() {
     );
 
 }
+
+
+export function BuilderBsrTree() {
+        return (
+            <>
+
+                    <MenuHorizontalBand/>
+                    <MenuItem url={`#mode=bsrtree&page=5-1`} tag={'4-1'} style={{width: innerWidth}}
+                              content={SimpleText('Examples')}/>
+
+
+
+            </>
+        );
+
+}

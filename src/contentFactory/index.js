@@ -1,8 +1,10 @@
 import ReactDOM from "react-dom/client";
 import React, {lazy, Suspense } from "react";
-import P4_15 from "../ViewStorage/menu/dialog/4-15";
 
 
+
+
+const IndexBsrTree = lazy(() => import("../ViewStorage/menu/bsrtree"));
 
 const IndexBsrMenu = lazy(() => import("../ViewStorage/menu/bsrMenu"));
 const IndexBsrSau = lazy(() => import("../ViewStorage/menu/bsrSau"));
@@ -63,6 +65,11 @@ const P4_11 = lazy(() => import('../ViewStorage/menu/dialog/4-11'));
 const P4_12 = lazy(() => import('../ViewStorage/menu/dialog/4-12'));
 const P4_14 = lazy(() => import('../ViewStorage/menu/dialog/4-14'));
 
+const P4_15 = lazy(() => import('../ViewStorage/menu/dialog/4-15'));
+
+
+
+const P5_1 = lazy(() => import('../ViewStorage/menu/bsrtree/5-1'));
 
 
 
@@ -80,6 +87,7 @@ export function ContentFactory(tag) {
     }
 
     let data=tag;
+
 
     switch (tag.trim()){
 
@@ -259,6 +267,13 @@ export function ContentFactory(tag) {
         case '4-15':{
             data=<P4_15/>
             break
+        }
+        case 'bsrtree':{
+            data=<IndexBsrTree/>
+            break
+        }
+        case '5-1':{
+            data=<P5_1/>
         }
     }
 

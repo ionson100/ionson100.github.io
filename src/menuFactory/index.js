@@ -1,7 +1,7 @@
 import MenuItem from "bsr-menu";
 import {FaAnglesRight} from "react-icons/fa6";
 import {FaAnglesDown} from "react-icons/fa6";
-import {BuilderBsrDialog, BuilderBsrMenu, BuilderBsrOrm, BuilderBsrSau, widthM} from "./builderBsrOrm";
+import {BuilderBsrDialog, BuilderBsrMenu, BuilderBsrOrm, BuilderBsrSau, BuilderBsrTree, widthM} from "./builderBsrOrm";
 import {useEffect, useRef} from "react";
 import {BuildContent, RunListenerHash} from "../hachListener";
 
@@ -9,6 +9,7 @@ export let HtmlMenu = undefined
 export let HtmlOrm = undefined
 export let HtmlSau = undefined
 export let HtmlDialog = undefined
+export let HtmlTree = undefined
 const sizeImage = 12;
 let init = false;
 const styleImage = {
@@ -27,11 +28,13 @@ export function MenuFactory() {
     const mRefOrm = useRef()
     const mRefSau = useRef()
     const mRefDialog = useRef()
+    const mRefTree = useRef()
     useEffect(() => {
         HtmlMenu = mRefMenu.current
         HtmlOrm = mRefOrm.current
         HtmlSau = mRefSau.current;
         HtmlDialog=mRefDialog.current;
+        HtmlTree=mRefTree.current
         if (init === false) {
             init = true;
 
@@ -47,7 +50,7 @@ export function MenuFactory() {
 
         }
 
-    })
+    },[])
 
     return (
         <>
@@ -125,6 +128,25 @@ export function MenuFactory() {
                 }}>
                 {
                     <BuilderBsrDialog/>
+                }
+            </MenuItem>
+
+            <MenuItem
+                tabIndex={5}
+                style={styleMenu}
+                ref={mRefTree}
+                url={`#mode=bsrtree&page=bsrtree`}
+                id='drop5'
+                tag='bsrtree'
+                positionPopup="dropDown"
+                behavior="click"
+                iconDropOpen={<FaAnglesDown size={sizeImage} style={styleImage}/>}
+                iconDropClose={<FaAnglesRight size={sizeImage} style={styleImage}/>}
+                content={() => {
+                    return <span style={{paddingLeft: 10}}>bsr-tree-virtual</span>
+                }}>
+                {
+                    <BuilderBsrTree/>
                 }
             </MenuItem>
 

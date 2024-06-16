@@ -1,4 +1,4 @@
-import {HtmlDialog, HtmlMenu, HtmlOrm, HtmlSau} from "./index";
+import {HtmlDialog, HtmlMenu, HtmlOrm, HtmlSau, HtmlTree} from "./index";
 
 export function PainterMenu(mode, tag, state) {
 
@@ -7,6 +7,7 @@ export function PainterMenu(mode, tag, state) {
     HtmlOrm.setShow(false)
     HtmlSau.setShow(false)
     HtmlDialog.setShow(false)
+    HtmlTree.setShow(false)
 
 
     switch (mode) {
@@ -51,11 +52,23 @@ export function PainterMenu(mode, tag, state) {
             }
             break
         }
+
+        case 'bsrtree': {
+            HtmlTree.setShow(true)
+            const menu = document.querySelector(`[data-memu-popup="bsrtree"]`)
+            if (menu.style.visibility === "hidden") {
+                if (state !== 'false') {
+                    HtmlTree.open();
+                }
+            }
+            break
+        }
         default:{
             HtmlMenu.setShow(true)
             HtmlOrm.setShow(true)
             HtmlSau.setShow(true)
             HtmlDialog.setShow(true)
+            HtmlTree.setShow(true)
             break
         }
     }
