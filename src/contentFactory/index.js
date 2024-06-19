@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 import React, {lazy, Suspense } from "react";
+import {storage} from "../utils";
 
 
 
@@ -88,8 +89,19 @@ export function ContentFactory(tag) {
 
     let data=tag;
 
+    setTimeout(()=>{
+        if(storage.menu&&storage.isManualClick===false){
+            const menu=storage.menu();
+            menu.OpenMenuItemOnly(tag.trim())
+        }
+        if(storage.isManualClick===true){
+            storage.isManualClick=false;
+        }
+    },100)
+
 
     switch (tag.trim()){
+
 
 
         case 'bsrmenu':{

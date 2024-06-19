@@ -19,75 +19,75 @@ export default function IndexBsrDialog() {
                 <tr>
 
 
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-2">closeModalDialogClickForeignArea</a></td>
+                    <td data-d={1}><a href="#page=4-2">closeModalDialogClickForeignArea</a></td>
                     <td>boolean | undefined</td>
                     <td>undefined</td>
                     <td>Closing a modal dialog by clicking an empty area</td>
                 </tr>
                 <tr>
 
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-3">refDialog</a></td>
+                    <td data-d={1}><a href="#page=4-3">refDialog</a></td>
                     <td>React.RefObject&lt;InstanceType&lt;typeof ModalDialog&gt;&gt; | null</td>
                     <td>null</td>
                     <td>A reference to the modal dialog object. Will be useful for closing the dialog programmatically
                     </td>
                 </tr>
                 <tr>
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-4">icon</a></td>
+                    <td data-d={1}><a href="#page=4-4">icon</a></td>
                     <td>any</td>
                     <td>undefined</td>
                     <td>Dialogue head icon</td>
                 </tr>
 
                 <tr>
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-5">header</a></td>
+                    <td data-d={1}><a href="#page=4-5">header</a></td>
                     <td>any</td>
                     <td>undefined</td>
                     <td>Dialogue title content</td>
                 </tr>
                 <tr>
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-5">body</a></td>
+                    <td data-d={1}><a href="#page=4-5">body</a></td>
                     <td>any</td>
                     <td>undefined</td>
                     <td>Dialogue body content</td>
 
                 </tr>
                 <tr>
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-5">buttons</a></td>
+                    <td data-d={1}><a href="#page=4-5">buttons</a></td>
                     <td>ReactElement[] | undefined</td>
                     <td>undefined</td>
                     <td>Array of dialog buttons</td>
                 </tr>
                 <tr>
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-6">style</a></td>
+                    <td data-d={1}><a href="#page=4-6">style</a></td>
                     <td>React.CSSProperties | undefined</td>
                     <td>undefined</td>
                     <td>Dialogue styles</td>
                 </tr>
 
                 <tr>
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-6">styleHeader</a></td>
+                    <td data-d={1}><a href="#page=4-6">styleHeader</a></td>
                     <td>React.CSSProperties | undefined</td>
                     <td> undefined</td>
                     <td>Dialog Title Styles</td>
                 </tr>
 
                 <tr>
-                    <td data-d={1}> <a href="#mode=bsrdialog&page=4-6">styleFooter</a></td>
+                    <td data-d={1}> <a href="#page=4-6">styleFooter</a></td>
                     <td>React.CSSProperties | undefined</td>
                     <td>undefined</td>
                     <td>Dialog Footer Styles</td>
                 </tr>
 
                 <tr>
-                    <td data-d={1}> <a href="#mode=bsrdialog&page=4-6">styleBody</a></td>
+                    <td data-d={1}> <a href="#page=4-6">styleBody</a></td>
                     <td>React.CSSProperties | undefined</td>
                     <td>undefined</td>
                     <td>Dialog Body Styles</td>
                 </tr>
 
                 <tr>
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-5">positions</a></td>
+                    <td data-d={1}><a href="#page=4-5">positions</a></td>
                     <td>'center'</td>
                     <td>'center'|'top'</td>
                     <td>Position of dialogue on screen</td>
@@ -106,19 +106,19 @@ export default function IndexBsrDialog() {
                 </tr>
                 <tr>
 
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-7">onClose</a></td>
+                    <td data-d={1}><a href="#page=4-7">onClose</a></td>
                     <td>(dialog: HTMLDivElement | undefined) =&gt; void</td>
                     <td>undefined</td>
                     <td>Event when closing a dialog</td>
                 </tr>
                 <tr>
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-7">onShow</a></td>
+                    <td data-d={1}><a href="#page=4-7">onShow</a></td>
                     <td>(dialog: HTMLDivElement | undefined) =&gt; void</td>
                     <td>undefined</td>
                     <td>Only for menu where positionPopup='dropDown'.</td>
                 </tr>
                 <tr>
-                    <td data-d={1}><a href="#mode=bsrdialog&page=4-9">timeOut</a></td>
+                    <td data-d={1}><a href="#page=4-9">timeOut</a></td>
                     <td>number | undefined</td>
                     <td>undefined</td>
                     <td>Time in milliseconds until the dialog is automatically closed if the dialog is used as an

@@ -158,7 +158,7 @@ export default function P4_10() {
                 where you need to implement the methods: validate and getData <br/>
                 and rendering method.<br/>
                 Event trace:<br/>
-                1. Pressing a button or EDS key.<br/>
+                1. Pressing a button or Esc key.<br/>
                 2. Processing in the validate procedure. If the procedure returns a false result, the processing ends.<br/>
                 3. Obtaining body content data, procedure getData.<br/>
                 4. Formation of a response to the promise and closing the dialogue.<br/>

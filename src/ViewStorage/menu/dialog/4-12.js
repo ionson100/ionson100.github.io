@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React from "react";
 import {ShowBsrDialog, BaseBodyDialog} from "bsr-modaldialog";
 import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 import {GetRegisterDialog} from "../registerForm";

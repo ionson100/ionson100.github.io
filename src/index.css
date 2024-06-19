@@ -4,13 +4,17 @@
 
 }
 
-body {
-    background: white;
+html, body {
+    height: 100%;
     margin: 0;
-    font-family: "Times New Roman", serif;
-    font-size: 20px;
+    padding: 0;
+    background: #ffffff;
+}
 
-
+#root {
+    display: flex;
+    height: 100%;
+    width: 100%;
 }
 
 .band {
@@ -18,13 +22,6 @@ body {
     background: #dedcdc;
 }
 
-
-#root {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    background: #faf7f7;
-}
 
 .left-menu {
     overflow-x: hidden;
@@ -41,6 +38,7 @@ body {
     width: 100%;
     background-color: #faf7f7;
     padding: 10px 10px 10px 30px;
+    font-size: 20px;
 }
 
 .not-select {
@@ -355,6 +353,34 @@ button[disabled] {
     background-color: #e372c4;
     opacity: 0.5;
     text-align: center;
+}
+/**------------------sidebar---------------------**/
+
+.header-menu-icons {
+    margin: 5px 10px;
+    padding: 2px;
+    cursor: pointer;
+    color: yellow;
+}
+
+.header-menu-icons:hover {
+    background: #5a5959;
+}
+
+.header-menu-icons:active {
+    background: #5a5959;
+    color: #efadaa;
+}
+
+.button-toggle-menu {
+
+    left: 5px !important;
+    bottom: 5px !important;
+
+}
+
+.selected-drop-menu {
+    background: rgba(0, 0, 0, 0.96) !important;
 }
 
 
