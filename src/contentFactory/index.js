@@ -1,8 +1,21 @@
 import ReactDOM from "react-dom/client";
-import React, {lazy, Suspense } from "react";
+import React, {lazy, Suspense} from "react";
 import {storage} from "../utils";
 
 
+const P5_2 = lazy(() => import("../ViewStorage/menu/bsrtree/5-2"));
+const P5_3 = lazy(() => import("../ViewStorage/menu/bsrtree/5-3"));
+const P5_4 = lazy(() => import("../ViewStorage/menu/bsrtree/5-4"));
+const P5_5 = lazy(() => import("../ViewStorage/menu/bsrtree/5-5"));
+const P5_6 = lazy(() => import("../ViewStorage/menu/bsrtree/5-6"));
+const P5_9 = lazy(() => import("../ViewStorage/menu/bsrtree/5-9"));
+const P5_10 = lazy(() => import("../ViewStorage/menu/bsrtree/5-10"));
+const P5_12 = lazy(() => import("../ViewStorage/menu/bsrtree/5-12"));
+const P5_14 = lazy(() => import("../ViewStorage/menu/bsrtree/5-14"));
+const P5_16 = lazy(() => import("../ViewStorage/menu/bsrtree/5-16"));
+const P5_19 = lazy(() => import("../ViewStorage/menu/bsrtree/5-19"));
+const P5_30 = lazy(() => import("../ViewStorage/menu/bsrtree/5-30"));
+const P5_111 = lazy(() => import("../ViewStorage/menu/bsrtree/p5_111"));
 
 
 const IndexBsrTree = lazy(() => import("../ViewStorage/menu/bsrtree"));
@@ -31,8 +44,6 @@ const P1_16 = lazy(() => import("../ViewStorage/menu/menuCore/1-16"));
 const P1_17 = lazy(() => import("../ViewStorage/menu/menuCore/1-17"));
 
 
-
-
 const P3_1 = lazy(() => import('../ViewStorage/menu/sau/3-1'));
 const P3_2 = lazy(() => import("../ViewStorage/menu/sau/3-2"));
 const P3_3 = lazy(() => import("../ViewStorage/menu/sau/3-3"));
@@ -58,7 +69,6 @@ const P4_6 = lazy(() => import("../ViewStorage/menu/dialog/4-6"));
 const P4_7 = lazy(() => import("../ViewStorage/menu/dialog/4-7"));
 
 
-
 const P4_8 = lazy(() => import('../ViewStorage/menu/dialog/4-8'));
 const P4_9 = lazy(() => import('../ViewStorage/menu/dialog/4-9'));
 const P4_10 = lazy(() => import('../ViewStorage/menu/dialog/4-10'));
@@ -69,9 +79,7 @@ const P4_14 = lazy(() => import('../ViewStorage/menu/dialog/4-14'));
 const P4_15 = lazy(() => import('../ViewStorage/menu/dialog/4-15'));
 
 
-
 const P5_1 = lazy(() => import('../ViewStorage/menu/bsrtree/5-1'));
-
 
 
 const ContentHub = {
@@ -81,224 +89,369 @@ const ContentHub = {
 export function ContentFactory(tag) {
 
 
-    if(tag.length===0) return;
+    if (tag.length === 0) return;
     if (!ContentHub.content) {
 
         ContentHub.content = ReactDOM.createRoot(document.getElementById('content'));
     }
 
-    let data=tag;
+    let data = tag;
 
-    setTimeout(()=>{
-        if(storage.menu&&storage.isManualClick===false){
-            const menu=storage.menu();
+    setTimeout(() => {
+        if (storage.menu && storage.isManualClick === false) {
+            const menu = storage.menu();
             menu.OpenMenuItemOnly(tag.trim())
         }
-        if(storage.isManualClick===true){
-            storage.isManualClick=false;
+        if (storage.isManualClick === true) {
+            storage.isManualClick = false;
         }
-    },100)
+    }, 100)
 
 
-    switch (tag.trim()){
+    switch (tag.trim()) {
 
 
-
-        case 'bsrmenu':{
-          data=  <IndexBsrMenu/>
+        case 'bsrmenu': {
+            data = <IndexBsrMenu/>
             break;
         }
-        case 'bsrdialog':{
-            data=<IndexBsrDialog/>
+        case 'bsrdialog': {
+            data = <IndexBsrDialog/>
             break
         }
-        case '1-1':{
-            data=<P1_1/>
+        case '1-1': {
+            data = <P1_1/>
             break
         }
-        case '1-2':{
-            data=<P1_2/>
+        case '1-2': {
+            data = <P1_2/>
             break
         }
-        case '1-3':{
-            data=<P1_3/>
+        case '1-3': {
+            data = <P1_3/>
             break
         }
-        case '1-4':{
-            data=<P1_4/>
+        case '1-4': {
+            data = <P1_4/>
             break
         }
-        case '1-5':{
-            data=<P1_5/>
+        case '1-5': {
+            data = <P1_5/>
             break
         }
-        case '1-6':{
-            data=<P1_6/>
+        case '1-6': {
+            data = <P1_6/>
             break
         }
-        case '1-7':{
-            data=<P1_7/>
+        case '1-7': {
+            data = <P1_7/>
             break
         }
-        case '1-8':{
-           data=<P1_8/>
+        case '1-8': {
+            data = <P1_8/>
             break
         }
-        case '1-9':{
-            data=<P1_9/>
+        case '1-9': {
+            data = <P1_9/>
             break
         }
-        case '1-10':{
-            data=<P1_10_/>
+        case '1-10': {
+            data = <P1_10_/>
             break
         }
-        case '1-11':{
-            data=<P1_11/>
+        case '1-11': {
+            data = <P1_11/>
             break
         }
-        case '1-13':{
-            data=<P1_13/>
+        case '1-13': {
+            data = <P1_13/>
             break
         }
-        case '1-12':{
-            data=<P1_12/>
+        case '1-12': {
+            data = <P1_12/>
             break
         }
-        case '1-14':{
-            data=<P1_14/>
+        case '1-14': {
+            data = <P1_14/>
             break
         }
-        case '1-15':{
-            data=<P1_15/>
+        case '1-15': {
+            data = <P1_15/>
             break
         }
-        case '1-16':{
-            data=<P1_16/>
+        case '1-16': {
+            data = <P1_16/>
             break
         }
-        case '1-17':{
-            data=<P1_17/>
+        case '1-17': {
+            data = <P1_17/>
             break
         }
-        case "bsrsau":{
-            data=<IndexBsrSau/>
+        case "bsrsau": {
+            data = <IndexBsrSau/>
             break
         }
-        case '3-1':{
-            data=<P3_1/>
+        case '3-1': {
+            data = <P3_1/>
             break;
         }
-        case '3-2':{
-            data=<P3_2/>
+        case '3-2': {
+            data = <P3_2/>
             break
         }
-        case '3-3':{
-            data=<P3_3/>
+        case '3-3': {
+            data = <P3_3/>
             break
         }
-        case '3-4':{
-            data=<P3_4/>
+        case '3-4': {
+            data = <P3_4/>
             break
         }
-        case '3-5':{
-            data=<P3_5/>
+        case '3-5': {
+            data = <P3_5/>
             break
         }
-        case '3-6':{
-            data=<P3_6/>
+        case '3-6': {
+            data = <P3_6/>
             break
         }
-        case '3-7':{
-            data=<P3_7/>
+        case '3-7': {
+            data = <P3_7/>
             break
         }
-        case '3-8':{
-            data=<P3_8/>
+        case '3-8': {
+            data = <P3_8/>
             break
         }
-        case '3-9':{
-            data=<P3_9/>
+        case '3-9': {
+            data = <P3_9/>
             break
         }
-        case '3-10':{
-            data=<P3_10/>
+        case '3-10': {
+            data = <P3_10/>
             break
         }
-        case '4-1':{
-            data=<P4_1/>
+        case '4-1': {
+            data = <P4_1/>
             break
         }
-        case '4-2':{
-            data=<P4_2/>
+        case '4-2': {
+            data = <P4_2/>
             break
         }
-        case '4-3':{
-            data=<P4_3/>
+        case '4-3': {
+            data = <P4_3/>
             break
         }
-        case '4-4':{
-            data=<P4_4/>
+        case '4-4': {
+            data = <P4_4/>
             break
         }
-        case '4-5':{
-            data=<P4_5/>
+        case '4-5': {
+            data = <P4_5/>
             break
         }
-        case '4-6':{
-            data=<P4_6/>
+        case '4-6': {
+            data = <P4_6/>
             break
         }
-        case '4-7':{
-            data=<P4_7/>
+        case '4-7': {
+            data = <P4_7/>
             break
         }
-        case '4-8':{
-            data=<P4_8/>
+        case '4-8': {
+            data = <P4_8/>
             break
         }
-        case '4-9':{
-            data=<P4_9/>
+        case '4-9': {
+            data = <P4_9/>
             break
         }
-        case '4-10':{
-            data=<P4_10/>
+        case '4-10': {
+            data = <P4_10/>
             break
         }
-        case '4-11':{
-            data=<P4_11/>
+        case '4-11': {
+            data = <P4_11/>
             break
         }
-        case '4-12':{
-            data=<P4_12/>
+        case '4-12': {
+            data = <P4_12/>
             break
         }
-        case '4-14':{
-            data=<P4_14/>
+        case '4-14': {
+            data = <P4_14/>
             break
         }
-        case '4-15':{
-            data=<P4_15/>
+        case '4-15': {
+            data = <P4_15/>
             break
         }
-        case 'bsrtree':{
-            data=<IndexBsrTree/>
+        case 'bsrtree': {
+            data = <IndexBsrTree/>
             break
         }
-        case '5-1':{
-            data=<P5_1/>
+        case '5-300': {
+            data = <IndexBsrTree/>
+            break
         }
+        case '5-1': {
+            data = <P5_1/>
+            break
+        }
+        case '5-2': {
+            data = <P5_2/>
+            break
+        }
+        case '5-3': {
+            data = <P5_3/>
+            break
+        }
+        case '5-4': {
+            data = <P5_4/>
+            break
+        }
+        case '5-5': {
+            data = <P5_5/>
+            break
+        }
+        case '5-6': {
+            data = <P5_6/>
+            break
+        }
+        case '5-7': {
+            data = <P5_6/>
+            break
+        }
+        case '5-8': {
+            data = <P5_6/>
+            break
+        }
+        case '5-9': {
+            data = <P5_9/>
+            break
+        }
+        case '5-10': {
+            data = <P5_10/>
+            break
+        }
+        case '5-11': {
+            data = <P5_10/>
+            break
+        }
+        case "5-12": {
+            data = <P5_12/>
+            break
+        }
+        case "5-13": {
+            data = <P5_12/>
+            break
+        }
+        case '5-14': {
+            data = <P5_14/>
+            break
+        }
+        case '5-15': {
+            data = <P5_14/>
+            break
+        }
+        case '5-16': {
+            data = <P5_16/>
+            break
+        }
+        case '5-17': {
+            data = <P5_16/>
+            break
+        }
+        case '5-18': {
+
+            data = <P5_16/>
+            break
+        }
+        case '5-19': {
+            data = <P5_19/>
+            break
+        }
+        case '5-22': {
+            data = <P5_19/>
+            break
+        }
+        case '5-20': {
+            data = <P5_19/>
+            break
+        }
+        case '5-21': {
+            data = <P5_19/>
+            break
+        }
+        case '5-30': {
+            data = <P5_30/>
+            break
+        }
+        case '5-31': {
+            data = <P5_30/>
+            break
+        }
+        case '5-32': {
+            data = <P5_30/>
+            break
+        }
+        case '5-33': {
+            data = <P5_30/>
+            break
+        }
+        case '5-34': {
+            data = <P5_30/>
+            break
+        }
+        case '5-35': {
+            data = <P5_30/>
+            break
+        }
+        case '5-36': {
+            data = <P5_30/>
+            break
+        }
+        case '5-37': {
+            data = <P5_30/>
+            break
+        }
+        case '5-38': {
+            data = <P5_30/>
+            break
+        }
+        case '5-39': {
+            data = <P5_30/>
+            break
+        }
+        case '5-40': {
+            data = <P5_30/>
+            break
+        }
+        case '5-41': {
+            data = <P5_30/>
+            break
+        }
+        case '5-42': {
+            data = <P5_30/>
+            break
+        }
+        case '5-111': {
+            data = <P5_111/>
+            break
+        }
+
     }
 
 
-
- ContentHub.content.render(
-     <Suspense  fallback={<div>load page</div>}>
-         <div id={'sc-123'}>{data}</div>
-     </Suspense>
- );
+    ContentHub.content.render(
+        <Suspense fallback={<div>load page</div>}>
+            <div id={'sc-123'}>{data}</div>
+        </Suspense>
+    );
     setTimeout(() => {
-        document.getElementById('sc-123')?.scrollIntoView({ behavior: "smooth" });
-    },100)
+        document.getElementById('sc-123')?.scrollIntoView({behavior: "smooth"});
+    }, 100)
 
 
 }

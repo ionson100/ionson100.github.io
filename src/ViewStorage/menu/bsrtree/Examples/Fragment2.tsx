@@ -34,6 +34,7 @@ export default  function Fragment2(){
     return(
         <div style={{display: "flex",background:"#efedb3",width:"100%",height:"100%",padding:5}}>
             <TreeMenu
+                style={{marginTop:10}}
                 useCheckBox={true}
                 ref={menu}
                 marginItem={20}
@@ -88,7 +89,7 @@ export default  function Fragment2(){
 
                 <button onClick={() => {
                     if (input.current!.value && input.current!.value.length > 10) {
-                        menu.current!.DeleteItems(input.current!.value)
+                        menu.current!.DeleteItem(input.current!.value)
                         input.current!.value = ''
                         label.current!.innerText = ''
 

@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import 'bsr-modaldialog/dist/index.css'
 import 'bsr-sau/dist/index.css'
+import "bsr-tree-virtual/dist/index.css"
 
 
 

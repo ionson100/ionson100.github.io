@@ -11,7 +11,9 @@ import {RxAvatar} from "react-icons/rx";
 
 import {BsArrowsCollapse, BsArrowsExpand} from "react-icons/bs";
 import {storage} from "../utils";
-import { TbPointFilled } from "react-icons/tb";
+import {TbPointFilled} from "react-icons/tb";
+import {PiTreeViewDuotone} from "react-icons/pi";
+import {CgMenuBoxed} from "react-icons/cg";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -52,8 +54,8 @@ export function Sidebar() {
             iconToggle={<RiMenuFill size={30} color={"yellow"}/>}
             footer={<div style={{height: 40, borderTop: "1px solid #6c6b6b"}}></div>}
             items={GetItems()}
-            onClickMenuItem={()=>{
-                storage.isManualClick=true;
+            onClickMenuItem={() => {
+                storage.isManualClick = true;
             }
             }
 
@@ -150,6 +152,69 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "Register Dialog", url: '#page=4-12', id: "4-12"}))
         m.items!.push(CreateItem({content: "Restricted use", url: '#page=4-14', id: "4-14"}))
         list.push(m)
+    }
+
+    {
+        const m = new MenuItem();
+        m.icon = <PiTreeViewDuotone size={25}/>
+        m.content = "bsr-tree-virtual"
+        m.id = 'bsrtree'
+        m.url = '#page=bsrtree'
+        const mi = new MenuItem()
+        mi.url="#page=5-300"
+        mi.icon = <CgMenuBoxed/>
+        mi.content = 'Menu Item'
+        /**---------------menuitem-----------**/
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "id", url:      '#page=5-30', id: "5-30"}))
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "content", url: '#page=5-31', id: "5-31"}))
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "title", url:   '#page=5-32', id: "5-32"}))
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "icon", url:    '#page=5-33', id: "5-33"}))
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "items", url:   '#page=5-34', id: "5-34"}))
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "isOpen", url:  '#page=5-35', id: "5-35"}))
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "url", url:     '#page=5-36', id: "5-36"}))
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "style", url:   '#page=5-37', id: "5-37"}))
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "className", url: '#page=5-38', id: "5-38"}))
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "dataUser", url:  '#page=5-39', id: "5-39"}))
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "target", url:    '#page=5-40', id: "5-40"}))
+        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "selected", url:  '#page=5-41', id: "5-41"}))
+
+        /**---------------menuitem-----------**/
+
+
+        m.items?.push(mi)
+
+        m.items!.push(CreateItem({content: "Use the easy way", url: '#page=5-111', id: "5-111"}))
+
+        m.items!.push(CreateItem({content: "Examples", url: '#page=5-1', id: "5-1"}))
+        m.items!.push(CreateItem({content: "itemSize", url: '#page=5-2', id: "5-2"}))
+        m.items!.push(CreateItem({content: "wight", url: '#page=5-4', id: "5-4"}))
+        m.items!.push(CreateItem({content: "height", url: '#page=5-4', id: "5-41"}))
+        m.items!.push(CreateItem({content: "callbackVirtualSize", url: '#page=5-3', id: "5-3"}))
+        m.items!.push(CreateItem({content: "marginItem", url: '#page=5-5', id: "5-5"}))
+        m.items!.push(CreateItem({content: "iconOpen", url: '#page=5-6', id: "5-6"}))
+        m.items!.push(CreateItem({content: "iconClose", url: '#page=5-7', id: "5-7"}))
+        m.items!.push(CreateItem({content: "iconTree", url: '#page=5-8', id: "5-8"}))
+        m.items!.push(CreateItem({content: "onClickMenuItem", url: '#page=5-9', id: "5-9"}))
+        m.items!.push(CreateItem({content: "useCheckBox", url: '#page=5-10', id: "5-10"}))
+        m.items!.push(CreateItem({content: "onChecked", url: '#page=5-11', id: "5-11"}))
+
+
+        m.items!.push(CreateItem({content: "Expand", url: '#page=5-12', id: "5-12"}))
+        m.items!.push(CreateItem({content: "Collapse", url: '#page=5-13', id: "5-13"}))
+
+
+        m.items!.push(CreateItem({content: "add Items, delete item by id", url: '#page=5-14', id: "5-14"}))
+        m.items!.push(CreateItem({content: "OpenMenuItemOnly", url: '#page=5-16', id: "5-16"}))
+        m.items!.push(CreateItem({content: "OpenMenuItemAndClick", url: '#page=5-17', id: "5-17"}))
+        m.items!.push(CreateItem({content: "GetPath by id", url: '#page=5-18', id: "5-18"}))
+
+        m.items!.push(CreateItem({content: "GetMenuItems", url: '#page=5-19', id: "5-19"}))
+        m.items!.push(CreateItem({content: "DeleteAllItems", url: '#page=5-20', id: "5-20"}))
+        m.items!.push(CreateItem({content: "RewriteItems", url: '#page=5-21', id: "5-21"}))
+        m.items!.push(CreateItem({content: "RefreshMenu", url: '#page=5-22', id: "5-22"}))
+        list.push(m)
+
+
     }
 
     return list
