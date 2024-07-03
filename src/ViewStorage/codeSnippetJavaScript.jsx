@@ -1,6 +1,7 @@
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coldarkDark as myStyle } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { vs as myStyleNet } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 
 
@@ -8,7 +9,7 @@ const CodeSnippetJavaScript = ({code}) => {
     return (
 
         <div style={{width:"fit-content"}}>
-            <SyntaxHighlighter language="jsx" style={myStyle}  >
+            <SyntaxHighlighter language="jsx" style={myStyleNet}  >
                 {code}
             </SyntaxHighlighter>
         </div>
@@ -18,7 +19,7 @@ const CodeSnippetJavaScript = ({code}) => {
 const CodeSnippetCss = ({code}) => {
     return (
         <div style={{width:"fit-content"}}>
-            <SyntaxHighlighter language="css" style={myStyle} >
+            <SyntaxHighlighter language="css" style={myStyleNet} >
                 {code}
             </SyntaxHighlighter>
         </div>
@@ -29,14 +30,36 @@ const CodeSnippetDotNet = ({code}) => {
     return (
 
         <div style={{width:"fit-content"}}>
-            <SyntaxHighlighter language="csharp" style={myStyle} >
+            <SyntaxHighlighter language="csharp" style={myStyleNet} >
+                {code}
+            </SyntaxHighlighter>
+        </div>
+    );
+};
+
+const CodeSnippetSql = ({code}) => {
+    return (
+
+        <div style={{width:"fit-content"}}>
+            <SyntaxHighlighter language="sql" style={myStyleNet} >
+                {code}
+            </SyntaxHighlighter>
+        </div>
+    );
+};
+
+const CodeSnippetJson = ({code}) => {
+    return (
+
+        <div style={{width:"fit-content"}}>
+            <SyntaxHighlighter language="json" style={myStyleNet} >
                 {code}
             </SyntaxHighlighter>
         </div>
     );
 };
 export {
-    CodeSnippetJavaScript,CodeSnippetCss,CodeSnippetDotNet
+    CodeSnippetJavaScript,CodeSnippetCss,CodeSnippetDotNet,CodeSnippetSql,CodeSnippetJson
 }
 
 

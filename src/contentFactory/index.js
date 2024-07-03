@@ -1,6 +1,28 @@
 import ReactDOM from "react-dom/client";
 import React, {lazy, Suspense} from "react";
 import {storage} from "../utils";
+import Orm from "../ViewStorage/menu/orm";
+import P6_14 from "../ViewStorage/menu/orm/6-14";
+import P6_15 from "../ViewStorage/menu/orm/6-15";
+import P6_16 from "../ViewStorage/menu/orm/6-16";
+import P6_17 from "../ViewStorage/menu/orm/6-17";
+import MyMap from "../ViewStorage/menu/orm/6-17-1";
+import P6_18 from "../ViewStorage/menu/orm/6-18";
+
+
+const P6_1 = lazy(() => import("../ViewStorage/menu/orm/6-1"));
+const P6_2 = lazy(() => import("../ViewStorage/menu/orm/6-2"));
+const P6_3 = lazy(() => import("../ViewStorage/menu/orm/6-3"));
+const P6_4 = lazy(() => import("../ViewStorage/menu/orm/6-4"));
+const P6_5 = lazy(() => import("../ViewStorage/menu/orm/6-5"));
+const P6_6 = lazy(() => import("../ViewStorage/menu/orm/6-6"));
+const P6_7 = lazy(() => import("../ViewStorage/menu/orm/6-7"));
+const P6_8 = lazy(() => import("../ViewStorage/menu/orm/6-8"));
+const P6_9 = lazy(() => import("../ViewStorage/menu/orm/6-9"));
+const P6_10 = lazy(() => import("../ViewStorage/menu/orm/6-10"));
+const P6_11 = lazy(() => import("../ViewStorage/menu/orm/6-11"));
+const P6_12 = lazy(() => import("../ViewStorage/menu/orm/6-12"));
+
 
 
 const P5_2 = lazy(() => import("../ViewStorage/menu/bsrtree/5-2"));
@@ -438,6 +460,78 @@ export function ContentFactory(tag) {
         }
         case '5-111': {
             data = <P5_111/>
+            break
+        }
+        case 'orm':{
+            data=<Orm/>
+            break
+        }
+        case '6-1':{
+            data=<P6_1/>
+            break
+        }
+        case '6-2':{
+            data=<P6_2/>
+            break
+        }
+        case '6-3':{
+            data=<P6_3/>
+            break
+        }
+        case '6-4':{
+            data=<P6_4/>
+            break
+        }
+        case '6-5':{
+            data=<P6_5/>
+            break
+        }
+        case '6-6':{
+            data=<P6_6/>
+            break
+        }
+        case '6-7':{
+            data=<P6_7/>
+            break
+        }
+        case '6-8':{
+            data=<P6_8/>
+            break
+        }
+        case '6-9':{
+            data=<P6_9/>
+            break
+        }
+        case '6-10':{
+            data=<P6_10/>
+            break
+        }
+        case '6-11':{
+            data=<P6_11/>
+            break
+        }
+        case '6-12':{
+            data=<P6_12/>
+            break
+        }
+        case '6-14':{
+            data=<P6_14/>
+            break
+        }
+        case '6-15':{
+            data=<P6_15/>
+            break
+        }
+        case '6-16':{
+            data=<P6_16/>
+            break
+        }
+        case '6-17':{
+            data=<MyMap/>
+            break
+        }
+        case '6-18':{
+            data=<P6_18/>
             break
         }
 

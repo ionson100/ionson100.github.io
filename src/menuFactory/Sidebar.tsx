@@ -14,6 +14,7 @@ import {storage} from "../utils";
 import {TbPointFilled} from "react-icons/tb";
 import {PiTreeViewDuotone} from "react-icons/pi";
 import {CgMenuBoxed} from "react-icons/cg";
+import { PiDatabase } from "react-icons/pi";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -154,6 +155,8 @@ function GetItems(): Array<MenuItem> {
         list.push(m)
     }
 
+
+
     {
         const m = new MenuItem();
         m.icon = <PiTreeViewDuotone size={25}/>
@@ -217,6 +220,35 @@ function GetItems(): Array<MenuItem> {
 
     }
 
+    {
+        const m = new MenuItem();
+        m.icon = <PiDatabase size={25}/>
+        m.content = "bitnik.orm"
+        m.id = 'orm'
+        m.url = '#page=orm'
+
+        m.items!.push(CreateItem({content: "Quick Start", url: '#page=6-1', id: "6-1"}))
+        m.items!.push(CreateItem({content: "Mapping Attributes", url: '#page=6-2', id: "6-2"}))
+        m.items!.push(CreateItem({content: "Transaction", url: '#page=6-4', id: "6-4"}))
+        m.items!.push(CreateItem({content: "Insert Update Delete", url: '#page=6-3', id: "6-3"}))
+        m.items!.push(CreateItem({content: "Link to Sql", url: '#page=6-5', id: "6-5"}))
+        m.items!.push(CreateItem({content: "Free Sql", url: '#page=6-6', id: "6-6"}))
+        m.items!.push(CreateItem({content: "Interface IMapAction", url: '#page=6-7', id: "6-7"}))
+        m.items!.push(CreateItem({content: "Extension methods for post-processing results", title:"Extension methods for post-processing results", url: '#page=6-8', id: "6-8"}))
+        m.items!.push(CreateItem({content: "Calling the constructor when creating an object from the database", title:"Calling the constructor when creating an object from the database", url: '#page=6-9', id: "6-9"}))
+        m.items!.push(CreateItem({content: "Work with subclasses", url: '#page=6-10', id: "6-10"}))
+        m.items!.push(CreateItem({content: "Working with a multi-database environment", title:"Working with a multi-database environment", url: '#page=6-11', id: "6-11"}))
+        m.items!.push(CreateItem({content: "Example working multi-database ", title:"Working with a multi-database environment", url: '#page=6-12', id: "6-12"}))
+        m.items!.push(CreateItem({content: "Working with geometry 2d model", url: '#page=6-14', id: "6-14"}))
+        m.items!.push(CreateItem({content: "IGeoShape", url: '#page=6-16', id: "6-16"}))
+        m.items!.push(CreateItem({content: "Example geometry", url: '#page=6-15', id: "6-15"}))
+        m.items!.push(CreateItem({content: "Example map", url: '#page=6-17', id: "6-17"}))
+        m.items!.push(CreateItem({content: "Source Example", url: '#page=6-18', id: "6-18"}))
+        list.push(m)
+    }
+
     return list
+
+
 }
 

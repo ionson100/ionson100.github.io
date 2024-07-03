@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "ol": "^8.2.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/uuid": "^10.0.0",
     "rc-table": "^7.45.5",
