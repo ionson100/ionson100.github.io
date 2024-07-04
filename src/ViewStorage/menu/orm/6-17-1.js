@@ -62,7 +62,6 @@ export default class MyMap extends Component {
                 } else {
                     const feature = this.map.forEachFeatureAtPixel(e.pixel,
                         function (feature) {
-                            console.log(feature)
                             return feature;
                         });
                     if (feature)

@@ -34,6 +34,6 @@ let index=0
         }
         List.push(root)
     }
-    console.log(index)
+
     return List
 }

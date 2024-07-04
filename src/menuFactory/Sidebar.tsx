@@ -14,7 +14,7 @@ import {storage} from "../utils";
 import {TbPointFilled} from "react-icons/tb";
 import {PiTreeViewDuotone} from "react-icons/pi";
 import {CgMenuBoxed} from "react-icons/cg";
-import { PiDatabase } from "react-icons/pi";
+import {PiDatabase} from "react-icons/pi";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -57,6 +57,17 @@ export function Sidebar() {
             items={GetItems()}
             onClickMenuItem={() => {
                 storage.isManualClick = true;
+            }
+            }
+            onClickToggle={(state) => {
+                if(state){
+
+                   let myUrl = new URL(document.URL.replace(/#/g, "?"));
+                   const tag = myUrl.searchParams.get("page");
+                   if(tag){
+                       mRefMenu.current!.OpenMenuItemOnly(tag)
+                   }
+                }
             }
             }
 
@@ -156,7 +167,6 @@ function GetItems(): Array<MenuItem> {
     }
 
 
-
     {
         const m = new MenuItem();
         m.icon = <PiTreeViewDuotone size={25}/>
@@ -164,22 +174,82 @@ function GetItems(): Array<MenuItem> {
         m.id = 'bsrtree'
         m.url = '#page=bsrtree'
         const mi = new MenuItem()
-        mi.url="#page=5-300"
+        mi.url = "#page=5-300"
         mi.icon = <CgMenuBoxed/>
         mi.content = 'Menu Item'
         /**---------------menuitem-----------**/
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "id", url:      '#page=5-30', id: "5-30"}))
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "content", url: '#page=5-31', id: "5-31"}))
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "title", url:   '#page=5-32', id: "5-32"}))
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "icon", url:    '#page=5-33', id: "5-33"}))
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "items", url:   '#page=5-34', id: "5-34"}))
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "isOpen", url:  '#page=5-35', id: "5-35"}))
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "url", url:     '#page=5-36', id: "5-36"}))
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "style", url:   '#page=5-37', id: "5-37"}))
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "className", url: '#page=5-38', id: "5-38"}))
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "dataUser", url:  '#page=5-39', id: "5-39"}))
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "target", url:    '#page=5-40', id: "5-40"}))
-        mi.items!.push(CreateItem({icon:<CgMenuBoxed size={15} color={'#b0e6f5'}/>, content: "selected", url:  '#page=5-41', id: "5-41"}))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "id",
+            url: '#page=5-30',
+            id: "5-30"
+        }))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "content",
+            url: '#page=5-31',
+            id: "5-31"
+        }))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "title",
+            url: '#page=5-32',
+            id: "5-32"
+        }))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "icon",
+            url: '#page=5-33',
+            id: "5-33"
+        }))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "items",
+            url: '#page=5-34',
+            id: "5-34"
+        }))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "isOpen",
+            url: '#page=5-35',
+            id: "5-35"
+        }))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "url",
+            url: '#page=5-36',
+            id: "5-36"
+        }))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "style",
+            url: '#page=5-37',
+            id: "5-37"
+        }))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "className",
+            url: '#page=5-38',
+            id: "5-38"
+        }))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "dataUser",
+            url: '#page=5-39',
+            id: "5-39"
+        }))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "target",
+            url: '#page=5-40',
+            id: "5-40"
+        }))
+        mi.items!.push(CreateItem({
+            icon: <CgMenuBoxed size={15} color={'#b0e6f5'}/>,
+            content: "selected",
+            url: '#page=5-41',
+            id: "5-41"
+        }))
 
         /**---------------menuitem-----------**/
 
@@ -234,11 +304,31 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "Link to Sql", url: '#page=6-5', id: "6-5"}))
         m.items!.push(CreateItem({content: "Free Sql", url: '#page=6-6', id: "6-6"}))
         m.items!.push(CreateItem({content: "Interface IMapAction", url: '#page=6-7', id: "6-7"}))
-        m.items!.push(CreateItem({content: "Extension methods for post-processing results", title:"Extension methods for post-processing results", url: '#page=6-8', id: "6-8"}))
-        m.items!.push(CreateItem({content: "Calling the constructor when creating an object from the database", title:"Calling the constructor when creating an object from the database", url: '#page=6-9', id: "6-9"}))
+        m.items!.push(CreateItem({
+            content: "Extension methods for post-processing results",
+            title: "Extension methods for post-processing results",
+            url: '#page=6-8',
+            id: "6-8"
+        }))
+        m.items!.push(CreateItem({
+            content: "Calling the constructor when creating an object from the database",
+            title: "Calling the constructor when creating an object from the database",
+            url: '#page=6-9',
+            id: "6-9"
+        }))
         m.items!.push(CreateItem({content: "Work with subclasses", url: '#page=6-10', id: "6-10"}))
-        m.items!.push(CreateItem({content: "Working with a multi-database environment", title:"Working with a multi-database environment", url: '#page=6-11', id: "6-11"}))
-        m.items!.push(CreateItem({content: "Example working multi-database ", title:"Working with a multi-database environment", url: '#page=6-12', id: "6-12"}))
+        m.items!.push(CreateItem({
+            content: "Working with a multi-database environment",
+            title: "Working with a multi-database environment",
+            url: '#page=6-11',
+            id: "6-11"
+        }))
+        m.items!.push(CreateItem({
+            content: "Example working multi-database ",
+            title: "Working with a multi-database environment",
+            url: '#page=6-12',
+            id: "6-12"
+        }))
         m.items!.push(CreateItem({content: "Working with geometry 2d model", url: '#page=6-14', id: "6-14"}))
         m.items!.push(CreateItem({content: "IGeoShape", url: '#page=6-16', id: "6-16"}))
         m.items!.push(CreateItem({content: "Example geometry", url: '#page=6-15', id: "6-15"}))
