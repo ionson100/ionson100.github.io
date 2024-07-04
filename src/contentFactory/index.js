@@ -2,12 +2,16 @@ import ReactDOM from "react-dom/client";
 import React, {lazy, Suspense} from "react";
 import {storage} from "../utils";
 import Orm from "../ViewStorage/menu/orm";
-import P6_14 from "../ViewStorage/menu/orm/6-14";
-import P6_15 from "../ViewStorage/menu/orm/6-15";
-import P6_16 from "../ViewStorage/menu/orm/6-16";
-import P6_17 from "../ViewStorage/menu/orm/6-17";
-import MyMap from "../ViewStorage/menu/orm/6-17-1";
-import P6_18 from "../ViewStorage/menu/orm/6-18";
+
+
+
+const P6_14 = lazy(() => import("../ViewStorage/menu/orm/6-14"));
+
+const P6_15 = lazy(() => import("../ViewStorage/menu/orm/6-15"));
+const P6_16 = lazy(() => import("../ViewStorage/menu/orm/6-16"));
+const MyMap = lazy(() => import("../ViewStorage/menu/orm/6-17-1"));
+const P6_18 = lazy(() => import("../ViewStorage/menu/orm/6-18"));
+const P6_19 = lazy(() => import("../ViewStorage/menu/orm/6-19"));
 
 
 const P6_1 = lazy(() => import("../ViewStorage/menu/orm/6-1"));
@@ -532,6 +536,10 @@ export function ContentFactory(tag) {
         }
         case '6-18':{
             data=<P6_18/>
+            break
+        }
+        case '6-19':{
+            data=<P6_19/>
             break
         }
 

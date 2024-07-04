@@ -35,7 +35,7 @@ export default  function Fragment1(){
     const label = useRef<HTMLDivElement>(null)
     const input = useRef<HTMLInputElement>(null)
     return(
-        <div style={{display: "flex",background:"#efedb3",width:"100%",height:"100%",padding:5}}>
+        <div style={{display: "flex",width:"100%",height:"100%",padding:5}}>
             <TreeMenu
                 style={{marginTop:10}}
                 useCheckBox={true}

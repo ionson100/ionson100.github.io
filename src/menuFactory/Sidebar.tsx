@@ -244,6 +244,7 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "Example geometry", url: '#page=6-15', id: "6-15"}))
         m.items!.push(CreateItem({content: "Example map", url: '#page=6-17', id: "6-17"}))
         m.items!.push(CreateItem({content: "Source Example", url: '#page=6-18', id: "6-18"}))
+        m.items!.push(CreateItem({content: "Json", url: '#page=6-19', id: "6-19"}))
         list.push(m)
     }
 

@@ -382,9 +382,28 @@ button[disabled] {
 .selected-drop-menu {
     background: rgba(0, 0, 0, 0.96) !important;
 }
+
 #sc-123{
     width: 100%;
     height: 100%;
+}
+summary{
+    cursor: pointer;
+    width: fit-content;
+    padding: 2px 5px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+summary:hover{
+    background: #e5e1e1;
+}
+summary:active{
+    background: #c9c6c6;
 }
 
 

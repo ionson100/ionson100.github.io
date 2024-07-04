@@ -48,7 +48,7 @@ session.InsertBulk(classes);
             </div>
             <br/>
             <details>
-                <summary style={{cursor: "pointer"}}>FreeSql and sql request</summary>
+                <summary >FreeSql and sql request</summary>
                 <div>
                     <CodeSnippetDotNet code={`var sql = $"select * from {session.TableName<MyClass>()}";
 //select * from "m_t_123"
@@ -64,7 +64,7 @@ var res =session.FreeSql<MyClass>(sql).ToList();`}/>
             <br/>
 
             <details>
-                <summary style={{cursor: "pointer"}}>FreeSql as dynamic</summary>
+                <summary >FreeSql as dynamic</summary>
                 <div>
                     <CodeSnippetDotNet code={`var sql = $"select * from {session.TableName<MyClass>()} ";
 var res =session.FreeSql<dynamic>(sql).ToList();
@@ -78,7 +78,7 @@ res.ForEach(WriteLineClass);`}/>
             <br/>
 
             <details>
-                <summary style={{cursor: "pointer"}}>FreeSql as other type</summary>
+                <summary >FreeSql as other type</summary>
                 <div>
                     <CodeSnippetDotNet code={`var sql = $"SELECT  age FROM m_t_123 ";
 var res =session.FreeSql<int>(sql).ToList();
@@ -96,7 +96,7 @@ res.ForEach(a =>
             <br/>
 
             <details>
-                <summary style={{cursor: "pointer"}}>FreeSql custom type with constructor</summary>
+                <summary >FreeSql custom type with constructor</summary>
                 <div>
                     <CodeSnippetDotNet code={`//(using attribute:MapReceiverFreeSqlAttribute) the presence of a constructor with parameters
 [MapReceiverFreeSql]
@@ -127,7 +127,7 @@ res.ForEach(WriteLineClass);`}/>
             <br/>
 
             <details>
-                <summary style={{cursor: "pointer"}}>FreeSql custom type </summary>
+                <summary >FreeSql custom type </summary>
                 <div>
                     <CodeSnippetDotNet code={`class MyFreeSql
 {
@@ -143,7 +143,7 @@ res.ForEach(WriteLineClass);`}/>
             <br/>
 
             <details>
-                <summary style={{cursor: "pointer"}}>FreeSql anonymous type</summary>
+                <summary >FreeSql anonymous type</summary>
                 <div>
                     <CodeSnippetDotNet code={`static List<T> TempSql<T>(T t,string sql)
 {

@@ -57,7 +57,7 @@ session.TableCreate<MGeo>();
             </div>
             <br/>
             <details>
-                <summary style={{cursor:"pointer"}}>Create geo shape, insert to table</summary>
+                <summary >Create geo shape, insert to table</summary>
                 <div>
 
                     <CodeSnippetDotNet code={`var mGeo = new MGeo{Name = "LineString",Shape = FactoryGeo.LineString(new GeoPoint(1,2),new GeoPoint(2,3))};
@@ -73,7 +73,7 @@ session.Insert(mGeo);
 
             <br/>
             <details>
-                <summary style={{cursor:"pointer"}}>Srid</summary>
+                <summary >Srid</summary>
                 <div>
                     <p>
                         Default srid:4326<br/>
@@ -93,7 +93,7 @@ session.Insert(mGeo);
 
             <br/>
             <details>
-                <summary style={{cursor:"pointer"}}>Get type geometry</summary>
+                <summary >Get type geometry</summary>
                 <div>
 
                     <CodeSnippetDotNet code={`session.Insert(new MGeo { Name = "LineString", Shape = FactoryGeo.LineString(new GeoPoint(1, 2), new GeoPoint(2, 3)) });
@@ -116,7 +116,7 @@ points.ForEach(a=>Console.WriteLine(a.Name));
 
             <br/>
             <details>
-                <summary style={{cursor:"pointer"}}>StArea</summary>
+                <summary >StArea</summary>
                 <div>
                     <a target={"_blank"} href={'https://postgis.net/docs/ST_Area.html'}>ST_Area</a>
 
@@ -140,7 +140,7 @@ var s = shape.SetSession(session).StArea();
 
             <br/>
             <details>
-                <summary style={{cursor:"pointer"}}>StAsBinary</summary>
+                <summary >StAsBinary</summary>
                 <div>
                     <a target={"_blank"} href={'https://postgis.net/docs/ST_AsBinary.html'}>ST_AsBinary</a>
                     <CodeSnippetDotNet code={`session.Insert(new MGeo { Name = "polygon1", Shape = FactoryGeo.Polygon("POLYGON((743238 2967416,743238 2967450, 743265 2967450,743265.625 2967416,743238 2967416))") });
@@ -156,7 +156,7 @@ var s = shape.SetSession(session).StAsBinary();
 
             <br/>
             <details>
-                <summary style={{cursor:"pointer"}}>StAsText</summary>
+                <summary >StAsText</summary>
                 <div>
                     <a target={"_blank"} href={'https://postgis.net/docs/ST_AsText.html'}>StAsText</a>
                     <CodeSnippetDotNet code={`session.Insert(new MGeo { Name = "polygon1", Shape = FactoryGeo.Polygon("POLYGON((743238 2967416,743238 2967450, 743265 2967450,743265.625 2967416,743238 2967416))") });
@@ -170,7 +170,7 @@ var s = shape.StAsText();
 
             <br/>
             <details>
-                <summary style={{cursor:"pointer"}}>StWithin</summary>
+                <summary >StWithin</summary>
                 <div>
                     <a target={"_blank"} href={'https://postgis.net/docs/ST_Within.html'}>ST_Within</a>
                     <p>Find all objects in the database that are contained in a container</p>
@@ -220,7 +220,7 @@ var isWithin = point.SetSession(session).StWithin(container) ;`}/>
 
             <br/>
             <details>
-                <summary style={{cursor:"pointer"}}>STContains</summary>
+                <summary >STContains</summary>
                 <div>
                     <a target={"_blank"} href={'https://postgis.net/docs/ST_Contains.html'}>ST_Contains</a>
                     <CodeSnippetDotNet code={`var p= FactoryGeo.Polygon("polygon ((0 0, 0 10, 10 10, 10 0, 0 0))");
@@ -236,7 +236,7 @@ var isContains = p1.SetSession(session).StContains(p) ;`}/>
 
             <br/>
             <details>
-                <summary style={{cursor:"pointer"}}>StCrosses</summary>
+                <summary >StCrosses</summary>
                 <div>
                     <a target={"_blank"} href={'https://postgis.net/docs/ST_Crosses.html'}>ST_Crosses</a>
                     <CodeSnippetDotNet code={`var p= FactoryGeo.LineString("linestring (20 20, 60 60)");
@@ -250,7 +250,7 @@ var isCrosses = p.SetSession(session).StCrosses(p1) ;`}/>
 
             <br/>
             <details>
-                <summary style={{cursor:"pointer"}}>StOverlaps</summary>
+                <summary >StOverlaps</summary>
                 <div>
                     <a target={"_blank"} href={'https://postgis.net/docs/ST_Overlaps.html'}>ST_Overlaps</a>
                     <CodeSnippetDotNet code={`var p= FactoryGeo.Polygon("POLYGON ((40 170, 90 30, 180 100, 40 170))");

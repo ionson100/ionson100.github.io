@@ -33,7 +33,7 @@ var sessionOther=Configure.GetSession<IOtherDataBaseFactory>()`}/>
 
             <br/>
             <details>
-                <summary style={{cursor: "pointer"}}>Postgres</summary>
+                <summary >Postgres</summary>
                 <div>
 
                     <CodeSnippetDotNet code={` public class MyDbPostgres : IOtherDataBaseFactory
@@ -59,7 +59,7 @@ var sessionOther=Configure.GetSession<IOtherDataBaseFactory>()`}/>
 
             <br/>
             <details>
-                <summary style={{cursor: "pointer"}}>MSSql</summary>
+                <summary >MSSql</summary>
                 <div>
 
                     <CodeSnippetDotNet code={`public class MyDbMsSql : IOtherDataBaseFactory
@@ -85,7 +85,7 @@ var sessionOther=Configure.GetSession<IOtherDataBaseFactory>()`}/>
 
             <br/>
             <details>
-                <summary style={{cursor: "pointer"}}>SQLite</summary>
+                <summary >SQLite</summary>
                 <div>
 
                     <CodeSnippetDotNet code={`public class MyDbSqlite : IOtherDataBaseFactory
@@ -111,7 +111,7 @@ var sessionOther=Configure.GetSession<IOtherDataBaseFactory>()`}/>
 
             <br/>
             <details>
-                <summary style={{cursor: "pointer"}}>MySql</summary>
+                <summary >MySql</summary>
                 <div>
 
                     <CodeSnippetDotNet code={` public  class MyDbMySql : IOtherDataBaseFactory
