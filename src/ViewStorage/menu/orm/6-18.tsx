@@ -22,9 +22,21 @@ import {
 } from 'ol/style.js';
 import {Cluster, OSM, Vector as VectorSource} from 'ol/source.js';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
-import {Stroke} from "ol/style";
+import {Icon, Stroke} from "ol/style";
 import {GeoJSON} from "ol/format";
+import {json} from "./map/features"
 import {boundingExtent} from 'ol/extent.js';
+
+const canvasE=(w)=>{
+    const canvas = document.createElement('canvas');
+    canvas.width = w+20;
+    canvas.height = 20;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'yellow';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    return canvas;
+}
+
 
 export default class MyMap extends Component {
 
@@ -62,22 +74,17 @@ export default class MyMap extends Component {
         });
         this.map.on('click', (e) => {
             this.clusters.getFeatures(e.pixel).then((clickedFeatures) => {
-
-                if (clickedFeatures.length > 0) {
-
+                if (clickedFeatures.length) {
+                    // Get clustered Coordinates
                     const features = clickedFeatures[0].get('features');
-                    const extent = boundingExtent(
-                        features.map((r) => r.getGeometry().getCoordinates())
-                    );
-                    this.map.getView().fit(extent, {duration: 300, padding: [300, 300, 300, 300]});
-                } else {
-                    const feature = this.map.forEachFeatureAtPixel(e.pixel,
-                        function (feature) {
-                            console.log(feature)
-                            return feature;
-                        });
-                    if (feature)
-                        alert("client id:"+feature.values_.features[0].get('id') +"price:     "+feature.values_.features[0].get('price'))
+                    if (features.length > 1) {
+                        const extent = boundingExtent(
+                            features.map((r) => r.getGeometry().getCoordinates())
+                        );
+                        this.map.getView().fit(extent, {duration: 300, padding: [300, 300, 300, 300]});
+                    }else {
+                        alert('client id:'+ features[0].get('id')} +'\\nprice:      '+features[0].get('price'))
+                    }
                 }
             });
         });
@@ -104,16 +111,16 @@ export default class MyMap extends Component {
         } else {
             const originalFeature = feature.get('features')[0];
             const str = originalFeature.get('price');
+            let w=str.length*5.5;
             return new Style({
+                image: new Icon({
+                    img: canvasE(w)
+                }),
                 text: new Text({
                     text: str,
-                    font: 'bold 20px Calibri,sans-serif',
+                    font: 'bold 15px Calibri,sans-serif',
                     fill: new Fill({
                         color: 'black',
-                    }),
-                    stroke: new Stroke({
-                        color: 'yellow',
-                        width: 10,
                     }),
                 }),
             });
