@@ -15,6 +15,7 @@ import {TbPointFilled} from "react-icons/tb";
 import {PiTreeViewDuotone} from "react-icons/pi";
 import {CgMenuBoxed} from "react-icons/cg";
 import {PiDatabase} from "react-icons/pi";
+import { BsLayoutTextSidebar } from "react-icons/bs";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -292,8 +293,25 @@ function GetItems(): Array<MenuItem> {
 
     {
         const m = new MenuItem();
+        m.icon = <BsLayoutTextSidebar size={25}/>
+        m.content = "bsr-left-sidebar"
+        m.id = 'sidebar'
+        m.url = '#page=sidebar'
+
+        m.items!.push(CreateItem({content: "Quick Start", url: '#page=7-1', id: "6-1"}))
+
+        list.push(m)
+    }
+
+
+
+
+
+
+    {
+        const m = new MenuItem();
         m.icon = <PiDatabase size={25}/>
-        m.content = "bitnik.orm"
+        m.content = "bitnik.orm C#"
         m.id = 'orm'
         m.url = '#page=orm'
 

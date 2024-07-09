@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import React, {lazy, Suspense} from "react";
 import {storage} from "../utils";
 import Orm from "../ViewStorage/menu/orm";
+import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 
 
 
@@ -540,6 +541,10 @@ export function ContentFactory(tag) {
         }
         case '6-19':{
             data=<P6_19/>
+            break
+        }
+        case 'sidebar':{
+            data=<IndexBsrSidebar/>
             break
         }
 

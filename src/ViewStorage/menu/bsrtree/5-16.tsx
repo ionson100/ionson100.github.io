@@ -3,8 +3,6 @@ import {MenuItem, TreeMenu} from "bsr-tree-virtual";
 import {MdOutlineSubdirectoryArrowRight} from "react-icons/md";
 import {FaRegMinusSquare, FaRegPlusSquare} from "react-icons/fa";
 import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
-import {CreateItem} from "bsr-left-sidebar";
-import { LiaElementor } from "react-icons/lia";
 
 /**----------------------------------------**/
 const code=`
@@ -13,7 +11,7 @@ import {MenuItem, TreeMenu} from "bsr-tree-virtual";
 import "bsr-tree-virtual/dist/index.css"
 import {MdOutlineSubdirectoryArrowRight} from "react-icons/md";
 import {FaRegMinusSquare, FaRegPlusSquare} from "react-icons/fa";
-import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
+
 
 function getListItem() {
     const listItem: MenuItem[] = [];
