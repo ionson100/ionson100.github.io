@@ -81,7 +81,7 @@ session.ToPersistent(mClass);
                 `}/>
     </div>
 
-    <p> Link to Sql: </p>
+    <p>Example: Delete, Update, UpdateSql. </p>
     <div>
     <CodeSnippetDotNet code={`
 using var session = Configure.Session;

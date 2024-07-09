@@ -372,12 +372,15 @@ button[disabled] {
     color: #efadaa;
 }
 
-.button-toggle-menu {
 
-    left: 5px !important;
-    bottom: 5px !important;
 
-}
+/*.button-toggle-menu {*/
+
+/*    left: 5px !important;*/
+/*    bottom: 30px !important;*/
+/*    cursor: pointer !important;*/
+/*    width: fit-content;*/
+/*}*/
 
 .selected-drop-menu {
     background: rgba(0, 0, 0, 0.96) !important;
