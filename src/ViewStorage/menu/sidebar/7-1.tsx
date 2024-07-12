@@ -36,7 +36,7 @@ function getItems():MenuItem[]{
     return  ListItem
 }
 const styleHeader={
-    color:"wheat",border:"3px solid wheat",padding:20
+    padding:10,backgroundColor:"#212020"
 }
 
 export default function P7_1(){
@@ -80,7 +80,7 @@ export default function P7_1(){
                     iconClose={<FaCaretRight color={"#6c6b6b"}/>}
                     iconOpen={<FaCaretDown/>}
                     iconToggle={<RiMenuFill size={30} color={"yellow"}/>}
-                    footer={<div style={{height: 40, borderTop: "1px solid #6c6b6b"}}></div>}
+                    //footer={<div style={{height: 40, borderTop: "1px solid #6c6b6b"}}></div>}
                     onClickMenuItem={(a,o)=>{
                        mRefInput.current!.value= o.items!.id
                     }}
@@ -92,13 +92,17 @@ export default function P7_1(){
                         }
                     }}
 
+                    onChangeMenuWidth={(width)=>{
+                        console.log(width)
+                    }}
+
                 />
 
 
 
             <div style={{height:"100%",width:"100%",overflowY:"auto"}}>
                 <CodeSnippetJavaScript code={`import {LeftMenu, MenuItem, CreateItem} from "bsr-left-sidebar";
-import React, {useEffect, useRef} from "react";
+import React, {ReactElement, useEffect, useRef} from "react";
 import {TbPointFilled} from "react-icons/tb";
 import {FaCaretDown, FaCaretRight} from "react-icons/fa";
 import {RiMenuFill} from "react-icons/ri";
@@ -107,10 +111,11 @@ import { FcBusinesswoman } from "react-icons/fc";
 import { FcEngineering } from "react-icons/fc";
 import { FcGallery } from "react-icons/fc";
 
+
 const iconsStyle={
     paddingLeft: "0.3rem",
 }
-function GetItems():MenuItem[]{
+function getItems():MenuItem[]{
     const ListItem:MenuItem[]=[];
     {
         const m=CreateItem({content:"Item1",icon:<FcAssistant size={25} style={iconsStyle} />})
@@ -133,18 +138,13 @@ function GetItems():MenuItem[]{
     ListItem.push(CreateItem({content:"test"}))
     return  ListItem
 }
+const styleHeader={
+    padding:10,backgroundColor:"#212020"
+}
 
 export default function P7_1(){
     const mRefMenu = useRef<InstanceType<typeof LeftMenu>>(null)
     const mRefInput = useRef<HTMLInputElement>(null)
-
-    useEffect(()=>{
-        mRefMenu.current!.RefreshSize()
-    },[])
-    
-    const styleHeader={
-        color:"wheat",border:"3px solid wheat",padding:20
-    }
 
     function getHeader():ReactElement{
         return(
@@ -172,18 +172,18 @@ export default function P7_1(){
         <div style={{display:"flex",width:"100%",height:"100%"}}>
 
                 <LeftMenu
-                    style={{height:"100%"}}
+
                     ref={mRefMenu}
                     header={getHeader()}
                     iconTree={<TbPointFilled size={12}/>}
                     paddingItem={15}
                     minWidth={55}
                     width={350}
-                    items={GetItems()}
+                    items={getItems()}
                     iconClose={<FaCaretRight color={"#6c6b6b"}/>}
                     iconOpen={<FaCaretDown/>}
                     iconToggle={<RiMenuFill size={30} color={"yellow"}/>}
-                    footer={<div style={{height: 40, borderTop: "1px solid #6c6b6b"}}></div>}
+                    //footer={<div style={{height: 40, borderTop: "1px solid #6c6b6b"}}></div>}
                     onClickMenuItem={(a,o)=>{
                        mRefInput.current!.value= o.items!.id
                     }}
@@ -194,8 +194,15 @@ export default function P7_1(){
                             }
                         }
                     }}
+                     onChangeMenuWidth={(width)=>{
+                        console.log(width)
+                    }}
 
-                />`}/>
+                />
+
+
+
+            <div style={{height:"100%",width:"100%",overflowY:"auto"}}>Content</div>`}/>
             </div>
         </div>
     )
