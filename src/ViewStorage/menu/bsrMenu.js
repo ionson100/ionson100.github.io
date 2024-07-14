@@ -137,13 +137,13 @@ export default function IndexBsrMenu() {
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=1-12">onClick</a></td>
-                    <td>((e: InstanceType&#60;typeof MenuItem&#62;) =&rang; void) | undefined</td>
+                    <td>((e: InstanceType&#60;typeof MenuItem&#62;) =&#62; void) | undefined</td>
                     <td>undefined</td>
                     <td>Mouse click menu</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=1-14">onVisible</a></td>
-                    <td>((e: InstanceType&#60;typeof MenuItem&#62;) =&rang; void) | undefined</td>
+                    <td>((e: InstanceType&#60;typeof MenuItem&#62;) =&#62; void) | undefined</td>
                     <td>undefined</td>
                     <td>Event visible popup menu.</td>
                 </tr>
@@ -202,7 +202,7 @@ export default function IndexBsrMenu() {
                         &nbsp;&nbsp;&nbsp; isOpenDrop?&#59; boolean;<br/>
                         &nbsp;&nbsp;&nbsp; id?&#59; string;<br/>
                         &nbsp;&nbsp;&nbsp; tag?&#59; any;<br/>
-                        &#125;)=&rang;any) | undefined<br/>
+                        &#125;)=&#62;any) | undefined<br/>
                     </td>
                     <td>undefined</td>
                     <td>User rendering content menu</td>
@@ -222,12 +222,12 @@ export default function IndexBsrMenu() {
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=1-6">open()</a></td>
-                    <td>()=&rang;void</td>
+                    <td>()=&#62;void</td>
                     <td>Open menu (positionPopup: dropDown)</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=1-6">close()</a></td>
-                    <td>()=&rang;void</td>
+                    <td>()=&#62;void</td>
                     <td>Open menu (positionPopup: dropDown)</td>
                 </tr>
                 <tr>
@@ -247,13 +247,13 @@ export default function IndexBsrMenu() {
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=1-7">setShow(boolean)</a></td>
-                    <td>(a:boolean)=&rang;void</td>
+                    <td>(a:boolean)=&#62;void</td>
                     <td>Show menu ( true - show, false - not show)</td>
                 </tr>
                 <tr>
 
                     <td data-d={1}><a href="#page=1-4">setDisabled(boolean)</a></td>
-                    <td>(a:boolean)=&rang;void</td>
+                    <td>(a:boolean)=&#62;void</td>
                     <td>Set disable menu</td>
                 </tr>
                 <tr>
@@ -289,7 +289,7 @@ export default function IndexBsrMenu() {
 
 
                     <td data-d={1}><a href="#page=1-9">CloseMenu(callback?)</a></td>
-                    <td>(callback:(()=&rang;void) | undefined)=&rang;void</td>
+                    <td>(callback:(()=&#62;void) | undefined)=&#62;void</td>
                     <td>Closes the menu chain</td>
                 </tr>
                 </tbody>

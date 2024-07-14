@@ -1,11 +1,10 @@
 import {LeftMenu, MenuItem, CreateItem} from "bsr-left-sidebar";
-import React, {ReactElement, useEffect, useRef} from "react";
+import React, {ReactElement, useRef} from "react";
 import {TbPointFilled} from "react-icons/tb";
 import {FaCaretDown, FaCaretRight} from "react-icons/fa";
 import {RiMenuFill} from "react-icons/ri";
 import { FcAssistant } from "react-icons/fc";
 import { FcBusinesswoman } from "react-icons/fc";
-import { FcEngineering } from "react-icons/fc";
 import { FcGallery } from "react-icons/fc";
 import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 
@@ -19,6 +18,12 @@ function getItems():MenuItem[]{
         m.items?.push(CreateItem({content:"subItem1"}))
         m.items?.push(CreateItem({content:"subItem2"}))
         ListItem.push(m);
+    }
+    {
+        const menuBand=new MenuItem();
+        menuBand.band=<div style={{color:"#4f4e4e",fontSize:15,textAlign:"center",backgroundColor:"black"}}>band</div>
+        ListItem.push(menuBand)
+
     }
 
     ListItem.push(CreateItem({content:"Item2",icon:<FcBusinesswoman  size={25} style={iconsStyle}/>}))
@@ -102,13 +107,13 @@ export default function P7_1(){
 
             <div style={{height:"100%",width:"100%",overflowY:"auto"}}>
                 <CodeSnippetJavaScript code={`import {LeftMenu, MenuItem, CreateItem} from "bsr-left-sidebar";
-import React, {ReactElement, useEffect, useRef} from "react";
+import 'bsr-left-sidebar/dist/index.css'
+import React, {ReactElement, useRef} from "react";
 import {TbPointFilled} from "react-icons/tb";
 import {FaCaretDown, FaCaretRight} from "react-icons/fa";
 import {RiMenuFill} from "react-icons/ri";
 import { FcAssistant } from "react-icons/fc";
 import { FcBusinesswoman } from "react-icons/fc";
-import { FcEngineering } from "react-icons/fc";
 import { FcGallery } from "react-icons/fc";
 
 
@@ -122,6 +127,12 @@ function getItems():MenuItem[]{
         m.items?.push(CreateItem({content:"subItem1"}))
         m.items?.push(CreateItem({content:"subItem2"}))
         ListItem.push(m);
+    }
+     {
+        const menuBand=new MenuItem();
+        menuBand.band=<div style={{color:"#4f4e4e",fontSize:15,textAlign:"center",backgroundColor:"black"}}>band</div>
+        ListItem.push(menuBand)
+
     }
 
     ListItem.push(CreateItem({content:"Item2",icon:<FcBusinesswoman  size={25} style={iconsStyle}/>}))

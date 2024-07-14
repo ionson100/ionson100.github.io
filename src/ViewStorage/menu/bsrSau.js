@@ -24,7 +24,7 @@ export default function IndexBsrSau() {
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=3-1">selectedFile</a></td>
-                    <td>(f: File | null | undefined) =&rang;boolean | undefined</td>
+                    <td>(f: File | null | undefined) =&#62;boolean | undefined</td>
                     <td>undefined</td>
                     <td>Event selected file,if you return false, the choice will not be legal</td>
                 </tr>
@@ -50,45 +50,45 @@ export default function IndexBsrSau() {
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=3-6">beforeUpload</a></td>
-                    <td>?: (() =&rang; void) | undefined</td>
+                    <td>?: (() =&#62; void) | undefined</td>
                     <td>undefined</td>
                     <td>Event marker before transferring the file to the server</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=3-2">clientError</a></td>
-                    <td>((event: string) =&rang; void) | undefined</td>
+                    <td>((event: string) =&#62; void) | undefined</td>
                     <td>undefined</td>
                     <td>Browser side error event</td>
                 </tr>
                 <tr>
 
                     <td data-d={1}><a href="#page=3-2">serverError</a></td>
-                    <td>((events: string) =&rang; void) | undefined</td>
+                    <td>((events: string) =&#62; void) | undefined</td>
                     <td> undefined</td>
                     <td>Server side error event</td>
                 </tr>
                 <tr>
                     <td data-d={1}>progress</td>
-                    <td>((events: ProgressEvent(XMLHttpRequestEventTarget)) =&rang;void) | undefined</td>
+                    <td>((events: ProgressEvent(XMLHttpRequestEventTarget)) =&#62;void) | undefined</td>
                     <td>undefined</td>
                     <td>Attributes for plotting download progress</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=3-5">preview</a></td>
-                    <td>((events: string) =&rang; void,) | undefined</td>
+                    <td>((events: string) =&#62; void,) | undefined</td>
                     <td></td>
                     <td>Click preview</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=3-5">previewAsync</a></td>
-                    <td>((events: string) =&rang; void,) |</td>
+                    <td>((events: string) =&#62; void,) |</td>
                     <td>undefined</td>
                     <td>Continuous preview</td>
 
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=3-10">done</a></td>
-                    <td>((events: any) =&rang; void) | undefined</td>
+                    <td>((events: any) =&#62; void) | undefined</td>
                     <td>undefined</td>
                     <td>Successful sending event to the server
                         @param events Data that the server side wants to transfer to the client
@@ -129,12 +129,12 @@ export default function IndexBsrSau() {
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=3-8">clear</a></td>
-                    <td>()=&rang;void</td>
+                    <td>()=&#62;void</td>
                     <td>Clear all params avatar component</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=3-9">getCanvasFormData</a></td>
-                    <td>()=&rang;string |undefined</td>
+                    <td>()=&#62;string |undefined</td>
                     <td>Returns a link to the modified image</td>
                 </tr>
                 </tbody>

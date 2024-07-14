@@ -41,7 +41,7 @@ export default function IndexBsrTree() {
 
                 <tr>
                     <td data-d={1}><a href="#page=5-3">callbackVirtualSize</a></td>
-                    <td>()=&rang;widht,height</td>
+                    <td>()=&#62;widht,height</td>
                     <td>undefined</td>
                     <td>Getting measurements of the tree panel</td>
                 </tr>
@@ -72,7 +72,9 @@ export default function IndexBsrTree() {
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=5-9">onClickMenuItem</a></td>
-                    <td><pre>(TreeMenu,&#123;MenuItem[],MenuItem,HTMLAnchorElement&#125;)=&rang;void</pre></td>
+                    <td>
+                        <pre>(TreeMenu,&#123;MenuItem[],MenuItem,HTMLAnchorElement&#125;)=&#62;void</pre>
+                    </td>
                     <td>undefined</td>
                     <td>Item click event</td>
                 </tr>
@@ -86,14 +88,15 @@ export default function IndexBsrTree() {
 
                 <tr>
                     <td data-d={1}><a href="#page=5-11">onChecked</a></td>
-                    <td><pre>(TreeMenu,MenuItem)=&rang;void</pre></td>
+                    <td>
+                        <pre>(TreeMenu,MenuItem)=&#62;void</pre>
+                    </td>
                     <td>undefined</td>
                     <td>Item checked event</td>
                 </tr>
                 </tbody>
             </table>
             <br/>
-
 
 
             <table style={{width: "80%"}}>
@@ -108,7 +111,7 @@ export default function IndexBsrTree() {
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=5-12">Expand</a></td>
-                    <td>()=&rang;void</td>
+                    <td>()=&#62;void</td>
                     <td>Expand tree</td>
                 </tr>
                 <tr>
@@ -119,52 +122,47 @@ export default function IndexBsrTree() {
 
                 <tr>
                     <td data-d={1}><a href="#page=5-14">AddItems</a></td>
-                    <td>(...MenuItem)=&rang;void</td>
+                    <td>(...MenuItem)=&#62;void</td>
                     <td>Add items</td>
                 </tr>
 
                 <tr>
                     <td data-d={1}><a href="#page=5-14">DeleteItem</a></td>
-                    <td>(id)=&rang;void</td>
+                    <td>(id)=&#62;void</td>
                     <td>Delete item by id</td>
                 </tr>
 
                 <tr>
                     <td data-d={1}><a href="#page=5-16">OpenMenuItemOnly</a></td>
-                    <td>(string)=&rang;void</td>
-                    <td>Open only tree menu by id </td>
+                    <td>(string)=&#62;void</td>
+                    <td>Open only tree menu by id</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=5-17">OpenMenuItemAndClick</a></td>
-                    <td>(string)=&rang;void</td>
-                    <td>Open tree menu by id and click </td>
+                    <td>(string)=&#62;void</td>
+                    <td>Open tree menu by id and click</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=5-18">GetPath</a></td>
-                    <td>(string)=&rang;void</td>
+                    <td>(string)=&#62;MenuItem[]</td>
                     <td>Get tree menu path</td>
                 </tr>
 
 
-
                 <tr>
                     <td data-d={1}><a href="#page=5-19">GetMenuItems</a></td>
-                    <td>(string)=&rang;MenuItem</td>
+                    <td>(string)=&#62;MenuItem</td>
                     <td>Getting a reference to an object MenuItem by id</td>
                 </tr>
-                <tr>
-                    <td data-d={1}><a href="#page=5-20">DeleteAllItems</a></td>
-                    <td>()=&rang;void</td>
-                    <td>Clears the list MenuItem</td>
-                </tr>
+
                 <tr>
                     <td data-d={1}><a href="#page=5-21">RewriteItems</a></td>
-                    <td>(array MenuItem)=&rang;void</td>
+                    <td>(array MenuItem)=&#62;void</td>
                     <td>Replaces a list with a new list MenuItem</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=5-22">RefreshMenu</a></td>
-                    <td>(string)=&rang;void</td>
+                    <td>(string)=&#62;void</td>
                     <td>Redraws the panel tree</td>
                 </tr>
                 </tbody>
@@ -203,7 +201,7 @@ export default function IndexBsrTree() {
                     <td data-d={1}><a href="#page=5-32">title</a></td>
                     <td>string</td>
                     <td>undefined</td>
-                    <td>The title global attribute  contains text representing advisory information</td>
+                    <td>The title global attribute contains text representing advisory information</td>
                 </tr>
 
                 <tr>
@@ -247,7 +245,7 @@ export default function IndexBsrTree() {
                     <td data-d={1}><a href="#page=5-39">dataUser</a></td>
                     <td>string</td>
                     <td>undefined</td>
-                    <td>Spend attribute user data</td>
+                    <td>Attribute user data</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=5-40">target</a></td>

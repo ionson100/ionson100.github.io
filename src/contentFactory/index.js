@@ -3,9 +3,9 @@ import React, {lazy, Suspense} from "react";
 import {storage} from "../utils";
 import Orm from "../ViewStorage/menu/orm";
 import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
-import P7_1 from "../ViewStorage/menu/sidebar/7-1";
 
 
+const P7_1 = lazy(() => import("../ViewStorage/menu/sidebar/7-1"));
 
 const P6_14 = lazy(() => import("../ViewStorage/menu/orm/6-14"));
 
