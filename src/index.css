@@ -411,6 +411,9 @@ summary:active{
 canvas{
     border: 1px solid black;
 }
+.band-hidden{
+    display: none;
+}
 
 
 

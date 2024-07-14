@@ -21,7 +21,7 @@ function getItems():MenuItem[]{
     }
     {
         const menuBand=new MenuItem();
-        menuBand.band=<div style={{color:"#4f4e4e",fontSize:15,textAlign:"center",backgroundColor:"black"}}>band</div>
+        menuBand.band=<div data-band={1} style={{color:"#4f4e4e",fontSize:15,textAlign:"center",backgroundColor:"black"}}>band</div>
         ListItem.push(menuBand)
 
     }
@@ -94,7 +94,11 @@ export default function P7_1(){
                             if(mRefInput.current!.value){
                                 mRefMenu.current!.OpenMenuItemAndClick(mRefInput.current!.value)
                             }
+
                         }
+                        mRefMenu.current!.GetBody()?.querySelectorAll('[data-band="1"]').forEach((el) => {
+                            el.classList.toggle('band-hidden');
+                        })
                     }}
 
                     onChangeMenuWidth={(width)=>{
@@ -130,7 +134,7 @@ function getItems():MenuItem[]{
     }
      {
         const menuBand=new MenuItem();
-        menuBand.band=<div style={{color:"#4f4e4e",fontSize:15,textAlign:"center",backgroundColor:"black"}}>band</div>
+        menuBand.band=<div data-band={1} style={{color:"#4f4e4e",fontSize:15,textAlign:"center",backgroundColor:"black"}}>band</div>
         ListItem.push(menuBand)
 
     }
@@ -204,6 +208,9 @@ export default function P7_1(){
                                 mRefMenu.current!.OpenMenuItemAndClick(mRefInput.current!.value)
                             }
                         }
+                         mRefMenu.current!.GetBody()?.querySelectorAll('[data-band="1"]').forEach((el) => {
+                            el.classList.toggle('band-hidden');
+                        })
                     }}
                      onChangeMenuWidth={(width)=>{
                         console.log(width)
