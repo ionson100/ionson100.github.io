@@ -1,70 +1,54 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+- ### React component Menu (bsr-menu)
+  npm: [https://www.npmjs.com/package/bsr-menu](https://www.npmjs.com/package/bsr-menu)\
+  Repository: [https://github.com/ionson100/bsr-menu](https://github.com/ionson100/bsr-menu)\
+  [Props, Function](https://ionson100.github.io/wwwroot/index.html#mode=bsrmenu&page=bsrmenu&state=true)\
+  [Examples, Help pages](https://ionson100.github.io/wwwroot/index.html#mode=bsrmenu&page=1-1)
+- ### React component simple avatar uploader (bsr-sau)
+  npm: [https://www.npmjs.com/package/bsr-sau](https://www.npmjs.com/package/bsr-sau)\
+  Repository: [https://github.com/ionson100/bsr-sau](https://github.com/ionson100/bsr-sau)\
+  [Props, Function](https://ionson100.github.io/wwwroot/index.html#mode=bsrsau&page=bsrsau&state=true)\
+  [Examples, Help pages](https://ionson100.github.io/wwwroot/index.html#mode=bsrsau&page=3-5)
+- ### React component async modal dialog (bsr-modaldialog)
+  npm: [https://www.npmjs.com/package/bsr-modaldialog](https://www.npmjs.com/package/bsr-modaldialog)\
+  Repository: [https://github.com/ionson100/bsr-modaldialog](https://github.com/ionson100/bsr-modaldialog)\
+  [Props, Function](https://ionson100.github.io/wwwroot/index.html#mode=bsrdialog&page=bsrdialog&state=true)\
+  [Examples, Help pages](https://ionson100.github.io/wwwroot/index.html#mode=bsrdialog&page=4-1)
+- ### React component tree (bsr-tree-virtual)
+  npm: [https://www.npmjs.com/package/bsr-tree-virtual](https://www.npmjs.com/package/bsr-tree-virtual)\
+  Repository: [https://github.com/ionson100/bsr-tree-virtual](https://github.com/ionson100/bsr-tree-virtual)\
+  [Props, Function](https://ionson100.github.io/wwwroot/index.html#page=bsrtree)\
+  [Examples, Help pages](https://ionson100.github.io/wwwroot/index.html#page=5-1)
+- ### React component sidebar menu (bsr-left-sidebar)
+-   npm: [https://www.npmjs.com/package/bsr-left-sidebar](https://www.npmjs.com/package/bsr-left-sidebar)\
+    Repository: [https://github.com/ionson100/bsr-left-sidebar](https://github.com/ionson100/bsr-left-sidebar)\
+    [Props, Function](https://ionson100.github.io/wwwroot/index.html#page=sidebar)\
+    [Examples, Help pages](https://ionson100.github.io/wwwroot/index.html#page=7-2)
+- ### Orm C# bitnic.orm
+  ORM library, for databases: Postgres,MySql,MsSql,Sqlite.\
+  The library supports: LINQ to SQL Queries (not fully),\
+  Transactions,\
+  Free SQL Queries,\
+  Working with flat geographic features,\
+  Working with the Json type.\
+  All examples in this guide are based on working with the Postgres database.
 
-In the project directory, you can run:
+  #### Note:
+  All bases must be created before use, with the exception of Sqlite,\
+  if the file does not exist, the ORM will create it.\
+  Write to log file-debug mode only.\
+  install database provider from NuGet: (Npgsql, Mysql.Data, System.Data.SQLite, System.Data.SqlClient).\
+  Enum type is stored in the database as an integer.\
+  Presence of a primary key field:required.\
+  Primary key is Allowed on one field.\
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  Restrictions for PostgreSQL.\
+  The date is stored in the olden mode.\
+  Correction:\
+  AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);\
+  AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);\
+  ORM adds itself. 
+  Repository: [https://github.com/ionson100/ORM-1_21-](https://github.com/ionson100/ORM-1_21-)\
+  [Examples, Help pages](https://ionson100.github.io/wwwroot/index.html#page=orm)\
+  [NuGet](https://www.nuget.org/packages/bitnic.orm)
