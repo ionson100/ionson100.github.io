@@ -6,6 +6,7 @@ import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 
 
 const P7_1 = lazy(() => import("../ViewStorage/menu/sidebar/7-1"));
+const P7_2 = lazy(() => import("../ViewStorage/menu/sidebar/7-2"));
 
 const P6_14 = lazy(() => import("../ViewStorage/menu/orm/6-14"));
 
@@ -550,6 +551,10 @@ export function ContentFactory(tag) {
         }
         case '7-1':{
             data=<P7_1/>
+            break
+        }
+        case '7-2':{
+            data=<P7_2/>
             break
         }
 

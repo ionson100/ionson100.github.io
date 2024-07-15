@@ -297,7 +297,8 @@ function GetItems(): Array<MenuItem> {
         m.id = 'sidebar'
         m.url = '#page=sidebar'
 
-        m.items!.push(CreateItem({content: "Quick Start", url: '#page=7-1', id: "6-1"}))
+        m.items!.push(CreateItem({content: "Quick Start", url: '#page=7-1', id: "7-1"}))
+        m.items!.push(CreateItem({content: "Simple  example", url: '#page=7-2', id: "7-2"}))
 
         list.push(m)
     }
