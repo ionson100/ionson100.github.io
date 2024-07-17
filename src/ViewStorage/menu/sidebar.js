@@ -354,13 +354,6 @@ export default function IndexBsrSidebar() {
                     <td>undefined</td>
                     <td>Target link item as link</td>
                 </tr>
-
-                <tr>
-                    <td data-d={1}><a href="#page=7-1">selected</a></td>
-                    <td>boolean</td>
-                    <td>undefined</td>
-                    <td>checked item (only use checkBox)</td>
-                </tr>
                 </tbody>
             </table>
         </>
