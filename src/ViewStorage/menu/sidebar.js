@@ -106,6 +106,8 @@ export default function IndexBsrSidebar() {
                     <td>undefined</td>
                     <td>Icon for child item</td>
                 </tr>
+
+
                 <tr>
                     <td data-d={1}><a href="#page=7-1">onClickMenuItem</a></td>
                     <td>
@@ -261,6 +263,19 @@ export default function IndexBsrSidebar() {
                     <td>any</td>
                     <td>undefined</td>
                     <td>Delimiter items menu</td>
+                </tr>
+                <tr>
+                    <td data-d={1}><a href="#page=7-1">key</a></td>
+                    <td>number</td>
+                    <td>undefined</td>
+                    <td>Inner user data</td>
+                </tr>
+
+                <tr>
+                    <td data-d={1}><a href="#page=7-1">tag</a></td>
+                    <td>any</td>
+                    <td>undefined</td>
+                    <td>Inner user data</td>
                 </tr>
                 <tr>
                     <td data-d={1}><a href="#page=7-1">id</a></td>
