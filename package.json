@@ -12,6 +12,7 @@
     "bsr-menu": "github:ionson100/bsr-menu",
     "bsr-modaldialog": "github:ionson100/bsr-modaldialog",
     "bsr-sau": "github:ionson100/bsr-sau",
+    "bsr-tab": "github:ionson100/bsr-tab",
     "bsr-tree-virtual": "github:ionson100/bsr-tree-virtual",
     "def": "^0.0.8",
     "prismjs": "^1.29.0",
@@ -48,9 +49,9 @@
     ]
   },
   "devDependencies": {
-    "ol": "^8.2.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/uuid": "^10.0.0",
+    "ol": "^8.2.0",
     "rc-table": "^7.45.5",
     "react-scroll-to-top": "^3.0.0",
     "react-syntax-highlighter": "^15.5.0",

@@ -3,6 +3,8 @@ import React, {lazy, Suspense} from "react";
 import {storage} from "../utils";
 import Orm from "../ViewStorage/menu/orm";
 import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
+import IndexTabs from "../ViewStorage/menu/tabs";
+import P8_1 from "../ViewStorage/menu/tabs/8-1";
 
 
 const P7_1 = lazy(() => import("../ViewStorage/menu/sidebar/7-1"));
@@ -555,6 +557,14 @@ export function ContentFactory(tag) {
         }
         case '7-2':{
             data=<P7_2/>
+            break
+        }
+        case 'tabs':{
+           data=<IndexTabs/>
+            break
+        }
+        case '8-1':{
+            data=<P8_1/>
             break
         }
 

@@ -415,6 +415,9 @@ canvas{
     display: none;
 }
 
-
+.bsr-tab button {
+    /*width: border-box !important;*/
+    /*padding: 0 15px 0 15px;*/
+}
 
 

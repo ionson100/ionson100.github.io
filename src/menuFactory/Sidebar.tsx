@@ -15,6 +15,7 @@ import {PiTreeViewDuotone} from "react-icons/pi";
 import {CgMenuBoxed} from "react-icons/cg";
 import {PiDatabase} from "react-icons/pi";
 import { BsLayoutTextSidebar } from "react-icons/bs";
+import { PiTabs } from "react-icons/pi";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -299,6 +300,19 @@ function GetItems(): Array<MenuItem> {
 
         m.items!.push(CreateItem({content: "Quick Start", url: '#page=7-1', id: "7-1"}))
         m.items!.push(CreateItem({content: "Simple  example", url: '#page=7-2', id: "7-2"}))
+
+        list.push(m)
+    }
+
+    {
+        const m = new MenuItem();
+        m.icon = <PiTabs size={25}/>
+        m.content = "bsr-tab"
+        m.id = 'tabs'
+        m.url = '#page=tabs'
+
+        m.items!.push(CreateItem({content: "Quick Start", url: '#page=8-1', id: "8-1"}))
+        m.items!.push(CreateItem({content: "Simple  example", url: '#page=8-2', id: "8-2"}))
 
         list.push(m)
     }
