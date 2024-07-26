@@ -311,9 +311,25 @@ function GetItems(): Array<MenuItem> {
         m.id = 'tabs'
         m.url = '#page=tabs'
 
-        m.items!.push(CreateItem({content: "Quick Start", url: '#page=8-1', id: "8-1"}))
-        m.items!.push(CreateItem({content: "Simple  example", url: '#page=8-2', id: "8-2"}))
+        m.items!.push(CreateItem({content: "Example", url: '#page=8-1', id: "8-1"}))
+        m.items!.push(CreateItem({content: "Tabs: buttonPrefix", url: '#page=8-2', id: "8-2"}))
+        m.items!.push(CreateItem({content: "Tabs: SelectTabsById", url: '#page=8-10', id: "8-10"}))
 
+
+        m.items!.push(CreateItem({content: "Tab:eventKey", url: '#page=8-3', id: "8-3"}))
+
+        m.items!.push(CreateItem({content: " Tab: onSelect", url: '#page=8-3', id: "8-3"}))
+        m.items!.push(CreateItem({content: "Tab: id", url: '#page=8-3', id: "8-3"}))
+
+        m.items!.push(CreateItem({content: "Tab: title", url: '#page=8-4', id: "8-4"}))
+        m.items!.push(CreateItem({content: "Tab: icon", url: '#page=8-4', id: "8-4"}))
+
+        m.items!.push(CreateItem({content: "Tab: isOpen", url: '#page=8-5', id: "8-5"}))
+        m.items!.push(CreateItem({content: "Tab: width", url: '#page=8-6', id: "8-6"}))
+
+        m.items!.push(CreateItem({content: "Tab: SelectTab", url: '#page=8-7', id: "8-7"}))
+        m.items!.push(CreateItem({content: "Tab: SetShow", url: '#page=8-8', id: "8-8"}))
+        m.items!.push(CreateItem({content: "Tab: SetDisabled", url: '#page=8-9', id: "8-9"}))
         list.push(m)
     }
 

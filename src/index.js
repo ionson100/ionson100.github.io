@@ -6,7 +6,7 @@ import App from './App';
 import 'bsr-modaldialog/dist/index.css'
 import 'bsr-sau/dist/index.css'
 import "bsr-tree-virtual/dist/index.css"
-import 'bsr-tab/dist/index.css'
+import 'bsr-tabs/dist/index.css'
 
 
 
@@ -21,3 +21,5 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 //reportWebVitals();
+
+
