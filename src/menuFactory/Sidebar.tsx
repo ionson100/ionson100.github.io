@@ -14,8 +14,8 @@ import {TbPointFilled} from "react-icons/tb";
 import {PiTreeViewDuotone} from "react-icons/pi";
 import {CgMenuBoxed} from "react-icons/cg";
 import {PiDatabase} from "react-icons/pi";
-import { BsLayoutTextSidebar } from "react-icons/bs";
-import { PiTabs } from "react-icons/pi";
+import {BsLayoutTextSidebar} from "react-icons/bs";
+import {PiTabs} from "react-icons/pi";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -61,13 +61,13 @@ export function Sidebar() {
             }
             }
             onClickToggle={(state) => {
-                if(state){
+                if (state) {
 
-                   let myUrl = new URL(document.URL.replace(/#/g, "?"));
-                   const tag = myUrl.searchParams.get("page");
-                   if(tag){
-                       mRefMenu.current!.OpenMenuItemOnly(tag)
-                   }
+                    let myUrl = new URL(document.URL.replace(/#/g, "?"));
+                    const tag = myUrl.searchParams.get("page");
+                    if (tag) {
+                        mRefMenu.current!.OpenMenuItemOnly(tag)
+                    }
                 }
             }
             }
@@ -310,32 +310,43 @@ function GetItems(): Array<MenuItem> {
         m.content = "bsr-tab"
         m.id = 'tabs'
         m.url = '#page=tabs'
-
         m.items!.push(CreateItem({content: "Example", url: '#page=8-1', id: "8-1"}))
-        m.items!.push(CreateItem({content: "Tabs: buttonPrefix", url: '#page=8-2', id: "8-2"}))
-        m.items!.push(CreateItem({content: "Tabs: SelectTabsById", url: '#page=8-10', id: "8-10"}))
+        const b = <div style={{height: "5px",background:"black"}}></div>
+        const tabs=new MenuItem()
+        tabs.content="Tabs"
+        tabs.icon=  <CgMenuBoxed/>
+        tabs.items!.push()
+
+        tabs.items!.push(CreateItem({content: "Tabs: className", url: '#page=8-2', id: "8-2"}))
+        tabs.items!.push(CreateItem({content: "Tabs: style", url: '#page=8-3', id: "8-3"}))
+        tabs.items!.push(CreateItem({content: "Tabs: id", url: '#page=8-31', id: "8-31"}))
+        tabs.items!.push(CreateItem({content: "Tabs: SelectTabById", url: '#page=8-4', id: "8-4"}))
+        tabs.items!.push(CreateItem({content: "Tabs: SetShowTabById", url: '#page=8-5', id: "8-5"}))
+        tabs.items!.push(CreateItem({content: "Tabs: SetDisabledTabById", url: '#page=8-6', id: "8-6"}))
+        tabs.items!.push(CreateItem({content: "Tabs: onSelect", url: '#page=8-8', id: "8-8"}))
+
+        m.items!.push(tabs)
+
+        const tab=new MenuItem();
+        tab.icon=  <CgMenuBoxed/>
+        tab.content = "Tab"
+        tab.items!.push(CreateItem({content: "Tab:eventKey", url: '#page=8-7', id: "8-7"}))
 
 
-        m.items!.push(CreateItem({content: "Tab:eventKey", url: '#page=8-3', id: "8-3"}))
+        tab.items!.push(CreateItem({content: "Tab: id", url: '#page=8-9', id: "8-9"}))
+        //
+        tab.items!.push(CreateItem({content: "Tab: title", url: '#page=8-10', id: "8-10"}))
+        tab.items!.push(CreateItem({content: "Tab: icon", url: '#page=8-11', id: "8-11"}))
 
-        m.items!.push(CreateItem({content: " Tab: onSelect", url: '#page=8-3', id: "8-3"}))
-        m.items!.push(CreateItem({content: "Tab: id", url: '#page=8-3', id: "8-3"}))
+        tab.items!.push(CreateItem({content: "Tab: select", url: '#page=8-12', id: "8-12"}))
+        tab.items!.push(CreateItem({content: "Tab: width", url: '#page=8-13', id: "8-13"}))
 
-        m.items!.push(CreateItem({content: "Tab: title", url: '#page=8-4', id: "8-4"}))
-        m.items!.push(CreateItem({content: "Tab: icon", url: '#page=8-4', id: "8-4"}))
-
-        m.items!.push(CreateItem({content: "Tab: isOpen", url: '#page=8-5', id: "8-5"}))
-        m.items!.push(CreateItem({content: "Tab: width", url: '#page=8-6', id: "8-6"}))
-
-        m.items!.push(CreateItem({content: "Tab: SelectTab", url: '#page=8-7', id: "8-7"}))
-        m.items!.push(CreateItem({content: "Tab: SetShow", url: '#page=8-8', id: "8-8"}))
-        m.items!.push(CreateItem({content: "Tab: SetDisabled", url: '#page=8-9', id: "8-9"}))
+        tab.items!.push(CreateItem({content: "Tab: SelectTab", url: '#page=8-14', id: "8-14"}))
+        tab.items!.push(CreateItem({content: "Tab: SetShow", url: '#page=8-15', id: "8-15"}))
+        tab.items!.push(CreateItem({content: "Tab: SetDisabled", url: '#page=8-16', id: "8-16"}))
+        m.items!.push(tab)
         list.push(m)
     }
-
-
-
-
 
 
     {
