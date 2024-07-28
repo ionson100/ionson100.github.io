@@ -311,17 +311,16 @@ function GetItems(): Array<MenuItem> {
         m.id = 'tabs'
         m.url = '#page=tabs'
         m.items!.push(CreateItem({content: "Example", url: '#page=8-1', id: "8-1"}))
+        m.items!.push(CreateItem({content: "Simple lesson", url: '#page=8-20', id: "8-20"}))
         const b = <div style={{height: "5px",background:"black"}}></div>
         const tabs=new MenuItem()
         tabs.content="Tabs"
         tabs.icon=  <CgMenuBoxed/>
         tabs.items!.push()
 
-        tabs.items!.push(CreateItem({content: "Tabs: className", url: '#page=8-2', id: "8-2"}))
-        tabs.items!.push(CreateItem({content: "Tabs: style", url: '#page=8-3', id: "8-3"}))
-        tabs.items!.push(CreateItem({content: "Tabs: id", url: '#page=8-31', id: "8-31"}))
+        tabs.items!.push(CreateItem({content: "Tabs: className, style, id", title:'Tabs: className, style, id', url: '#page=8-2', id: "8-2"}))
         tabs.items!.push(CreateItem({content: "Tabs: SelectTabById", url: '#page=8-4', id: "8-4"}))
-        tabs.items!.push(CreateItem({content: "Tabs: SetShowTabById", url: '#page=8-5', id: "8-5"}))
+        tabs.items!.push(CreateItem({content: "Tabs: SetVisibilitiesTabById", url: '#page=8-5', id: "8-5"}))
         tabs.items!.push(CreateItem({content: "Tabs: SetDisabledTabById", url: '#page=8-6', id: "8-6"}))
         tabs.items!.push(CreateItem({content: "Tabs: onSelect", url: '#page=8-8', id: "8-8"}))
 
@@ -342,7 +341,7 @@ function GetItems(): Array<MenuItem> {
         tab.items!.push(CreateItem({content: "Tab: width", url: '#page=8-13', id: "8-13"}))
 
         tab.items!.push(CreateItem({content: "Tab: SelectTab", url: '#page=8-14', id: "8-14"}))
-        tab.items!.push(CreateItem({content: "Tab: SetShow", url: '#page=8-15', id: "8-15"}))
+        tab.items!.push(CreateItem({content: "Tab: SetVisibilities", url: '#page=8-15', id: "8-15"}))
         tab.items!.push(CreateItem({content: "Tab: SetDisabled", url: '#page=8-16', id: "8-16"}))
         m.items!.push(tab)
         list.push(m)

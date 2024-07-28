@@ -4,7 +4,19 @@ import {storage} from "../utils";
 import Orm from "../ViewStorage/menu/orm";
 import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 import IndexTabs from "../ViewStorage/menu/tabs";
-import P8_1 from "../ViewStorage/menu/tabs/8-1";
+import P8_20 from "../ViewStorage/menu/tabs/8-20";
+
+
+
+const P8_1 = lazy(() => import("../ViewStorage/menu/tabs/8-1"));
+const P8_2 = lazy(() => import("../ViewStorage/menu/tabs/8-2"));
+const P8_4 = lazy(() => import("../ViewStorage/menu/tabs/8-4"));
+const P8_5 = lazy(() => import("../ViewStorage/menu/tabs/8-5"));
+const P8_6 = lazy(() => import("../ViewStorage/menu/tabs/8-6"));
+const P8_8 = lazy(() => import("../ViewStorage/menu/tabs/8-8"));
+const P8_10 = lazy(() => import("../ViewStorage/menu/tabs/8-10"));
+const P8_14 = lazy(() => import("../ViewStorage/menu/tabs/8-14"));
+
 
 
 const P7_1 = lazy(() => import("../ViewStorage/menu/sidebar/7-1"));
@@ -31,7 +43,6 @@ const P6_9 = lazy(() => import("../ViewStorage/menu/orm/6-9"));
 const P6_10 = lazy(() => import("../ViewStorage/menu/orm/6-10"));
 const P6_11 = lazy(() => import("../ViewStorage/menu/orm/6-11"));
 const P6_12 = lazy(() => import("../ViewStorage/menu/orm/6-12"));
-
 
 
 const P5_2 = lazy(() => import("../ViewStorage/menu/bsrtree/5-2"));
@@ -138,7 +149,9 @@ export function ContentFactory(tag) {
         }
     }, 100)
 
-
+    ContentHub.content.render(
+        <div id={'sc-123'}>null</div>
+    );
     switch (tag.trim()) {
 
 
@@ -471,100 +484,168 @@ export function ContentFactory(tag) {
             data = <P5_111/>
             break
         }
-        case 'orm':{
-            data=<Orm/>
+        case 'orm': {
+            data = <Orm/>
             break
         }
-        case '6-1':{
-            data=<P6_1/>
+        case '6-1': {
+            data = <P6_1/>
             break
         }
-        case '6-2':{
-            data=<P6_2/>
+        case '6-2': {
+            data = <P6_2/>
             break
         }
-        case '6-3':{
-            data=<P6_3/>
+        case '6-3': {
+            data = <P6_3/>
             break
         }
-        case '6-4':{
-            data=<P6_4/>
+        case '6-4': {
+            data = <P6_4/>
             break
         }
-        case '6-5':{
-            data=<P6_5/>
+        case '6-5': {
+            data = <P6_5/>
             break
         }
-        case '6-6':{
-            data=<P6_6/>
+        case '6-6': {
+            data = <P6_6/>
             break
         }
-        case '6-7':{
-            data=<P6_7/>
+        case '6-7': {
+            data = <P6_7/>
             break
         }
-        case '6-8':{
-            data=<P6_8/>
+        case '6-8': {
+            data = <P6_8/>
             break
         }
-        case '6-9':{
-            data=<P6_9/>
+        case '6-9': {
+            data = <P6_9/>
             break
         }
-        case '6-10':{
-            data=<P6_10/>
+        case '6-10': {
+            data = <P6_10/>
             break
         }
-        case '6-11':{
-            data=<P6_11/>
+        case '6-11': {
+            data = <P6_11/>
             break
         }
-        case '6-12':{
-            data=<P6_12/>
+        case '6-12': {
+            data = <P6_12/>
             break
         }
-        case '6-14':{
-            data=<P6_14/>
+        case '6-14': {
+            data = <P6_14/>
             break
         }
-        case '6-15':{
-            data=<P6_15/>
+        case '6-15': {
+            data = <P6_15/>
             break
         }
-        case '6-16':{
-            data=<P6_16/>
+        case '6-16': {
+            data = <P6_16/>
             break
         }
-        case '6-17':{
-            data=<MyMap/>
+        case '6-17': {
+            data = <MyMap/>
             break
         }
-        case '6-18':{
-            data=<P6_18/>
+        case '6-18': {
+            data = <P6_18/>
             break
         }
-        case '6-19':{
-            data=<P6_19/>
+        case '6-19': {
+            data = <P6_19/>
             break
         }
-        case 'sidebar':{
-            data=<IndexBsrSidebar/>
+        case 'sidebar': {
+            data = <IndexBsrSidebar/>
             break
         }
-        case '7-1':{
-            data=<P7_1/>
+        case '7-1': {
+            data = <P7_1/>
             break
         }
-        case '7-2':{
-            data=<P7_2/>
+        case '7-2': {
+            data = <P7_2/>
             break
         }
-        case 'tabs':{
-           data=<IndexTabs/>
+        case 'tabs': {
+            data = <IndexTabs/>
             break
         }
-        case '8-1':{
-            data=<P8_1/>
+        case '8-1': {
+            data = <P8_1/>
+            break
+        }
+        case '8-2': {
+            data = <P8_2/>
+            break
+        }
+        case '8-3': {
+            data = <P8_2/>
+            break
+        }
+        case '8-31': {
+            data = <P8_2/>
+            break
+        }
+        case '8-4': {
+            data = <P8_4/>
+            break
+        }
+        case '8-5': {
+            data = <P8_5/>
+            break
+        }
+        case '8-6': {
+            data = <P8_6/>
+            break
+        }
+        case '8-8': {
+            data=<P8_8/>
+            break
+        }
+        case '8-7': {
+            data=<P8_8/>
+            break
+        }
+        case '8-9': {
+            data=<P8_8/>
+            break
+        }
+        case '8-12': {
+            data=<P8_8/>
+            break
+        }
+        case '8-10':{
+            data=<P8_10/>
+            break
+        }
+        case '8-11':{
+            data=<P8_10/>
+            break
+        }
+        case '8-13':{
+            data=<P8_10/>
+            break
+        }
+        case '8-14':{
+            data=<P8_14/>
+            break
+        }
+        case '8-15':{
+            data=<P8_14/>
+            break
+        }
+        case '8-16':{
+            data=<P8_14/>
+            break
+        }
+        case '8-20':{
+            data=<P8_20/>
             break
         }
 
