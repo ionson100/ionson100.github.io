@@ -25,6 +25,11 @@
     Repository: [https://github.com/ionson100/bsr-left-sidebar](https://github.com/ionson100/bsr-left-sidebar)\
     [Props, Function](https://ionson100.github.io/wwwroot/index.html#page=sidebar)\
     [Examples, Help pages](https://ionson100.github.io/wwwroot/index.html#page=7-2)
+- ### React component Tabs (bsr-tabs)
+-   npm: [https://www.npmjs.com/package/bsr-tabs](https://www.npmjs.com/package/bsr-tabs)\
+    Repository: [https://github.com/ionson100/bsr-tabs](https://github.com/ionson100/bsr-tabs)\
+    [Props, Function](https://ionson100.github.io/wwwroot/index.html#page=tabs)\
+    [Examples, Help pages](https://ionson100.github.io/wwwroot/index.html#page=8-20)
 - ### Orm C# bitnic.orm
   ORM library, for databases: Postgres,MySql,MsSql,Sqlite.\
   The library supports: LINQ to SQL Queries (not fully),\
