@@ -4,7 +4,7 @@ import {storage} from "../utils";
 import Orm from "../ViewStorage/menu/orm";
 import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 import IndexTabs from "../ViewStorage/menu/tabs";
-import P8_20 from "../ViewStorage/menu/tabs/8-20";
+
 
 
 
@@ -16,7 +16,7 @@ const P8_6 = lazy(() => import("../ViewStorage/menu/tabs/8-6"));
 const P8_8 = lazy(() => import("../ViewStorage/menu/tabs/8-8"));
 const P8_10 = lazy(() => import("../ViewStorage/menu/tabs/8-10"));
 const P8_14 = lazy(() => import("../ViewStorage/menu/tabs/8-14"));
-
+const P8_20 = lazy(() => import("../ViewStorage/menu/tabs/8-20"));
 
 
 const P7_1 = lazy(() => import("../ViewStorage/menu/sidebar/7-1"));
