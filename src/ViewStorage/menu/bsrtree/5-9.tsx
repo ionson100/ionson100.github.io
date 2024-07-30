@@ -51,7 +51,7 @@ export default function P5_9() {
                     //item?: MenuItem - current item
                     //element?: HTMLAnchorElement - current html element
                     //}
-                    mReLabel.current!.innerText=" content item: "+obj.item!.content+"  id item: "+obj.item!.id+""
+                    mReLabel.current.innerText=" content item: "+obj.item.content+"  id item: "+obj.item.id+""
 
                 }}
             />

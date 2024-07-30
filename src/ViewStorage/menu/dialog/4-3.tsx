@@ -16,7 +16,7 @@ export  function P4_3() {
             <label ref={mRefLabel}></label>
             <br/>
             <button onClick={() => {
-                mRefLabel.current!.innerText=''
+                mRefLabel.current.innerText=''
                 ShowBsrDialog({
                     refDialog:mRefDialog,
                     modal:false,
@@ -24,7 +24,7 @@ export  function P4_3() {
                     body:<span style={{paddingLeft:10}}>Close it with a button:Close Dialog</span>,
                     buttons:[(<button data-mode={-1} data-focus={1}>close</button>)]
                 }).then(a=>{
-                    mRefLabel.current!.innerText=JSON.stringify(a)
+                    mRefLabel.current.innerText=JSON.stringify(a)
                 })
             }}>show
             </button>

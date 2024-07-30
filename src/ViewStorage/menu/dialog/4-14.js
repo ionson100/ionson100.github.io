@@ -1,4 +1,3 @@
-import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 import React from "react";
 
 export default function P4_14(){

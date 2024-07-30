@@ -45,10 +45,10 @@ export default function P5_12() {
             />
             <br/>
             <button onClick={()=>{
-                mRefTree.current!.Expand()
+                mRefTree.current.Expand()
             }}> Expand</button>
             <button onClick={()=>{
-                mRefTree.current!.Collapse()
+                mRefTree.current.Collapse()
             }}> Collapse</button>
         </div>
     )

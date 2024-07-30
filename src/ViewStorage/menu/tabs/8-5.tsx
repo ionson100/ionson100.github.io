@@ -45,7 +45,7 @@ export default function Tabs() {
            <br/>
            <label>
                <input type={"checkbox"}  onChange={(e) => {
-                    mRefTabs.current!.SetVisibilitiesTabById('id-tab-312',!e.target.checked)
+                    mRefTabs.current.SetVisibilitiesTabById('id-tab-312',!e.target.checked)
                 }}/>
                 Hidden tab2
            </label>

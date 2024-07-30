@@ -45,7 +45,7 @@ export default function P5_10() {
                 items={getListItem()}
                 useCheckBox={true}
                 onChecked={(tree,item)=>{
-                    mReLabel.current!.innerText="id Item:"+item.id+" checked:"+item.selected
+                    mReLabel.current.innerText="id Item:"+item.id+" checked:"+item.selected
                 }}
 
             />

@@ -19,11 +19,11 @@ export function P1_8() {
 
     const mRefMenu=useRef<InstanceType<typeof MenuItem >>(null)
     function myClick(menuItem:InstanceType<typeof MenuItem>){
-        mRefMenu.current!.wrapper!.style.background='red'
-        mRefMenu.current!.wrapper!.style.padding='100px'
-        mRefMenu.current!.menu!.style.background='yellow'
-        mRefMenu.current!.popUp!.style.background='red'
-        menuItem.menu!.style.background='green'
+        mRefMenu.current.wrapper.style.background='red'
+        mRefMenu.current.wrapper.style.padding='100px'
+        mRefMenu.current.menu.style.background='yellow'
+        mRefMenu.current.popUp.style.background='red'
+        menuItem.menu.style.background='green'
     }
 
     return (

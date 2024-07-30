@@ -14,7 +14,7 @@ export default function P3_9() {
             <AvatarUploader ref={mRefAvatarRef}/>
             <br/>
             <button onClick={()=>{
-               const dataForForm=mRefAvatarRef.current!.getCanvasFormData()
+               const dataForForm=mRefAvatarRef.current.getCanvasFormData()
                 alert(dataForForm)
             }}>I will send the data to the server myself</button>
         </>

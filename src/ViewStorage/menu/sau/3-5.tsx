@@ -19,7 +19,7 @@ export default function P3_5() {
                 ref={mRefAvatarRef}
                 visibleLinkPreview={true}
                 previewAsync={(url)=>{
-                    mRefImage.current!.src = url;
+                    mRefImage.current.src = url;
                 }}
                 preview={(url)=>{
                     alert("I ll insert the picture myself where I want: url: "+url);

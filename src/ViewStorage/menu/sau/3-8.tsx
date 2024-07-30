@@ -14,7 +14,7 @@ export default function P3_8() {
             <AvatarUploader ref={mRefAvatarRef}/>
             <br/>
             <button onClick={()=>{
-                mRefAvatarRef.current!.clear()
+                mRefAvatarRef.current.clear()
             }}>clear Avatar</button>
         </>
     )

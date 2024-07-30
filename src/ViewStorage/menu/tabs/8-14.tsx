@@ -62,20 +62,20 @@ export default function Tabs() {
             <div style={{display: "flex"}}>
                 <div className={'border-div'}>
                     <button onClick={()=>{
-                        mRefTab.current!.SelectTab()
+                        mRefTab.current.SelectTab()
                     }}>
                         Select tab2
                     </button>
                 </div>
                 <div className={'border-div'}>
                     <input type={"checkbox"} onChange={(e) => {
-                        mRefTab.current!.SetVisibilities(!e.target.checked)
+                        mRefTab.current.SetVisibilities(!e.target.checked)
                     }}/>
                     <div>Hidden tab2</div>
                 </div>
                 <div className={'border-div'}>
                     <input type={"checkbox"} onChange={(e) => {
-                        mRefTab.current!.SetDisabled(e.target.checked)
+                        mRefTab.current.SetDisabled(e.target.checked)
                     }}/>
                     <div>Disable tab2</div>
                 </div>

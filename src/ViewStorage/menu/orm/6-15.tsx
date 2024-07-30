@@ -118,7 +118,7 @@ points.ForEach(a=>Console.WriteLine(a.Name));
             <details>
                 <summary >StArea</summary>
                 <div>
-                    <a target={"_blank"} href={'https://postgis.net/docs/ST_Area.html'}>ST_Area</a>
+                    <a rel="noreferrer" target={"_blank"} href={'https://postgis.net/docs/ST_Area.html'}>ST_Area</a>
 
                     <CodeSnippetDotNet code={`session.Insert(new MGeo { Name = "polygon1", Shape = FactoryGeo.Polygon("POLYGON((743238 2967416,743238 2967450, 743265 2967450,743265.625 2967416,743238 2967416))") });
 
@@ -142,7 +142,7 @@ var s = shape.SetSession(session).StArea();
             <details>
                 <summary >StAsBinary</summary>
                 <div>
-                    <a target={"_blank"} href={'https://postgis.net/docs/ST_AsBinary.html'}>ST_AsBinary</a>
+                    <a rel="noreferrer" target={"_blank"} href={'https://postgis.net/docs/ST_AsBinary.html'}>ST_AsBinary</a>
                     <CodeSnippetDotNet code={`session.Insert(new MGeo { Name = "polygon1", Shape = FactoryGeo.Polygon("POLYGON((743238 2967416,743238 2967450, 743265 2967450,743265.625 2967416,743238 2967416))") });
 var res = session.Query<MGeo>().Select(a=>new {a.Name,s=a.Shape.StAsBinary()}).ToList();
 var shape = FactoryGeo.Polygon(
@@ -158,7 +158,7 @@ var s = shape.SetSession(session).StAsBinary();
             <details>
                 <summary >StAsText</summary>
                 <div>
-                    <a target={"_blank"} href={'https://postgis.net/docs/ST_AsText.html'}>StAsText</a>
+                    <a rel="noreferrer" target={"_blank"} href={'https://postgis.net/docs/ST_AsText.html'}>StAsText</a>
                     <CodeSnippetDotNet code={`session.Insert(new MGeo { Name = "polygon1", Shape = FactoryGeo.Polygon("POLYGON((743238 2967416,743238 2967450, 743265 2967450,743265.625 2967416,743238 2967416))") });
 var res = session.Query<MGeo>().Select(a=>new {a.Name,s=a.Shape.StAsText()}).ToList();
 var shape = FactoryGeo.Polygon(
@@ -172,7 +172,7 @@ var s = shape.StAsText();
             <details>
                 <summary >StWithin</summary>
                 <div>
-                    <a target={"_blank"} href={'https://postgis.net/docs/ST_Within.html'}>ST_Within</a>
+                    <a rel="noreferrer" target={"_blank"} href={'https://postgis.net/docs/ST_Within.html'}>ST_Within</a>
                     <p>Find all objects in the database that are contained in a container</p>
                     <CodeSnippetDotNet code={`session.Insert(new MGeo { Name = "point1", Shape = FactoryGeo.Point(-122.12824857332558, 47.6395516675712) });
 session.Insert(new MGeo { Name = "point2", Shape = FactoryGeo.Point(0, 0) });
@@ -222,7 +222,7 @@ var isWithin = point.SetSession(session).StWithin(container) ;`}/>
             <details>
                 <summary >STContains</summary>
                 <div>
-                    <a target={"_blank"} href={'https://postgis.net/docs/ST_Contains.html'}>ST_Contains</a>
+                    <a rel="noreferrer" target={"_blank"} href={'https://postgis.net/docs/ST_Contains.html'}>ST_Contains</a>
                     <CodeSnippetDotNet code={`var p= FactoryGeo.Polygon("polygon ((0 0, 0 10, 10 10, 10 0, 0 0))");
 var p1 =  FactoryGeo.Polygon("polygon ((-1 -1, -1 11, 11 11, 11 -1, -1 -1))") ;
 var p2 = FactoryGeo.Polygon("polygon ((-2 -2, -2 11, 12 12, 12 -2, -2 -2))");
@@ -238,7 +238,7 @@ var isContains = p1.SetSession(session).StContains(p) ;`}/>
             <details>
                 <summary >StCrosses</summary>
                 <div>
-                    <a target={"_blank"} href={'https://postgis.net/docs/ST_Crosses.html'}>ST_Crosses</a>
+                    <a rel="noreferrer" target={"_blank"} href={'https://postgis.net/docs/ST_Crosses.html'}>ST_Crosses</a>
                     <CodeSnippetDotNet code={`var p= FactoryGeo.LineString("linestring (20 20, 60 60)");
 var p1 =  FactoryGeo.LineString("linestring (40 50, 50 40)") ;
 session.Insert(new MGeo { Name = "line", Shape = p });
@@ -252,7 +252,7 @@ var isCrosses = p.SetSession(session).StCrosses(p1) ;`}/>
             <details>
                 <summary >StOverlaps</summary>
                 <div>
-                    <a target={"_blank"} href={'https://postgis.net/docs/ST_Overlaps.html'}>ST_Overlaps</a>
+                    <a rel="noreferrer" target={"_blank"} href={'https://postgis.net/docs/ST_Overlaps.html'}>ST_Overlaps</a>
                     <CodeSnippetDotNet code={`var p= FactoryGeo.Polygon("POLYGON ((40 170, 90 30, 180 100, 40 170))");
 var p1 =  FactoryGeo.Polygon("POLYGON ((110 180, 20 60, 130 90, 110 180))") ;
 session.Insert(new MGeo { Name = "polygon", Shape = p });

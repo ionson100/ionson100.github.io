@@ -43,7 +43,7 @@ export default function P8_4() {
             </Tabs>
             <br/>
             <button onClick={() => {
-                mRefTabs.current!.SelectTabById('id-tab-312')
+                mRefTabs.current.SelectTabById('id-tab-312')
             }}>
                 select tab3
             </button>

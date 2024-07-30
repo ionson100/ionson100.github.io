@@ -47,7 +47,7 @@ export default function P5_14() {
                 iconOpen={<FaRegMinusSquare color={"black"} size={20}/>}
                 items={getListItem()}
                 onClickMenuItem={(s,o)=>{
-                    mRefInput.current!.value=o.item!.id
+                    mRefInput.current.value=o.item.id
                 }}
             />
             <br/>
@@ -63,16 +63,16 @@ export default function P5_14() {
                         .AddItem(new MenuItem('final')
                             .AddItem(new MenuItem('sub_final')
                                 .AddItem(new MenuItem('45'))))));
-                mRefTree.current!.AddItems(m)
-                mRefInput.current!.value=''
+                mRefTree.current.AddItems(m)
+                mRefInput.current.value=''
             }}> Add item</button>
             <button onClick={()=>{
-                if(!mRefInput.current!.value){
+                if(!mRefInput.current.value){
                     alert('id is empty')
                     return
                 }
-                mRefTree.current!.DeleteItem(mRefInput.current!.value)
-                mRefInput.current!.value=''
+                mRefTree.current.DeleteItem(mRefInput.current.value)
+                mRefInput.current.value=''
             }}>Delete by id</button>
         </div>
     )

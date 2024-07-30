@@ -49,25 +49,25 @@ export default function P5_19() {
                 iconOpen={<FaRegMinusSquare color={"black"} size={20}/>}
                 items={getListItem()}
                 onClickMenuItem={(s,o)=>{
-                    console.log('clicked: '+o.item!.id)
+                    console.log('clicked: '+o.item.id)
                 }}
             />
             <br/>
             <br/>
             <button onClick={()=>{
-                const listItem=mRefTree.current!.GetListItems()
+                const listItem=mRefTree.current.GetListItems()
                 const m=CreateItem({content:"add"})
-                listItem!.push(m)
-                mRefTree.current!.RefreshMenu()
+                listItem.push(m)
+                mRefTree.current.RefreshMenu()
 
             }}>Add Items manual</button>
             <button onClick={()=>{
-                mRefTree.current!.DeleteAllItems()
+                mRefTree.current.DeleteAllItems()
             }}>Delete all items</button>
 
             <button onClick={()=>{
                const newList:MenuItem[]=getListItem();
-               mRefTree.current!.RewriteItems(...newList)
+               mRefTree.current.RewriteItems(...newList)
             }}>Replaces list to now list</button>
         </div>
     )

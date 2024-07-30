@@ -45,7 +45,7 @@ export default function Tabs() {
            <br/>
            <label>
                <input type={"checkbox"}  onChange={(e) => {
-                   mRefTabs.current!.SetDisabledTabById('id-tab-312',e.target.checked)
+                   mRefTabs.current.SetDisabledTabById('id-tab-312',e.target.checked)
                 }}/>
                 Disable tab2
            </label>

@@ -49,7 +49,7 @@ export default function P5_30() {
                 iconOpen={<FaRegMinusSquare color={"black"} size={20}/>}
                 items={getListItem()}
                 onClickMenuItem={(s, o) => {
-                    console.log('clicked: ' + o.item!.id)
+                    console.log('clicked: ' + o.item.id)
                 }}
             />
             <br/>
@@ -67,7 +67,7 @@ export default function P5_30() {
                 menu.isOpen=true;
                 menu.selected=true;
                 menu.items?.push(CreateItem({content: "sub",selected:true}))
-                mRefTree.current!.AddItems(menu)
+                mRefTree.current.AddItems(menu)
             }}>Add Item
             </button>
         </div>

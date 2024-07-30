@@ -165,17 +165,17 @@ export default function P7_1(){
         return(
             <div style={styleHeader}>
                 <button onClick={()=>{
-                    mRefMenu.current!.Expand()
+                    mRefMenu.current.Expand()
                 }}>Expand</button>
                 <button onClick={()=>{
-                    mRefMenu.current!.Collapse()
+                    mRefMenu.current.Collapse()
                 }}>Collapse</button>
                 <button onClick={()=>{
                     if(!mRefInput.current?.value){
                         alert('id for click - empty')
                         return;
                     }
-                    mRefMenu.current!.OpenMenuItemAndClick(mRefInput.current!.value)
+                    mRefMenu.current.OpenMenuItemAndClick(mRefInput.current.value)
                 }}>Click by Id</button>
                 <br/><br/>
                 <input ref={mRefInput} type={'text'} style={{width:270}}/>
@@ -200,15 +200,15 @@ export default function P7_1(){
                     iconToggle={<RiMenuFill size={30} color={"yellow"}/>}
                     //footer={<div style={{height: 40, borderTop: "1px solid #6c6b6b"}}></div>}
                     onClickMenuItem={(a,o)=>{
-                       mRefInput.current!.value= o.items!.id
+                       mRefInput.current.value= o.items.id
                     }}
                     onClickToggle={(state)=>{
                         if(state){//open
-                            if(mRefInput.current!.value){
-                                mRefMenu.current!.OpenMenuItemAndClick(mRefInput.current!.value)
+                            if(mRefInput.current.value){
+                                mRefMenu.current.OpenMenuItemAndClick(mRefInput.current.value)
                             }
                         }
-                         mRefMenu.current!.GetBody()?.querySelectorAll('[data-band="1"]').forEach((el) => {
+                         mRefMenu.current.GetBody()?.querySelectorAll('[data-band="1"]').forEach((el) => {
                             el.classList.toggle('band-hidden');
                         })
                     }}

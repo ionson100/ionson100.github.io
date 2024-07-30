@@ -19,7 +19,7 @@ export class MyForm extends BaseBodyDialog {
 
 
     validate(mode: string | undefined): boolean {
-        this.mRefError.current!.innerText = ''
+        this.mRefError.current.innerText = ''
 
 
         if (!mode || mode === '-2' || mode === '-1') {
@@ -29,24 +29,24 @@ export class MyForm extends BaseBodyDialog {
         if (mode === '1') {// click register
 
 
-           f (this.mRefFirstName.current!.value === '') {
-                this.mRefError.current!.innerText = 'First name empty.'
+           f (this.mRefFirstName.current.value === '') {
+                this.mRefError.current.innerText = 'First name empty.'
                 this.mRefFirstName.current?.focus()
                 return false;
             }
-            if (this.mRefEmail.current!.value === '') {
-                this.mRefError.current!.innerText = 'Email empty.'
+            if (this.mRefEmail.current.value === '') {
+                this.mRefError.current.innerText = 'Email empty.'
                 this.mRefEmail.current?.focus()
                 return false;
             }
-            if (this.mRefPassword.current!.value === '') {
+            if (this.mRefPassword.current.value === '') {
                 this.mRefPassword.current?.focus()
-                this.mRefError.current!.innerText = 'Password empty.'
+                this.mRefError.current.innerText = 'Password empty.'
                 return false;
             }
-            if (this.mRefRole.current!.selectedIndex === 0) {
+            if (this.mRefRole.current.selectedIndex === 0) {
                 this.mRefRole.current?.focus()
-                this.mRefError.current!.innerText = 'Role not selected.'
+                this.mRefError.current.innerText = 'Role not selected.'
                 return false;
             }
 
@@ -74,7 +74,7 @@ export class MyForm extends BaseBodyDialog {
 
     componentDidMount() {
         setTimeout(() => {
-            this.mRefFirstName!.current!.focus()// override focus button dialog :close (if there)
+            this.mRefFirstName.current.focus()// override focus button dialog :close (if there)
         }, 100)
     }
 
@@ -133,7 +133,7 @@ export function GetRegisterDialog() {
             <br/>
             
             <button onClick={() => {
-                mRefLabel.current!.innerText = ''
+                mRefLabel.current.innerText = ''
 
                 ShowBsrDialog({
                     style: {width: 520},
@@ -143,7 +143,7 @@ export function GetRegisterDialog() {
                     body: <MyForm/>,
                     buttons: but
                 }).then(a => {
-                    mRefLabel.current!.innerText = JSON.stringify(a);
+                    mRefLabel.current.innerText = JSON.stringify(a);
                 })
             }}> Click
             </button>

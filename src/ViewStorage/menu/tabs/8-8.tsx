@@ -40,7 +40,7 @@ export default function P8_8() {
             <div ref={mRefDiv}></div>
             <br/>
             <Tabs ref={mRefTabs} style={{width:"50%"}} onSelect={(key,id)=>{
-                mRefDiv.current!.innerText=\`onSelect  eventKey:\`+key+'  '+\`id:\`+id;
+                mRefDiv.current.innerText=\`onSelect  eventKey:\`+key+'  '+\`id:\`+id;
             }}>
                 <Tab title='tab1' select={true} eventKey='keyTab1' id='id-tab-312-1'>
                     <div>Tab1</div>
@@ -51,7 +51,7 @@ export default function P8_8() {
             </Tabs>
             <br/>
             <button onClick={() => {
-                mRefTabs.current!.SelectTabById('id-tab-312')
+                mRefTabs.current.SelectTabById('id-tab-312')
             }}>
                 select tab2
             </button>
