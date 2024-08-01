@@ -4,7 +4,14 @@ import {storage} from "../utils";
 import Orm from "../ViewStorage/menu/orm";
 import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 import IndexTabs from "../ViewStorage/menu/tabs";
+import IndexTable from "../ViewStorage/menu/table";
 
+
+const P9_1 = lazy(() => import("../ViewStorage/menu/table/9-1"));
+const P9_2 = lazy(() => import("../ViewStorage/menu/table/9-2"));
+const P9_3 = lazy(() => import("../ViewStorage/menu/table/9-3"));
+const P9_4 = lazy(() => import("../ViewStorage/menu/table/9-4"));
+const P9_5 = lazy(() => import("../ViewStorage/menu/table/9-5"));
 
 
 
@@ -646,6 +653,30 @@ export function ContentFactory(tag) {
         }
         case '8-20':{
             data=<P8_20/>
+            break
+        }
+        case 'table':{
+            data=<IndexTable/>
+            break
+        }
+        case '9-1':{
+            data=<P9_1/>
+            break
+        }
+        case '9-2':{
+            data=<P9_2/>
+            break
+        }
+        case '9-3':{
+            data=<P9_3/>
+            break
+        }
+        case '9-4':{
+            data=<P9_4/>
+            break
+        }
+        case '9-5':{
+            data=<P9_5/>
             break
         }
 

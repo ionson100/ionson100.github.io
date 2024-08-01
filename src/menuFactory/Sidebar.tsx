@@ -16,6 +16,7 @@ import {CgMenuBoxed} from "react-icons/cg";
 import {PiDatabase} from "react-icons/pi";
 import {BsLayoutTextSidebar} from "react-icons/bs";
 import {PiTabs} from "react-icons/pi";
+import { GrTable } from "react-icons/gr";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -347,6 +348,22 @@ function GetItems(): Array<MenuItem> {
         list.push(m)
     }
 
+    {
+        const m = new MenuItem();
+        m.icon = <GrTable size={25}/>
+        m.content = "bsr-table"
+        m.id = 'table'
+        m.url = '#page=table'
+        m.items!.push(CreateItem({content: "Example", url: '#page=9-1', id: "9-1"}))
+        m.items!.push(CreateItem({content: "Quick start", url: '#page=9-2', id: "9-2"}))
+        m.items!.push(CreateItem({content: "id, style, className, caption, rowItems", title:'id, style, className, caption, rowItems', url: '#page=9-2', id: "9-2"}))
+        m.items!.push(CreateItem({content: "Click events", url: '#page=9-3', id: "9-3"}))
+        m.items!.push(CreateItem({content: "useInnerHTML", url: '#page=9-4', id: "9-4"}))
+        m.items!.push(CreateItem({content: "rowItems ICell", url: '#page=9-5', id: "9-5"}))
+
+        list.push(m)
+    }
+
 
     {
         const m = new MenuItem();
@@ -395,6 +412,7 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "Json", url: '#page=6-19', id: "6-19"}))
         list.push(m)
     }
+
 
     return list
 
