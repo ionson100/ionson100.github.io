@@ -7,12 +7,14 @@ import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
 
 
+const P9_19 = lazy(() => import("../ViewStorage/menu/table/9-10"));
+const P9_11 = lazy(() => import("../ViewStorage/menu/table/9-11"));
+const P9_12 = lazy(() => import("../ViewStorage/menu/table/9-12"));
 const P9_1 = lazy(() => import("../ViewStorage/menu/table/9-1"));
 const P9_2 = lazy(() => import("../ViewStorage/menu/table/9-2"));
 const P9_3 = lazy(() => import("../ViewStorage/menu/table/9-3"));
 const P9_4 = lazy(() => import("../ViewStorage/menu/table/9-4"));
 const P9_5 = lazy(() => import("../ViewStorage/menu/table/9-5"));
-
 
 
 const P8_1 = lazy(() => import("../ViewStorage/menu/tabs/8-1"));
@@ -612,71 +614,83 @@ export function ContentFactory(tag) {
             break
         }
         case '8-8': {
-            data=<P8_8/>
+            data = <P8_8/>
             break
         }
         case '8-7': {
-            data=<P8_8/>
+            data = <P8_8/>
             break
         }
         case '8-9': {
-            data=<P8_8/>
+            data = <P8_8/>
             break
         }
         case '8-12': {
-            data=<P8_8/>
+            data = <P8_8/>
             break
         }
-        case '8-10':{
-            data=<P8_10/>
+        case '8-10': {
+            data = <P8_10/>
             break
         }
-        case '8-11':{
-            data=<P8_10/>
+        case '8-11': {
+            data = <P8_10/>
             break
         }
-        case '8-13':{
-            data=<P8_10/>
+        case '8-13': {
+            data = <P8_10/>
             break
         }
-        case '8-14':{
-            data=<P8_14/>
+        case '8-14': {
+            data = <P8_14/>
             break
         }
-        case '8-15':{
-            data=<P8_14/>
+        case '8-15': {
+            data = <P8_14/>
             break
         }
-        case '8-16':{
-            data=<P8_14/>
+        case '8-16': {
+            data = <P8_14/>
             break
         }
-        case '8-20':{
-            data=<P8_20/>
+        case '8-20': {
+            data = <P8_20/>
             break
         }
-        case 'table':{
-            data=<IndexTable/>
+        case 'table': {
+            data = <IndexTable/>
             break
         }
-        case '9-1':{
-            data=<P9_1/>
+        case '9-1': {
+            data = <P9_1/>
             break
         }
-        case '9-2':{
-            data=<P9_2/>
+        case '9-2': {
+            data = <P9_2/>
             break
         }
-        case '9-3':{
-            data=<P9_3/>
+        case '9-3': {
+            data = <P9_3/>
             break
         }
-        case '9-4':{
-            data=<P9_4/>
+        case '9-4': {
+            data = <P9_4/>
             break
         }
-        case '9-5':{
-            data=<P9_5/>
+        case '9-5': {
+            data = <P9_5/>
+            break
+        }
+        case '9-10': {
+            data = <P9_19/>
+            break
+        }
+        case '9-11': {
+            data = <P9_11/>
+            break
+        }
+        case '9-12': {
+            data = <P9_12/>
             break
         }
 

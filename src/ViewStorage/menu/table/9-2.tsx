@@ -1,4 +1,4 @@
-import {Table, Column, ICell,} from "bsr-table";
+import {Table, Column, ICell} from "bsr-table";
 import React, {ReactElement} from "react";
 import "./table-123.css"
 

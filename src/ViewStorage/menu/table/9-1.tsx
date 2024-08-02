@@ -1,6 +1,7 @@
-import {Table, Column, ICell,} from "bsr-table";
+import {Table, Column, ICell,ColumnGroup,HeaderGroup} from "bsr-table";
 import React, {ReactElement, useRef} from "react";
 import "./table-123.css"
+import {GrAccessibility} from "react-icons/gr";
 
 function Button(str: string) {
     return <button onClick={(e) => {
@@ -8,6 +9,19 @@ function Button(str: string) {
         alert(str)
     }
     }>Button</button>
+}
+function getICel(index: number):ICell {
+    return {rawContent:<th onClick={()=>{
+        alert(index)
+        }}>select</th>,isVisible:true}
+}
+
+function getDataTable2(){
+    const list: Array<Array<string | ReactElement | ICell>> = [];
+    for (let i = 0; i < 10; i++) {
+        list.push([getICel(i), '2', '3', '4','5'])
+    }
+    return list
 }
 
 function Button2(str: string): ICell {
@@ -64,6 +78,26 @@ export default function P9_1() {
             <Column>Column:2</Column>
             <Column>Column:3</Column>
             <Column>Column:4</Column>
+        </Table>
+        <br/>
+        <Table
+            rowItems={getDataTable2()}
+            style={{width:'50%'}}>
+            <Column style={{width:100}}></Column>
+            <HeaderGroup title={'group1'}>
+
+                <Column>Column:2</Column>
+                <Column>Column:3</Column>
+            </HeaderGroup>
+            <HeaderGroup title={'group2'}>
+                <ColumnGroup style={{width:100,background:"yellow"}}>
+                    <Column>Column:4</Column>
+                    <Column>Column:5</Column>
+                </ColumnGroup>
+            </HeaderGroup>
+
+
+
         </Table>
 
     </div>
