@@ -21,7 +21,7 @@ export default function P9_2() {
 
         <Table
             id={"table_123"}
-            caption={'Quick stat table:'}
+            caption={'Quick start table:'}
             rowItems={getDataTable()}
             style={{width: "700px"}}>
             <Column style={{width: "100px"}}>Column:1</Column>

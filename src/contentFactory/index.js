@@ -669,6 +669,10 @@ export function ContentFactory(tag) {
             data = <P9_2/>
             break
         }
+        case '9-22': {
+            data = <P9_2/>
+            break
+        }
         case '9-3': {
             data = <P9_3/>
             break

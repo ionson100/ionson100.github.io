@@ -356,7 +356,7 @@ function GetItems(): Array<MenuItem> {
         m.url = '#page=table'
         m.items!.push(CreateItem({content: "Example", url: '#page=9-1', id: "9-1"}))
         m.items!.push(CreateItem({content: "Quick start", url: '#page=9-2', id: "9-2"}))
-        m.items!.push(CreateItem({content: "id, style, className, caption, rowItems", title:'id, style, className, caption, rowItems', url: '#page=9-2', id: "9-2"}))
+        m.items!.push(CreateItem({content: "id, style, className, caption, rowItems", title:'id, style, className, caption, rowItems', url: '#page=9-22', id: "9-22"}))
         m.items!.push(CreateItem({content: "Click events", url: '#page=9-3', id: "9-3"}))
         m.items!.push(CreateItem({content: "useInnerHTML", url: '#page=9-4', id: "9-4"}))
         m.items!.push(CreateItem({content: "rowItems ICell", url: '#page=9-5', id: "9-5"}))

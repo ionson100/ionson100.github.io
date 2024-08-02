@@ -22,7 +22,8 @@ export default function P9_5() {
     id?:string
     className?:string
     style?: React.CSSProperties | undefined
-    content?:string|ReactElement;
+    content?:string|ReactElement; //<td>...<td/>
+    rawContent?:string|ReactElement; //I'm waiting as <th>...<th/>
     isVisible?:boolean // is visible or use inner user data
     /*--css input--*/
     input[type="text"]{
