@@ -17,6 +17,7 @@ import {PiDatabase} from "react-icons/pi";
 import {BsLayoutTextSidebar} from "react-icons/bs";
 import {PiTabs} from "react-icons/pi";
 import { GrTable } from "react-icons/gr";
+import { BsMenuUp } from "react-icons/bs";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -363,6 +364,20 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "ColumnGroup", url: '#page=9-10', id: "9-10"}))
         m.items!.push(CreateItem({content: "HeaderGroup", url: '#page=9-11', id: "9-11"}))
         m.items!.push(CreateItem({content: "HeaderGroup && ColumnGroup", url: '#page=9-12', id: "9-12"}))
+
+        list.push(m)
+    }
+    {
+        const m = new MenuItem();
+        m.icon = <BsMenuUp size={25}/>
+        m.content = "bsr-context-menu"
+        m.id = 'contextMenu'
+
+
+        m.items!.push(CreateItem({content: "Quick Start", url: '#page=10-1', id: "10-1"}))
+        m.items!.push(CreateItem({content: "useContextMenu example", url: '#page=10-2', id: "10-2"}))
+        m.items!.push(CreateItem({content: "class example", url: '#page=10-3', id: "10-3"}))
+        m.items!.push(CreateItem({content: "useEffect example", url: '#page=10-4', id: "10-4"}))
 
         list.push(m)
     }

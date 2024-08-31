@@ -1,0 +1,9 @@
+.bsr-context-menu {
+    position: absolute;
+    background: white;
+    top: 0;
+    width: fit-content;
+    height: fit-content;
+    border: 13px solid black;
+    /*box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;*/
+}

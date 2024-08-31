@@ -7,6 +7,13 @@ import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
 
 
+
+const P10_1 = lazy(() => import("../ViewStorage/menu/contextMenu/10-1"));
+const P10_2 = lazy(() => import("../ViewStorage/menu/contextMenu/10-2"));
+const P10_3 = lazy(() => import("../ViewStorage/menu/contextMenu/10-3"));
+const P10_4 = lazy(() => import("../ViewStorage/menu/contextMenu/10-4"));
+
+
 const P9_19 = lazy(() => import("../ViewStorage/menu/table/9-10"));
 const P9_11 = lazy(() => import("../ViewStorage/menu/table/9-11"));
 const P9_12 = lazy(() => import("../ViewStorage/menu/table/9-12"));
@@ -695,6 +702,22 @@ export function ContentFactory(tag) {
         }
         case '9-12': {
             data = <P9_12/>
+            break
+        }
+        case '10-1':{
+            data=<P10_1/>
+            break
+        }
+        case '10-2':{
+            data= <P10_2/>
+            break
+        }
+        case '10-3':{
+            data=<P10_3/>
+            break
+        }
+        case '10-4': {
+            data=<P10_4/>
             break
         }
 
