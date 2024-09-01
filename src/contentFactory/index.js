@@ -5,6 +5,8 @@ import Orm from "../ViewStorage/menu/orm";
 import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
+import P11_1 from "../ViewStorage/menu/tooltip/11-1";
+import P11_2 from "../ViewStorage/menu/tooltip/11-2";
 
 
 
@@ -718,6 +720,14 @@ export function ContentFactory(tag) {
         }
         case '10-4': {
             data=<P10_4/>
+            break
+        }
+        case '11-1':{
+            data= <P11_1/>
+            break
+        }
+        case '11-2':{
+            data= <P11_2/>
             break
         }
 

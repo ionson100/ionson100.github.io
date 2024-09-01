@@ -6,6 +6,7 @@ import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 const code=`import React, {useRef} from 'react';
 import {useContextMenu} from 'bsr-context-menu';
 import 'bsr-context-menu/dist/index.css'
+import {CgMenuBoxed} from "react-icons/cg";
 
 
 function Body(text:string){
