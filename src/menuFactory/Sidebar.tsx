@@ -392,8 +392,8 @@ function GetItems(): Array<MenuItem> {
 
         m.items!.push(CreateItem({content: "Quick Start", url: '#page=11-1', id: "11-1"}))
         m.items!.push(CreateItem({content: "Option position", url: '#page=11-2', id: "11-2"}))
-        m.items!.push(CreateItem({content: "class example", url: '#page=11-3', id: "11-3"}))
-        m.items!.push(CreateItem({content: "useEffect example", url: '#page=11-4', id: "11-4"}))
+        m.items!.push(CreateItem({content: "Option isWindows", url: '#page=11-3', id: "11-3"}))
+        m.items!.push(CreateItem({content: "Option isWindowsClick", url: '#page=11-4', id: "11-4"}))
 
         list.push(m)
     }

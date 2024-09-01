@@ -7,6 +7,8 @@ import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
 import P11_1 from "../ViewStorage/menu/tooltip/11-1";
 import P11_2 from "../ViewStorage/menu/tooltip/11-2";
+import P11_3 from "../ViewStorage/menu/tooltip/11-3";
+import P11_4 from "../ViewStorage/menu/tooltip/11-4";
 
 
 
@@ -728,6 +730,14 @@ export function ContentFactory(tag) {
         }
         case '11-2':{
             data= <P11_2/>
+            break
+        }
+        case '11-3':{
+            data= <P11_3/>
+            break
+        }
+        case '11-4':{
+            data= <P11_4/>
             break
         }
 
