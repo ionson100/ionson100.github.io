@@ -9,6 +9,8 @@ import P11_1 from "../ViewStorage/menu/tooltip/11-1";
 import P11_2 from "../ViewStorage/menu/tooltip/11-2";
 import P11_3 from "../ViewStorage/menu/tooltip/11-3";
 import P11_4 from "../ViewStorage/menu/tooltip/11-4";
+import P11_5 from "../ViewStorage/menu/tooltip/11-5";
+import P11_6 from "../ViewStorage/menu/tooltip/11-6";
 
 
 
@@ -738,6 +740,14 @@ export function ContentFactory(tag) {
         }
         case '11-4':{
             data= <P11_4/>
+            break
+        }
+        case '11-5':{
+            data=<P11_5/>
+            break
+        }
+        case '11-6': {
+            data= <P11_6/>
             break
         }
 

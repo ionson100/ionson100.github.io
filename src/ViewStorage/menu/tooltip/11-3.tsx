@@ -13,9 +13,9 @@ export default function P11_3(){
     const mRefDiv3 = useRef<HTMLDivElement>(null)
     const mRefDiv4 = useRef<HTMLDivElement>(null)
 
-    useToolTip(mRefDiv1, 'Click My',{position:'left',isWindows:true})
+    useToolTip(mRefDiv1, 'Click My',{position:'right',isWindows:true})
     useToolTip(mRefDiv2, 'Click My',{position:'bottom',isWindows:true})
-    useToolTip(mRefDiv3, 'Click My',{position:'right',isWindows:true})
+    useToolTip(mRefDiv3, 'Click My',{position:'left',isWindows:true})
     useToolTip(mRefDiv4, 'Click My',{position:'top',isWindows:true})
 
     return (
@@ -44,9 +44,9 @@ export default function P11_3(){
     const mRefDiv3 = useRef<HTMLDivElement>(null)
     const mRefDiv4 = useRef<HTMLDivElement>(null)
 
-    useToolTip(mRefDiv1, 'Click My',{position:'left',isWindows:true})
+    useToolTip(mRefDiv1, 'Click My',{position:'right',isWindows:true})
     useToolTip(mRefDiv2, 'Click My',{position:'bottom',isWindows:true})
-    useToolTip(mRefDiv3, 'Click My',{position:'right',isWindows:true})
+    useToolTip(mRefDiv3, 'Click My',{position:'left',isWindows:true})
     useToolTip(mRefDiv4, 'Click My',{position:'top',isWindows:true})
 
     return (

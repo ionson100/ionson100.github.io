@@ -14,9 +14,9 @@ export default function P11_2(){
     const mRefDiv3 = useRef<HTMLDivElement>(null)
     const mRefDiv4 = useRef<HTMLDivElement>(null)
 
-    useToolTip(mRefDiv1, 'Simple Text',{position:'left'})
+    useToolTip(mRefDiv1, 'Simple Text',{position:'right'})
     useToolTip(mRefDiv2, 'Simple Text',{position:'bottom'})
-    useToolTip(mRefDiv3, 'Simple Text',{position:'right'})
+    useToolTip(mRefDiv3, 'Simple Text',{position:'left'})
     useToolTip(mRefDiv4, 'Simple Text',{position:'top'})
 
     return (
@@ -52,9 +52,9 @@ export default function P11_2(){
     const mRefDiv3 = useRef<HTMLDivElement>(null)
     const mRefDiv4 = useRef<HTMLDivElement>(null)
 
-    useToolTip(mRefDiv1, 'Simple Text',{position:'left'})
+    useToolTip(mRefDiv1, 'Simple Text',{position:'right'})
     useToolTip(mRefDiv2, 'Simple Text',{position:'bottom'})
-    useToolTip(mRefDiv3, 'Simple Text',{position:'right'})
+    useToolTip(mRefDiv3, 'Simple Text',{position:'left'})
     useToolTip(mRefDiv4, 'Simple Text',{position:'top'})
 
     return (
