@@ -5,12 +5,15 @@ import Orm from "../ViewStorage/menu/orm";
 import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
-import P11_1 from "../ViewStorage/menu/tooltip/11-1";
-import P11_2 from "../ViewStorage/menu/tooltip/11-2";
-import P11_3 from "../ViewStorage/menu/tooltip/11-3";
-import P11_4 from "../ViewStorage/menu/tooltip/11-4";
-import P11_5 from "../ViewStorage/menu/tooltip/11-5";
-import P11_6 from "../ViewStorage/menu/tooltip/11-6";
+
+
+const P11_1 = lazy(() => import("../ViewStorage/menu/tooltip/11-1"));
+const P11_2 = lazy(() => import("../ViewStorage/menu/tooltip/11-2"));
+const P11_3 = lazy(() => import("../ViewStorage/menu/tooltip/11-3"));
+const P11_4 = lazy(() => import("../ViewStorage/menu/tooltip/11-4"));
+const P11_5 = lazy(() => import("../ViewStorage/menu/tooltip/11-5"));
+const P11_6 = lazy(() => import("../ViewStorage/menu/tooltip/11-6"));
+const P11_41 = lazy(() => import("../ViewStorage/menu/tooltip/11-41"));
 
 
 
@@ -748,6 +751,10 @@ export function ContentFactory(tag) {
         }
         case '11-6': {
             data= <P11_6/>
+            break
+        }
+        case '11-41':{
+            data=<P11_41/>
             break
         }
 

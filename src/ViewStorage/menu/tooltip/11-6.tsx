@@ -5,7 +5,7 @@ import './index_center.css'
 import {IoClose} from "react-icons/io5";
 import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 
-const code=`import React, {useRef} from "react";
+const code = `import React, {useRef} from "react";
 import {useToolTip} from 'bsr-tooltip'
 import 'bsr-tooltip/dist/index.css'
 import './index_center.css'
@@ -28,9 +28,7 @@ export default function P11_6() {
     })
 
     function Body() {
-
         return (
-
             <div>
                 <div style={{display: "flex", justifyContent: "right"}}>
                     <IoClose size={30} onClick={() => {
@@ -41,7 +39,6 @@ export default function P11_6() {
                     <img alt={'image'} width={900} src={'https://www.gstatic.com/webp/gallery/1.jpg'}/>
                 </div>
             </div>
-
         )
     }
 
@@ -54,35 +51,21 @@ export default function P11_6() {
 `
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default function P11_6() {
     const mRef = useRef<HTMLDivElement>(null);
     const res = useToolTip(mRef, Body(), {
         position: "custom",
         className: 'centered-body',
-        isWindowsClick: true,
-        isSelfClose: true
+        mode: 'popupCloseSelf'
     })
 
     function Body() {
 
         return (
 
-            <div>
+            <div style={{cursor: "default"}}>
                 <div style={{display: "flex", justifyContent: "right"}}>
-                    <IoClose size={30} onClick={() => {
+                    <IoClose size={30} style={{cursor: "pointer"}} onClick={() => {
                         res.tooltip?.Close()
                     }}/>
                 </div>
