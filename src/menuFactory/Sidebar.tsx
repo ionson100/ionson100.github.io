@@ -19,6 +19,7 @@ import {PiTabs} from "react-icons/pi";
 import { GrTable } from "react-icons/gr";
 import { BsMenuUp } from "react-icons/bs";
 import { GrTooltip } from "react-icons/gr";
+import { FaRegCheckSquare } from "react-icons/fa";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -402,6 +403,18 @@ function GetItems(): Array<MenuItem> {
 
         m.items!.push(CreateItem({content: "Usage class", url: '#page=11-5', id: "11-5"}))
         m.items!.push(CreateItem({content: "Position custom", url: '#page=11-6', id: "11-6"}))
+
+        list.push(m)
+    }
+/*radiocheck*/
+    {
+        const m = new MenuItem();
+        m.icon = <FaRegCheckSquare size={25}/>
+        m.content = "bsr-radiocheck"
+        m.id = 'radiocheck'
+
+
+        m.items!.push(CreateItem({content: "Quick Start", url: '#page=12-1', id: "12-1"}))
 
         list.push(m)
     }
