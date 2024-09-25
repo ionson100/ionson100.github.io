@@ -9,7 +9,6 @@ const code = `
 import React from "react";
 import {MenuItem, TreeMenu} from "bsr-tree-virtual";
 import "bsr-tree-virtual/dist/index.css"
-
 import {MdOutlineSubdirectoryArrowRight} from "react-icons/md";
 import {FaRegMinusSquare, FaRegPlusSquare} from "react-icons/fa";
 

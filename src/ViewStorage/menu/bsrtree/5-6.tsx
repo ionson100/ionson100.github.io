@@ -15,13 +15,10 @@ const code = `
 import React from "react";
 import {MenuItem, TreeMenu} from "bsr-tree-virtual";
 import "bsr-tree-virtual/dist/index.css"
-
 import {MdOutlineSubdirectoryArrowRight} from "react-icons/md";
 import {FaRegMinusSquare, FaRegPlusSquare} from "react-icons/fa";
-
 import { FaRegFolderOpen,FaRegFolderClosed } from "react-icons/fa6";
 import { FaRegFile } from "react-icons/fa";
-
 import { TbPointFilled } from "react-icons/tb";
 import { FaAnglesRight,FaAnglesDown } from "react-icons/fa6";
 
