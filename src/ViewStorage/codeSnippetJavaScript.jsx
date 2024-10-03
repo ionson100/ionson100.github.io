@@ -1,6 +1,5 @@
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { coldarkDark as myStyle } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { vs as myStyleNet } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 

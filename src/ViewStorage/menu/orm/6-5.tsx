@@ -435,6 +435,44 @@ session.Query<MyClass>().Between(a=>a.DateTime,DateTime.Now.AddDays(-1),DateTime
                 `}/>
                 </div>
             </details>
+            <br/>
+            <details>
+                <summary style={{cursor:"pointer"}}>
+                    WhereIf WhereIfSql WhereIfIn
+                </summary>
+                <div>
+
+                    <CodeSnippetDotNet code={`
+public async Task<IActionResult> GetAllDetails(string? line, string? where, Guid group, Guid place,
+     bool consumable, string? format)
+ {
+     try
+     {
+         var lineIf = line == null || line == "null" || line == "undefined" || line == Guid.Empty.ToString();
+         using var session = await Configure.SessionAsync;
+         var res = await session.Query<MDetail>()
+             .WhereIf(where != null, a =>
+                 (a.Name != null && a.Name.ToLower().Contains(where.Trim().ToLower())
+                  || (a.PartNumber != null && a.PartNumber.Contains(where.Trim()))))
+             .WhereIf(string.IsNullOrWhiteSpace(format) == false, a => a.Format == format)
+             .WhereIf(place != Guid.Empty, a => a.StoragePlaceId == place)
+             .WhereIf(consumable == true, a => a.IsConsumables == true)
+             .WhereIf(group != Guid.Empty, a => a.GroupId == group)
+             .WhereIfSql(lineIf == false, a => $" {a.Lines}::jsonb ? @111", new SqlParam("@111", line==null?"":"".Trim())) //for Eliminate Exception
+             .OrderBy(s => s.Name)
+             .ToListAsync();
+         return Ok(res);
+     }
+
+     catch (Exception e)
+     {
+         Console.WriteLine(e);
+         throw 
+     }
+ }
+                `}/>
+                </div>
+            </details>
         </>
 
 

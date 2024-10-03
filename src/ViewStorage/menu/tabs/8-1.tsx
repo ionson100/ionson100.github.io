@@ -1,5 +1,4 @@
 import {Tab, Tabs} from "bsr-tabs"
-import {FiArrowLeftCircle} from "react-icons/fi";
 
 
 export default function P8_1() {

@@ -1,5 +1,4 @@
 import React from "react";
-import {CreateItem, MenuItem} from "bsr-left-sidebar";
 
 export default function IndexBsrTree() {
 
@@ -93,6 +92,14 @@ export default function IndexBsrTree() {
                     </td>
                     <td>undefined</td>
                     <td>Item checked event</td>
+                </tr>
+                <tr>
+                    <td data-d={1}><a href="#page=5-112">ruleOpen</a></td>
+                    <td>
+                        <pre>boolean</pre>
+                    </td>
+                    <td>false</td>
+                    <td>Method to open items menu by clicking</td>
                 </tr>
                 </tbody>
             </table>

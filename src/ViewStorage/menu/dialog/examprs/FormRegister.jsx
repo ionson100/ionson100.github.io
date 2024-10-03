@@ -1,6 +1,5 @@
-import React, {ReactElement} from "react";
+import React from "react";
 import {ShowBsrDialog} from "bsr-modaldialog";
-import { FaReact } from "react-icons/fa6";
 import {FaUserSecret} from "react-icons/fa";
 import {MyForm} from "../../registerForm";
 import {ConfirmDialogF} from "../../confirmDialog";

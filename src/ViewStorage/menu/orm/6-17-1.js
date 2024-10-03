@@ -10,7 +10,7 @@ import {
 } from 'ol/style.js';
 import {Cluster, OSM, Vector as VectorSource} from 'ol/source.js';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
-import {Icon, Stroke} from "ol/style";
+import {Icon} from "ol/style";
 import {GeoJSON} from "ol/format";
 import {json} from "./map/features"
 import {boundingExtent} from 'ol/extent.js';

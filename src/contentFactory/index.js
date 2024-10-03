@@ -7,6 +7,8 @@ import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
 
 
+const P5_112 = lazy(() => import("../ViewStorage/menu/bsrtree/5-112"));
+
 const P12_1 = lazy(() => import("../ViewStorage/menu/radiocheck/12-1"));
 
 const P11_1 = lazy(() => import("../ViewStorage/menu/tooltip/11-1"));
@@ -16,7 +18,6 @@ const P11_4 = lazy(() => import("../ViewStorage/menu/tooltip/11-4"));
 const P11_5 = lazy(() => import("../ViewStorage/menu/tooltip/11-5"));
 const P11_6 = lazy(() => import("../ViewStorage/menu/tooltip/11-6"));
 const P11_41 = lazy(() => import("../ViewStorage/menu/tooltip/11-41"));
-
 
 
 const P10_1 = lazy(() => import("../ViewStorage/menu/contextMenu/10-1"));
@@ -715,52 +716,57 @@ export function ContentFactory(tag) {
             data = <P9_12/>
             break
         }
-        case '10-1':{
-            data=<P10_1/>
+        case '10-1': {
+            data = <P10_1/>
             break
         }
-        case '10-2':{
-            data= <P10_2/>
+        case '10-2': {
+            data = <P10_2/>
             break
         }
-        case '10-3':{
-            data=<P10_3/>
+        case '10-3': {
+            data = <P10_3/>
             break
         }
         case '10-4': {
-            data=<P10_4/>
+            data = <P10_4/>
             break
         }
-        case '11-1':{
-            data= <P11_1/>
+        case '11-1': {
+            data = <P11_1/>
             break
         }
-        case '11-2':{
-            data= <P11_2/>
+        case '11-2': {
+            data = <P11_2/>
             break
         }
-        case '11-3':{
-            data= <P11_3/>
+        case '11-3': {
+            data = <P11_3/>
             break
         }
-        case '11-4':{
-            data= <P11_4/>
+
+        case '11-4': {
+            data = <P11_4/>
             break
         }
-        case '11-5':{
-            data=<P11_5/>
+        case '11-5': {
+            data = <P11_5/>
             break
         }
         case '11-6': {
-            data= <P11_6/>
+            data = <P11_6/>
             break
         }
-        case '11-41':{
-            data=<P11_41/>
+        case '11-41': {
+            data = <P11_41/>
             break
         }
-        case '12-1':{
-            data=<P12_1/>
+        case '12-1': {
+            data = <P12_1/>
+            break
+        }
+        case '5-112': {
+            data = <P5_112/>
             break
         }
 

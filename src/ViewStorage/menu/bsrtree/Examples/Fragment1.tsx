@@ -17,6 +17,7 @@ export default  function Fragment1(){
         <div style={{display: "flex",width:"100%",height:"100%",padding:5}}>
             <TreeMenu
 
+                ruleOpen={true}
                 style={{marginTop:10}}
                 useCheckBox={false}
                 ref={menu}

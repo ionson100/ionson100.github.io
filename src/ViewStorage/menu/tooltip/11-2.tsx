@@ -77,7 +77,7 @@ export default function P11_2(){
 
     function Body() {
         return <div>
-            <img alt={'image'} width={900} src={'https://www.gstatic.com/webp/gallery/1.jpg'}/>
+            <img alt={'image alt'} width={900} src={'https://www.gstatic.com/webp/gallery/1.jpg'}/>
         </div>
     }
 

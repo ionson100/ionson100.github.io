@@ -275,6 +275,7 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "onClickMenuItem", url: '#page=5-9', id: "5-9"}))
         m.items!.push(CreateItem({content: "useCheckBox", url: '#page=5-10', id: "5-10"}))
         m.items!.push(CreateItem({content: "onChecked", url: '#page=5-11', id: "5-11"}))
+        m.items!.push(CreateItem({content: "ruleOpen", url: '#page=5-112', id: "5-112"}))
 
 
         m.items!.push(CreateItem({content: "Expand", url: '#page=5-12', id: "5-12"}))

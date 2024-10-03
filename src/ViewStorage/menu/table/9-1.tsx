@@ -1,7 +1,6 @@
 import {Table, Column, ICell,ColumnGroup,HeaderGroup} from "bsr-table";
 import React, {ReactElement, useRef} from "react";
 import "./table-123.css"
-import {GrAccessibility} from "react-icons/gr";
 
 function Button(str: string) {
     return <button onClick={(e) => {

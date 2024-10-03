@@ -4,7 +4,6 @@ import {MdOutlineSubdirectoryArrowRight} from "react-icons/md";
 import {FaRegMinusSquare, FaRegPlusSquare} from "react-icons/fa";
 import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 import {CreateItem} from "bsr-tree-virtual";
-import {LiaElementor} from "react-icons/lia";
 import {CgMenuBoxed} from "react-icons/cg";
 import {v4 as uuidv4} from 'uuid';
 

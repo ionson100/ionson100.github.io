@@ -87,7 +87,10 @@ export default function P5_9() {
         <div>
             <label ref={mReLabel} className={'label-then'}></label>
             <br/>
+            asass
             <TreeMenu
+
+                ruleOpen={true}
                 style={{marginTop:5}}
                 iconTree={<MdOutlineSubdirectoryArrowRight color={"black"} size={20}/>}
                 iconClose={<FaRegPlusSquare color={"black"} size={20}/>}

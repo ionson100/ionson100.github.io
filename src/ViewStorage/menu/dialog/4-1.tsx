@@ -1,6 +1,4 @@
 import React, {useRef} from "react";
-import {ModalDialog} from "bsr-modaldialog";
-
 import SimpleModal from "./examprs/SimpleDialog";
 import SimpleModalClickPage from "./examprs/SinpleModalClickPage";
 import SimpleNotModal from "./examprs/SimpleNotModal";
@@ -9,13 +7,12 @@ import SimpleConfirm from "./examprs/PromtDialog";
 import FormRegister from "./examprs/FormRegister";
 import AlertPanel from "./examprs/Panel";
 import InnerScroll from "./examprs/InnerScroll";
-import OuterScroll from "./examprs/OuterScroll";
 
-let dialog:HTMLDivElement|undefined=undefined;
+
 
 export default function P4_1(){
     const mRefLabel=useRef<HTMLLabelElement>(null);
-    const mRefDialog:React.RefObject<InstanceType<typeof ModalDialog>> | null=React.useRef<InstanceType<typeof ModalDialog>>(null)
+
     return (
         <>
             <label className={'label-then'} ref={mRefLabel}></label>
