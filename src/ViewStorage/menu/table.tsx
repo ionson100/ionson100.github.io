@@ -13,7 +13,7 @@ function getDataTable1(): Array<Array<string | ReactElement | ICell>> {
 
     list.push(['children', 'string|React.ReactNode', 'undefined', 'children element for Table'])
     list.push([<a
-        href="#page=9-2">rowItems</a>, 'Array<Array<string|ReactElement|ICell|undefined|null>>', 'undefined', 'Array of table rows'])
+        href="#page=9-2">rowItems</a>, 'Array<Array<string|number|boolean|ReactElement|ICell|undefined|null>>|RowProperty[]', 'undefined', 'Array of table rows'])
     list.push(['onClickRow', '(id:string,index:number)=>void', 'undefined', 'Table row click events'])
     list.push(['onClickColumn', '(id:string,index:number)=>void', 'undefined', 'Click events on the table column header'])
     list.push(['onClickCell', '(id:string,row:number,column:number)=>void', 'undefined', 'Table cell click events'])
@@ -22,9 +22,20 @@ function getDataTable1(): Array<Array<string | ReactElement | ICell>> {
     return list;
 }
 
-// className?: string;
-// style?: React.CSSProperties | undefined,
-//     children?:string|React.ReactNode;
+function getRowProperty(): Array<Array<string | ReactElement | ICell>>{
+    const list: Array<Array<string | ReactElement | ICell>> = [];
+    list.push([<a href="#page=9-14">className</a>, 'string', 'undefined', 'CSS class name for tr'])
+    list.push([<a href="#page=9-14">id</a>, 'string', 'undefined', 'id element tr'])
+    list.push([<a href="#page=9-14">style</a>, 'React.CSSProperties', 'undefined', 'style element tr'])
+    list.push([<a href="#page=9-14">color</a>, 'string', 'undefined', 'color for tr'])
+    list.push([<a href="#page=9-14">CellItems</a>, 'Array<string|number|boolean|ReactElement|ICell|undefined|null>', 'require', 'list cell for row'])
+    list.push([<a href="#page=9-14">onClick</a>, '()=>void', 'undefined', 'click event for tr'])
+    list.push([<a href="#page=9-14">onSelect</a>, '()=>void', 'undefined', 'select event for tr'])
+    return list
+
+}
+
+
 function getDataTable3(): Array<Array<string | ReactElement | ICell>> {
     const list: Array<Array<string | ReactElement | ICell>> = [];
     list.push([<a href="#page=9-2">className</a>, 'string', 'undefined', 'CSS class name for Column'])
@@ -113,6 +124,19 @@ export default function IndexTable() {
             useInnerHTML={true}
             rowItems={getHeaderGroupTable()}
             caption={'Props HeaderGroup'}
+            style={{width: "80%"}}>
+            <Column style={{width: "20%"}}>Name</Column>
+            <Column style={{width: "40%"}}>Type</Column>
+            <Column style={{width: "20%"}}>Default</Column>
+            <Column style={{width: "20%"}}>Description</Column>
+        </Table>
+        <br/>
+
+        <br/>
+        <Table
+            useInnerHTML={true}
+            rowItems={getRowProperty()}
+            caption={'RowProperty'}
             style={{width: "80%"}}>
             <Column style={{width: "20%"}}>Name</Column>
             <Column style={{width: "40%"}}>Type</Column>

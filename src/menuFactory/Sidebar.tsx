@@ -367,6 +367,7 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "ColumnGroup", url: '#page=9-10', id: "9-10"}))
         m.items!.push(CreateItem({content: "HeaderGroup", url: '#page=9-11', id: "9-11"}))
         m.items!.push(CreateItem({content: "HeaderGroup && ColumnGroup", url: '#page=9-12', id: "9-12"}))
+        m.items!.push(CreateItem({content: "RowProperty", url: '#page=9-14', id: "9-14"}))
 
         list.push(m)
     }

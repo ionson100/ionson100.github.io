@@ -7,6 +7,8 @@ import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
 
 
+const P9_14 = lazy(() => import("../ViewStorage/menu/table/9-14"));
+
 const P5_112 = lazy(() => import("../ViewStorage/menu/bsrtree/5-112"));
 
 const P12_1 = lazy(() => import("../ViewStorage/menu/radiocheck/12-1"));
@@ -768,6 +770,9 @@ export function ContentFactory(tag) {
         case '5-112': {
             data = <P5_112/>
             break
+        }
+        case '9-14':{
+            data=<P9_14/>
         }
 
     }
