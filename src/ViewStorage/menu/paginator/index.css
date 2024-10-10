@@ -1,0 +1,26 @@
+.bsr-wrapper-paginator-core {
+    margin: auto auto 0;
+    width: fit-content;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    padding: 5px 10px;
+    border: 1px #058b17 solid;
+    border-radius: 0;
+    background: #fcfbfb;
+
+}
+
+
+.container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 200px;
+    width: 800px;
+
+    margin-left: 100px;
+}

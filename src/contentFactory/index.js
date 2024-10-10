@@ -5,6 +5,10 @@ import Orm from "../ViewStorage/menu/orm";
 import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
+import {P15_2} from "../ViewStorage/menu/paginator/15-2";
+import {P15_3} from "../ViewStorage/menu/paginator/15-3";
+import {P15_4} from "../ViewStorage/menu/paginator/15-14";
+import {P15_5} from "../ViewStorage/menu/paginator/15-5";
 
 
 const P9_14 = lazy(() => import("../ViewStorage/menu/table/9-14"));
@@ -773,6 +777,23 @@ export function ContentFactory(tag) {
         }
         case '9-14':{
             data=<P9_14/>
+        }
+        case '15-2':{
+            data=<P15_2/>
+            break
+        }
+        case '15-3':{
+            data=<P15_3/>
+            break
+        }
+        case '15-4':{
+            data=<P15_4/>
+            break
+        }
+        case '15-5':{
+            data=<P15_5/>
+            break
+
         }
 
     }

@@ -20,6 +20,7 @@ import { GrTable } from "react-icons/gr";
 import { BsMenuUp } from "react-icons/bs";
 import { GrTooltip } from "react-icons/gr";
 import { FaRegCheckSquare } from "react-icons/fa";
+import { RxButton } from "react-icons/rx";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -417,6 +418,22 @@ function GetItems(): Array<MenuItem> {
 
 
         m.items!.push(CreateItem({content: "Quick Start", url: '#page=12-1', id: "12-1"}))
+
+        list.push(m)
+    }
+
+    {
+        const m = new MenuItem();
+        m.icon = <RxButton size={25}/>
+        m.content = "bsr-paginator"
+        m.id = 'paginator'
+
+
+        m.items!.push(CreateItem({content: "Property", url: '#page=15-1', id: "15-1"}))
+        m.items!.push(CreateItem({content: "Quick Start", url: '#page=15-2', id: "15-2"}))
+        m.items!.push(CreateItem({content: "Rich Quick Start", url: '#page=15-3', id: "15-3"}))
+        m.items!.push(CreateItem({content: "isVisibleSide", url: '#page=15-4', id: "15-4"}))
+        m.items!.push(CreateItem({content: "useDoubleSending", url: '#page=15-5', id: "15-5"}))
 
         list.push(m)
     }
