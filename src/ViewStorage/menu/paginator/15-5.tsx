@@ -10,51 +10,67 @@ import 'bsr-paginator/dist/index.css'
 import {useEffect, useRef, useState} from "react";
 
 export function P15_5() {
+    const [myState, setMyState] = useState('');
     const refPaginator = useRef<Paginator>(null)
     useEffect(() => {
+         /*fetching* SetState(totalRows, pageSize,currentPage)*/
         refPaginator.current!.SetState(100, 10, 1)
     }, [])
 
     return (
-        <div className={'container'} style={{textAlign:"center"}} >
-            <div style={{textAlign:"center"}}>It is allowed to click the button more than once.</div>
+        <div  style={{textAlign:"center",width:"fit-content"}} >
+            <div>{myState}</div>
             <div style={{display:"flex",justifyContent:"center"}}>
-                <CodeSnippetJavaScript  code={code}/>
+                <Paginator
+                    useDoubleSending={true}
+                    range={5}
+                    ref={refPaginator}
+                    mode={'richBase'}
+                    ellipsis={'...'}
+                    previous={'previous'}
+                    next={'next'}
+                    onButtonClick={(page, pages) => {
+                        const str=page+" page of "+pages
+                        setMyState(str)
+                        alert('Click: '+str)
+                    }}
+                />
             </div>
-
-            <Paginator
-                useDoubleSending={true} /*It is allowed to click the button more than once*/
-                className={'bsr-wrapper-paginator-core'}
-                ref={refPaginator}
-                onButtonClick={(page, pages) => {
-                    alert('bitton click:'+page)
-                }}
-            />
         </div>
     )
 }`
 
 export function P15_5() {
+    const [myState, setMyState] = useState('');
     const refPaginator = useRef<Paginator>(null)
     useEffect(() => {
         refPaginator.current!.SetState(100, 10, 1)
     }, [])
 
     return (
-        <div className={'container'} style={{textAlign:"center"}} >
-            <div style={{textAlign:"center"}}>It is allowed to click the button more than once.</div>
+        <div  style={{textAlign:"center",width:"fit-content"}} >
+            <div>{myState}</div>
             <div style={{display:"flex",justifyContent:"center"}}>
                 <CodeSnippetJavaScript  code={code}/>
             </div>
 
-            <Paginator
-                useDoubleSending={true} /*It is allowed to click the button more than once*/
-                className={'bsr-wrapper-paginator-core'}
-                ref={refPaginator}
-                onButtonClick={(page, pages) => {
-                    alert('bitton click:'+page)
-                }}
-            />
+            <div style={{display:"flex",justifyContent:"center"}}>
+                <Paginator
+                    useDoubleSending={true}
+                    range={5}
+                    ref={refPaginator}
+                    mode={'richBase'}
+                    ellipsis={'...'}
+                    previous={'previous'}
+                    next={'next'}
+                    onButtonClick={(page, pages) => {
+
+                        const str=page+" page of "+pages
+                        setMyState(str)
+                        alert('Click: '+str)
+                    }}
+                />
+            </div>
         </div>
     )
 }

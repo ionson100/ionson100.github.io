@@ -1,5 +1,4 @@
 import {Paginator} from 'bsr-paginator'
-import './index.css'
 import 'bsr-paginator/dist/index.css'
 import {useEffect, useRef, useState} from "react";
 import {BsCaretLeftFill} from "react-icons/bs";
@@ -20,63 +19,63 @@ import {BsCaretRight} from "react-icons/bs";
 import { FaEllipsisH } from "react-icons/fa";
 
 export function P15_2() {
-    const [name, setName] = useState('');
+    const [myState, setMyState] = useState('');
     const refPaginator = useRef<Paginator>(null)
     useEffect(() => {
-        /*fetching*/
-        refPaginator.current!.SetState(200, 10, 1)
+        /*fetching* SetState(totalRows, pageSize,currentPage)*/
+        refPaginator.current!.SetState(200, 8, 1)
     }, [])
 
     return (
-        <div className={'container'} >
-            <div style={{textAlign: "center"}}>{name}</div>
-            <Paginator
-                ref={refPaginator}
-                range={9}
-                ellipsis={<FaEllipsisH/>}
-                styleButton={{borderRadius: 0,width:30,padding:5}}
-                previous={<BsCaretLeft color={'green'} title={'previous'}/>}
-                next={<BsCaretRight color={'green'} title={'next'}/>}
-                first={<BsCaretLeftFill color={'green'} title={'to first page'}/>}
-                last={<BsCaretRightFill color={'green'}  title={'to last page'}/>}
-                onButtonClick={(page, pages) => {
-                    setName("page:"+ page +" of" +pages)
-                }}
-            />
+        <div  >
+            <div>{myState}</div>
+             <Paginator
+                    ref={refPaginator}
+                    range={5}
+                    mode={"showEllipsis"}
+                    ellipsis={<FaEllipsisH/>}
+                    previous={<BsCaretLeft color={'green'} title={'previous'}/>}
+                    next={<BsCaretRight color={'green'} title={'next'}/>}
+                    first={<BsCaretLeftFill color={'green'} title={'to first page'}/>}
+                    last={<BsCaretRightFill color={'green'} title={'to last page'}/>}
+                    onButtonClick={(page, pages) => {
+                        setName(page+" page of "+pages)
+                    }}
+                />
         </div>
     )
 }`
 
 export function P15_3() {
-    const [name, setName] = useState('');
+    const [myState, setMyState] = useState('');
     const refPaginator = useRef<Paginator>(null)
     useEffect(() => {
-        refPaginator.current!.SetState(200, 10, 1)
+        refPaginator.current!.SetState(200, 8, 1)
     }, [])
 
     return (
-        <div className={'container'} style={{textAlign: "center"}}>
-            <div>{name}</div>
+        <div style={{width:"fit-content"}}>
+            <div>{myState}</div>
             <div style={{display: "flex", justifyContent: "center"}}>
                 <CodeSnippetJavaScript code={code}/>
             </div>
+            <div style={{display: "flex", justifyContent: "center"}}>
+                <Paginator
+                    ref={refPaginator}
+                    range={5}
+                    mode={"showEllipsis"}
+                    ellipsis={<FaEllipsisH/>}
+                    previous={<BsCaretLeft color={'green'} title={'previous'}/>}
+                    next={<BsCaretRight color={'green'} title={'next'}/>}
+                    first={<BsCaretLeftFill color={'green'} title={'to first page'}/>}
+                    last={<BsCaretRightFill color={'green'} title={'to last page'}/>}
+                    onButtonClick={(page, pages) => {
+                        setMyState(page+" page of "+pages)
+                    }}
+                />
+            </div>
 
-            <Paginator
 
-                range={9}
-                className={'bsr-wrapper-paginator-core'}
-                ref={refPaginator}
-                styleButton={{borderRadius: 0,width:30,padding:5}}
-                ellipsis={<FaEllipsisH/>}
-                style={{border:0,background:"transparent"}}
-                previous={<BsCaretLeft color={'green'} title={'previous'}/>}
-                next={<BsCaretRight color={'green'} title={'next'}/>}
-                first={<BsCaretLeftFill color={'green'} title={'to first page'}/>}
-                last={<BsCaretRightFill color={'green'} title={'to last page'}/>}
-                onButtonClick={(page, pages) => {
-                    setName(`${page} page of ${pages}`)
-                }}
-            />
         </div>
     )
 }

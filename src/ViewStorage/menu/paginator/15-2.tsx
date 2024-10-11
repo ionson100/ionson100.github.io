@@ -1,5 +1,4 @@
 import {Paginator} from 'bsr-paginator'
-import './index.css'
 import 'bsr-paginator/dist/index.css'
 import {useEffect, useRef, useState} from "react";
 import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
@@ -10,47 +9,62 @@ import 'bsr-paginator/dist/index.css'
 import {useEffect, useRef, useState} from "react";
 
 export function P15_2() {
-    const [name, setName] = useState('');
+     const [myState, setMyState] = useState('');
     const refPaginator = useRef<Paginator>(null)
     useEffect(() => {
-        /*fetching*/
+          /*fetching* (totalRows, pageSize,currentPage*/
         refPaginator.current!.SetState(100, 10, 1)
     }, [])
 
     return (
-        <div className={'container'} >
-            <div style={{textAlign: "center"}}>{name}</div>
-            <Paginator
-                ref={refPaginator}
-                onButtonClick={(page, pages) => {
-                    setName("page:"+ page +" of" +pages)
-                }}
-            />
+        <div  style={{textAlign:"center",width:"fit-content"}} >
+            <div>{myState}</div>
+                <Paginator
+                    range={5}
+                    ref={refPaginator}
+                    mode={'richBase'}
+                    ellipsis={'...'}
+                    previous={'previous'}
+                    next={'next'}
+                    onButtonClick={(page, pages) => {
+                        setMyState(page+" page of "+pages)
+                    }}
+                />
         </div>
     )
-}`
+}
+
+`
 
 export function P15_2() {
-    const [name, setName] = useState('');
+    const [myState, setMyState] = useState('');
     const refPaginator = useRef<Paginator>(null)
     useEffect(() => {
+        /*fetching* SetState(totalRows, pageSize,currentPage)*/
         refPaginator.current!.SetState(100, 10, 1)
     }, [])
 
     return (
-        <div className={'container'} style={{textAlign:"center"}} >
-            <div >{name}</div>
+        <div  style={{textAlign:"center",width:"fit-content"}} >
+            <div>{myState}</div>
             <div style={{display:"flex",justifyContent:"center"}}>
                 <CodeSnippetJavaScript  code={code}/>
             </div>
 
-            <Paginator
-                className={'bsr-wrapper-paginator-core'}
-                ref={refPaginator}
-                onButtonClick={(page, pages) => {
-                    setName(`${page} page of ${pages}`)
-                }}
-            />
+            <div style={{display:"flex",justifyContent:"center"}}>
+                <Paginator
+                    range={5}
+                    ref={refPaginator}
+                    mode={'richBase'}
+                    ellipsis={'...'}
+                    previous={'previous'}
+                    next={'next'}
+                    onButtonClick={(page, pages) => {
+                        setMyState(page+" page of "+pages)
+                    }}
+                />
+            </div>
+
         </div>
     )
 }
