@@ -18,7 +18,7 @@ import {BsCaretLeft} from "react-icons/bs";
 import {BsCaretRight} from "react-icons/bs";
 import { FaEllipsisH } from "react-icons/fa";
 
-export function P15_2() {
+export function App() {
     const [myState, setMyState] = useState('');
     const refPaginator = useRef<Paginator>(null)
     useEffect(() => {

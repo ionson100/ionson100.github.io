@@ -7,7 +7,7 @@ import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 const code=`import {useEffect, useRef, useState} from "react";
 import {Paginator} from "bsr-paginator";
 
-export function P15_6() {
+export function App() {
     const refPaginator1 = useRef<Paginator>(null)
     const refPaginator2 = useRef<Paginator>(null)
     const refPaginator3 = useRef<Paginator>(null)

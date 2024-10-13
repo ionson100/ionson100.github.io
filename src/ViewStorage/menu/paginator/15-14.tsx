@@ -8,7 +8,7 @@ const code=`import {Paginator} from 'bsr-paginator'
 import 'bsr-paginator/dist/index.css'
 import {useEffect, useRef, useState} from "react";
 
-export function P15_4() {
+export function App() {
     const [myState, setMyState] = useState('');
     const refPaginator = useRef<Paginator>(null)
     useEffect(() => {
