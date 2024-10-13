@@ -5,12 +5,17 @@ import Orm from "../ViewStorage/menu/orm";
 import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
-import {P15_2} from "../ViewStorage/menu/paginator/15-2";
-import {P15_3} from "../ViewStorage/menu/paginator/15-3";
-import {P15_4} from "../ViewStorage/menu/paginator/15-14";
-import {P15_5} from "../ViewStorage/menu/paginator/15-5";
-import {P15_6} from "../ViewStorage/menu/paginator/15-6";
-import {P15_7} from "../ViewStorage/menu/paginator/15-7";
+
+
+
+
+const P15_2 = lazy(() => import("../ViewStorage/menu/paginator/15-2"));
+const P15_3 = lazy(() => import("../ViewStorage/menu/paginator/15-3"));
+const P15_4 = lazy(() => import("../ViewStorage/menu/paginator/15-14"));
+const P15_5 = lazy(() => import("../ViewStorage/menu/paginator/15-5"));
+const P15_6 = lazy(() => import("../ViewStorage/menu/paginator/15-6"));
+const P15_7 = lazy(() => import("../ViewStorage/menu/paginator/15-7"));
+const P15_1 = lazy(() => import("../ViewStorage/menu/paginator/15-1"));
 
 
 const P9_14 = lazy(() => import("../ViewStorage/menu/table/9-14"));
@@ -724,6 +729,7 @@ export function ContentFactory(tag) {
             data = <P9_12/>
             break
         }
+
         case '10-1': {
             data = <P10_1/>
             break
@@ -779,6 +785,7 @@ export function ContentFactory(tag) {
         }
         case '9-14':{
             data=<P9_14/>
+            break
         }
         case '15-2':{
             data=<P15_2/>
@@ -803,6 +810,10 @@ export function ContentFactory(tag) {
         }
         case '15-7':{
             data=<P15_7/>
+            break
+        }
+        case '15-1':{
+            data=<P15_1/>
             break
         }
 

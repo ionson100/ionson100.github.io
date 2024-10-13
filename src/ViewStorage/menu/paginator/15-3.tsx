@@ -22,7 +22,7 @@ export function P15_2() {
     const [myState, setMyState] = useState('');
     const refPaginator = useRef<Paginator>(null)
     useEffect(() => {
-        /*fetching* SetState(totalRows, pageSize,currentPage)*/
+        /*fetching SetState(totalRows, pageSize,currentPage)*/
         refPaginator.current!.SetState(200, 8, 1)
     }, [])
 
@@ -38,15 +38,15 @@ export function P15_2() {
                     next={<BsCaretRight color={'green'} title={'next'}/>}
                     first={<BsCaretLeftFill color={'green'} title={'to first page'}/>}
                     last={<BsCaretRightFill color={'green'} title={'to last page'}/>}
-                    onButtonClick={(page, pages) => {
-                        setName(page+" page of "+pages)
+                    onChange={(page) => {
+                        setMyState(page + " page of " + refPaginator.current!.State.PagesCount)
                     }}
                 />
         </div>
     )
 }`
 
-export function P15_3() {
+export default function P15_3() {
     const [myState, setMyState] = useState('');
     const refPaginator = useRef<Paginator>(null)
     useEffect(() => {
@@ -54,11 +54,12 @@ export function P15_3() {
     }, [])
 
     return (
-        <div style={{width:"fit-content"}}>
-            <div>{myState}</div>
+        <div style={{width: "fit-content"}}>
+
             <div style={{display: "flex", justifyContent: "center"}}>
                 <CodeSnippetJavaScript code={code}/>
             </div>
+            <div style={{textAlign:"center",height:30}}>{myState}</div>
             <div style={{display: "flex", justifyContent: "center"}}>
                 <Paginator
                     ref={refPaginator}
@@ -69,8 +70,8 @@ export function P15_3() {
                     next={<BsCaretRight color={'green'} title={'next'}/>}
                     first={<BsCaretLeftFill color={'green'} title={'to first page'}/>}
                     last={<BsCaretRightFill color={'green'} title={'to last page'}/>}
-                    onButtonClick={(page, pages) => {
-                        setMyState(page+" page of "+pages)
+                    onChange={(page) => {
+                        setMyState(page + " page of " + refPaginator.current!.State.PagesCount)
                     }}
                 />
             </div>

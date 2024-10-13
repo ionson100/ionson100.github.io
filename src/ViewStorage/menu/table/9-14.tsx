@@ -68,7 +68,6 @@ export default function P9_14() {
                 <Column>Column:2</Column>
                 <Column>Column:3</Column>
                 <Column>Column:4</Column>
-
             </Table>
             <CodeSnippetJavaScript code={code}/>
         </>

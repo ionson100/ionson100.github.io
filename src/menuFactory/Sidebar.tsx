@@ -432,8 +432,8 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "Property", url: '#page=15-1', id: "15-1"}))
         m.items!.push(CreateItem({content: "Quick Start", url: '#page=15-2', id: "15-2"}))
         m.items!.push(CreateItem({content: "Rich Quick Start", url: '#page=15-3', id: "15-3"}))
-        m.items!.push(CreateItem({content: "useHidingSides", url: '#page=15-4', id: "15-4"}))
-        m.items!.push(CreateItem({content: "useDoubleSending", url: '#page=15-5', id: "15-5"}))
+        m.items!.push(CreateItem({content: "isHidingNavigate", url: '#page=15-4', id: "15-4"}))
+        m.items!.push(CreateItem({content: "isMoreSends", url: '#page=15-5', id: "15-5"}))
         m.items!.push(CreateItem({content: "mode", url: '#page=15-6', id: "15-6"}))
         m.items!.push(CreateItem({content: "Fetching data", url: '#page=15-7', id: "15-7"}))
 

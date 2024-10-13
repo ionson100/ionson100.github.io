@@ -20,16 +20,16 @@ export function P15_4() {
         <div  style={{textAlign:"center",width:"fit-content"}} >
             <div>{myState}</div>
             <div style={{display:"flex",justifyContent:"center"}}>
-                <Paginator
-                    useHidingSides={true}
+                 <Paginator
+                    isHidingNavigate={true}
                     range={5}
                     ref={refPaginator}
                     mode={'richBase'}
                     ellipsis={'...'}
                     previous={'previous'}
                     next={'next'}
-                    onButtonClick={(page, pages) => {
-                        setMyState(page+" page of "+pages)
+                    onChange={(page) => {
+                        setMyState("Click " + page + " page of " + refPaginator.current!.State.PagesCount)
                     }}
                 />
             </div>
@@ -38,7 +38,7 @@ export function P15_4() {
     )
 }`
 
-export function P15_4() {
+export default function P15_4() {
     const [myState, setMyState] = useState('');
     const refPaginator = useRef<Paginator>(null)
     useEffect(() => {
@@ -46,23 +46,23 @@ export function P15_4() {
     }, [])
 
     return (
-        <div  style={{textAlign:"center",width:"fit-content"}} >
-            <div>{myState}</div>
-            <div style={{display:"flex",justifyContent:"center"}}>
-                <CodeSnippetJavaScript  code={code}/>
-            </div>
+        <div style={{textAlign: "center", width: "fit-content"}}>
 
-            <div style={{display:"flex",justifyContent:"center"}}>
+            <div style={{display: "flex", justifyContent: "center"}}>
+                <CodeSnippetJavaScript code={code}/>
+            </div>
+            <div style={{textAlign:"center",height:30}}>{myState}</div>
+            <div style={{display: "flex", justifyContent: "center"}}>
                 <Paginator
-                    useHidingSides={true}
+                    isHidingNavigate={true}
                     range={5}
                     ref={refPaginator}
                     mode={'richBase'}
                     ellipsis={'...'}
                     previous={'previous'}
                     next={'next'}
-                    onButtonClick={(page, pages) => {
-                        setMyState(page+" page of "+pages)
+                    onChange={(page) => {
+                        setMyState("Click " + page + " page of " + refPaginator.current!.State.PagesCount)
                     }}
                 />
             </div>
