@@ -5,6 +5,8 @@ import Orm from "../ViewStorage/menu/orm";
 import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
+import IndexBsrTable from "../ViewStorage/menu/table-ex";
+import P19_1 from "../ViewStorage/menu/table_extension/19-1";
 
 
 
@@ -125,6 +127,7 @@ const P4_11 = lazy(() => import('../ViewStorage/menu/dialog/4-11'));
 const P4_12 = lazy(() => import('../ViewStorage/menu/dialog/4-12'));
 const P4_14 = lazy(() => import('../ViewStorage/menu/dialog/4-14'));
 const P4_15 = lazy(() => import('../ViewStorage/menu/dialog/4-15'));
+const P4_16 = lazy(() => import('../ViewStorage/menu/dialog/4-16'));
 const P5_1 = lazy(() => import('../ViewStorage/menu/bsrtree/5-1'));
 
 
@@ -333,6 +336,10 @@ export function ContentFactory(tag) {
         }
         case '4-15': {
             data = <P4_15/>
+            break
+        }
+        case '4-16':{
+            data=<P4_16/>
             break
         }
         case 'bsrtree': {
@@ -779,12 +786,20 @@ export function ContentFactory(tag) {
             data=<P15_1/>
             break
         }
+        case 'table-ex':{
+            data=<IndexBsrTable/>
+            break
+        }
+        case '19-1':{
+            data=<P19_1/>
+            break
+        }
 
     }
 
 
     ContentHub.content.render(
-        <Suspense fallback={<div>load page</div>}>
+        <Suspense fallback={<div>loading page</div>}>
             <div id={'sc-123'}>{data}</div>
         </Suspense>
     );

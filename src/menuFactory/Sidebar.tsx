@@ -169,6 +169,7 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "Close dialog from form", url: '#page=4-15', id: "4-15"}))
         m.items!.push(CreateItem({content: "Register Dialog", url: '#page=4-12', id: "4-12"}))
         m.items!.push(CreateItem({content: "Restricted use", url: '#page=4-14', id: "4-14"}))
+        m.items!.push(CreateItem({content: "Usage generic type", url: '#page=4-16', id: "4-16"}))
         list.push(m)
     }
 
@@ -318,7 +319,6 @@ function GetItems(): Array<MenuItem> {
         m.url = '#page=tabs'
         m.items!.push(CreateItem({content: "Example", url: '#page=8-1', id: "8-1"}))
         m.items!.push(CreateItem({content: "Simple lesson", url: '#page=8-20', id: "8-20"}))
-        const b = <div style={{height: "5px",background:"black"}}></div>
         const tabs=new MenuItem()
         tabs.content="Tabs"
         tabs.icon=  <CgMenuBoxed/>
@@ -372,6 +372,29 @@ function GetItems(): Array<MenuItem> {
 
         list.push(m)
     }
+
+
+    {
+        const m = new MenuItem();
+        m.icon = <GrTable size={25}/>
+        m.content = "bsr-table-extension"
+        m.id = 'table-ex'
+        m.url = '#page=table-ex'
+        m.items!.push(CreateItem({content: "Example", url: '#page=19-1', id: "19-1"}))
+        m.items!.push(CreateItem({content: "Quick start", url: '#page=19-2', id: "19-2"}))
+        m.items!.push(CreateItem({content: "id, ", url: '#page=19-22', id: "19-22"}))
+        m.items!.push(CreateItem({content: "Click events", url: '#page=19-3', id: "19-3"}))
+        m.items!.push(CreateItem({content: "useInnerHTML", url: '#page=19-4', id: "19-4"}))
+        m.items!.push(CreateItem({content: "rowItems ICell", url: '#page=19-5', id: "19-5"}))
+        m.items!.push(CreateItem({content: "ColumnGroup", url: '#page=19-10', id: "19-10"}))
+        m.items!.push(CreateItem({content: "HeaderGroup", url: '#page=19-11', id: "19-11"}))
+        m.items!.push(CreateItem({content: "HeaderGroup && ColumnGroup", url: '#page=19-12', id: "19-12"}))
+        m.items!.push(CreateItem({content: "RowProperty", url: '#page=19-14', id: "19-14"}))
+
+        list.push(m)
+    }
+
+
     {
         const m = new MenuItem();
         m.icon = <BsMenuUp size={25}/>

@@ -3,6 +3,8 @@ import {BaseBodyDialog, ShowBsrDialog} from "bsr-modaldialog";
 import {FaUserSecret} from "react-icons/fa";
 
 class ConfirmDialog extends BaseBodyDialog {
+
+
     getData(mode: string | undefined): object | undefined {
         return undefined;
     }
@@ -13,7 +15,6 @@ class ConfirmDialog extends BaseBodyDialog {
 
     render() {
         return (
-            <>
                 <div style={{textAlign: "center", padding: 10}}>
                     Close me<br/>
                     <button onClick={() => {
@@ -22,9 +23,6 @@ class ConfirmDialog extends BaseBodyDialog {
                         selfClose
                     </button>
                 </div>
-
-
-            </>
         )
     }
 
