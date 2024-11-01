@@ -1,12 +1,11 @@
-import React from "react";
-import {Table, Column, DataRow, CellFooter, RowFooter} from 'bsr-table-extension'
+import {useRef} from "react";
+import {Table, Column, ColumnGroup, HeaderGroup, DataRow, RowFooter, CellFooter} from 'bsr-table-extension'
 import 'bsr-table-extension/dist/index.css'
-import './index.css'
-import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
-import {ColumnGroup} from "bsr-table";
 
-const code=`import React from "react";
-import {Table, Column, DataRow} from 'bsr-table-extension'
+import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
+
+const code=`import {useRef} from "react";
+import {Table, Column, ColumnGroup, HeaderGroup, DataRow, RowFooter, CellFooter} from 'bsr-table-extension'
 import 'bsr-table-extension/dist/index.css'
 
 
@@ -16,17 +15,20 @@ type User = {
     email: string
     age: number
 }
+const list: DataRow<User, User>[] = []
 
 function fid(count: number) {
-    const list: DataRow<User, User>[] = []
+
+    list.length = 0
     for (let i = 0; i < count; i++) {
         const user: User = {
-            age: 5 + i,
+            age: 15 + i,
             email: "user" + i + "@user.com",
             firstName: "User" + i,
             lastName: "User LN:" + i
         }
         list.push({
+            title: user.firstName+ " "+ user.lastName,
             tag: user,
             getView: () => {
                 return user
@@ -36,14 +38,23 @@ function fid(count: number) {
     return list
 }
 
-export default function App(){
+export default function App() {
+    const refTable = useRef<Table>(null)
     return (
-        <Table rowItems={fid(10)} style={{width:"50%"}}>
-            <Column nameProperty={'firstName'}>First Name</Column>
-            <Column nameProperty={'lastName'}>Last Name</Column>
-            <Column nameProperty={'age'} style={{width:"50px"}}>Age</Column>
-            <Column nameProperty={'email'}>Email</Column>
-        </Table>
+       
+            <Table ref={refTable} rowItems={fid(5)}  style={{width: "50%"}}>
+                <Column nameProperty={'firstName'}>First Name:</Column>
+                <Column nameProperty={'lastName'}>Last Name:</Column>
+                <ColumnGroup style={{backgroundColor: "yellow"}}>
+                    <Column style={{width: 50}} nameProperty={'age'}>Age:</Column>
+                    <Column nameProperty={'email'}>Email:</Column>
+                </ColumnGroup>
+                <RowFooter>
+                    <CellFooter colspan={3}>total:</CellFooter>
+                    <CellFooter>{list.length}</CellFooter>
+                </RowFooter>
+            </Table>
+       
     )
 }`
 
@@ -56,23 +67,28 @@ export default function App(){
 
 
 
+
+
 type User = {
     firstName: string
     lastName: string
     email: string
     age: number
 }
+const list: DataRow<User, User>[] = []
 
 function fid(count: number) {
-    const list: DataRow<User, User>[] = []
+
+    list.length = 0
     for (let i = 0; i < count; i++) {
         const user: User = {
-            age: 5 + i,
+            age: 15 + i,
             email: "user" + i + "@user.com",
             firstName: "User" + i,
             lastName: "User LN:" + i
         }
         list.push({
+            title: user.firstName+ " "+ user.lastName,
             tag: user,
             getView: () => {
                 return user
@@ -82,26 +98,23 @@ function fid(count: number) {
     return list
 }
 
-export default function P19_5(){
-
+export default function P19_5() {
+    const refTable = useRef<Table>(null)
     return (
         <>
-            <Table rowItems={fid(5)} style={{width: "50%"}} caption={'table4 column group'}>
-
+            <Table ref={refTable} rowItems={fid(5)}  style={{width: "50%",marginTop:20}}>
                 <Column nameProperty={'firstName'}>First Name:</Column>
                 <Column nameProperty={'lastName'}>Last Name:</Column>
-
-
-                <ColumnGroup style={{backgroundColor: "green"}}>
+                <ColumnGroup style={{backgroundColor: "rgba(245,239,175,0.94)"}}>
                     <Column style={{width: 50}} nameProperty={'age'}>Age:</Column>
                     <Column nameProperty={'email'}>Email:</Column>
                 </ColumnGroup>
-
                 <RowFooter>
                     <CellFooter colspan={3}>total:</CellFooter>
-                    <CellFooter>5</CellFooter>
+                    <CellFooter>{list.length}</CellFooter>
                 </RowFooter>
             </Table>
+            <CodeSnippetJavaScript code={code}/>
         </>
 
     )

@@ -387,7 +387,7 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "use Footer", url: '#page=19-4', id: "19-4"}))
         m.items!.push(CreateItem({content: "ColumnGroup", url: '#page=19-5', id: "19-5"}))
 
-        m.items!.push(CreateItem({content: "ColumnGroup", url: '#page=19-10', id: "19-10"}))
+        m.items!.push(CreateItem({content: "DataRow", url: '#page=19-6', id: "19-6"}))
         m.items!.push(CreateItem({content: "HeaderGroup", url: '#page=19-11', id: "19-11"}))
         m.items!.push(CreateItem({content: "HeaderGroup && ColumnGroup", url: '#page=19-12', id: "19-12"}))
         m.items!.push(CreateItem({content: "RowProperty", url: '#page=19-14', id: "19-14"}))

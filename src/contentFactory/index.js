@@ -11,6 +11,7 @@ import P19_2 from "../ViewStorage/menu/table_extension/19-2";
 import {P19_3} from "../ViewStorage/menu/table_extension/19-3";
 import P19_4 from "../ViewStorage/menu/table_extension/19-4";
 import P19_5 from "../ViewStorage/menu/table_extension/19-5";
+import {P19_6} from "../ViewStorage/menu/table_extension/19-6";
 
 
 
@@ -813,6 +814,10 @@ export function ContentFactory(tag) {
         }
         case '19-5':{
             data=<P19_5/>
+            break
+        }
+        case '19-6':{
+            data=<P19_6/>
             break
         }
 
