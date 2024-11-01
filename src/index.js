@@ -7,6 +7,7 @@ import 'bsr-modaldialog/dist/index.css'
 import 'bsr-sau/dist/index.css'
 import "bsr-tree-virtual/dist/index.css"
 import 'bsr-tabs/dist/index.css'
+import 'bsr-table-extension/dist/index.css'
 
 
 

@@ -7,6 +7,10 @@ import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
 import IndexBsrTable from "../ViewStorage/menu/table-ex";
 import P19_1 from "../ViewStorage/menu/table_extension/19-1";
+import P19_2 from "../ViewStorage/menu/table_extension/19-2";
+import {P19_3} from "../ViewStorage/menu/table_extension/19-3";
+import P19_4 from "../ViewStorage/menu/table_extension/19-4";
+import P19_5 from "../ViewStorage/menu/table_extension/19-5";
 
 
 
@@ -792,6 +796,23 @@ export function ContentFactory(tag) {
         }
         case '19-1':{
             data=<P19_1/>
+            break
+        }
+        case '19-2':{
+            data=<P19_2/>
+            break
+        }
+        case '19-3':{
+            data=<P19_3/>
+            break
+        }
+
+        case '19-4':{
+            data=<P19_4/>
+            break
+        }
+        case '19-5':{
+            data=<P19_5/>
             break
         }
 

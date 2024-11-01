@@ -382,10 +382,11 @@ function GetItems(): Array<MenuItem> {
         m.url = '#page=table-ex'
         m.items!.push(CreateItem({content: "Example", url: '#page=19-1', id: "19-1"}))
         m.items!.push(CreateItem({content: "Quick start", url: '#page=19-2', id: "19-2"}))
-        m.items!.push(CreateItem({content: "id, ", url: '#page=19-22', id: "19-22"}))
-        m.items!.push(CreateItem({content: "Click events", url: '#page=19-3', id: "19-3"}))
-        m.items!.push(CreateItem({content: "useInnerHTML", url: '#page=19-4', id: "19-4"}))
-        m.items!.push(CreateItem({content: "rowItems ICell", url: '#page=19-5', id: "19-5"}))
+
+        m.items!.push(CreateItem({content: "Scroll body, use Height", url: '#page=19-3', id: "19-3"}))
+        m.items!.push(CreateItem({content: "use Footer", url: '#page=19-4', id: "19-4"}))
+        m.items!.push(CreateItem({content: "ColumnGroup", url: '#page=19-5', id: "19-5"}))
+
         m.items!.push(CreateItem({content: "ColumnGroup", url: '#page=19-10', id: "19-10"}))
         m.items!.push(CreateItem({content: "HeaderGroup", url: '#page=19-11', id: "19-11"}))
         m.items!.push(CreateItem({content: "HeaderGroup && ColumnGroup", url: '#page=19-12', id: "19-12"}))
