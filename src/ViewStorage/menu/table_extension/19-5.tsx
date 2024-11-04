@@ -17,7 +17,7 @@ type User = {
 }
 const list: DataRow<User, User>[] = []
 
-function fid(count: number) {
+function fill(count: number) {
 
     list.length = 0
     for (let i = 0; i < count; i++) {
@@ -42,7 +42,7 @@ export default function App() {
     const refTable = useRef<Table>(null)
     return (
        
-            <Table ref={refTable} rowItems={fid(5)}  style={{width: "50%"}}>
+            <Table ref={refTable} rowItems={fill(5)}  style={{width: "50%"}}>
                 <Column nameProperty={'firstName'}>First Name:</Column>
                 <Column nameProperty={'lastName'}>Last Name:</Column>
                 <ColumnGroup style={{backgroundColor: "yellow"}}>
@@ -77,7 +77,7 @@ type User = {
 }
 const list: DataRow<User, User>[] = []
 
-function fid(count: number) {
+function fill(count: number) {
 
     list.length = 0
     for (let i = 0; i < count; i++) {
@@ -102,7 +102,7 @@ export default function P19_5() {
     const refTable = useRef<Table>(null)
     return (
         <>
-            <Table ref={refTable} rowItems={fid(5)}  style={{width: "50%",marginTop:20}}>
+            <Table ref={refTable} rowItems={fill(5)}  style={{width: "50%",marginTop:20}}>
                 <Column nameProperty={'firstName'}>First Name:</Column>
                 <Column nameProperty={'lastName'}>Last Name:</Column>
                 <ColumnGroup style={{backgroundColor: "rgba(245,239,175,0.94)"}}>

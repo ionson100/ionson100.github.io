@@ -12,6 +12,9 @@ import {P19_3} from "../ViewStorage/menu/table_extension/19-3";
 import P19_4 from "../ViewStorage/menu/table_extension/19-4";
 import P19_5 from "../ViewStorage/menu/table_extension/19-5";
 import {P19_6} from "../ViewStorage/menu/table_extension/19-6";
+import P19_7 from "../ViewStorage/menu/table_extension/19-7";
+import P19_8 from "../ViewStorage/menu/table_extension/19-8";
+import P19_9 from "../ViewStorage/menu/table_extension/19-9";
 
 
 
@@ -818,6 +821,18 @@ export function ContentFactory(tag) {
         }
         case '19-6':{
             data=<P19_6/>
+            break
+        }
+        case '19-7':{
+            data=<P19_7/>
+            break
+        }
+        case '19-8':{
+            data=<P19_8/>
+            break
+        }
+        case '19-9':{
+            data=<P19_9/>
             break
         }
 

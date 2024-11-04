@@ -8,7 +8,7 @@ export default function IndexBsrTable() {
         <>
             <table style={{width: "80%"}}>
                 <caption>
-                    props bsr-left-sidebar
+                    props bsr-table-extension
                 </caption>
                 <tbody>
                 <tr>
@@ -18,125 +18,117 @@ export default function IndexBsrTable() {
                     <th style={{width: "20%"}}>Description</th>
                 </tr>
                 <tr>
-                    <td data-d={1}><a href="#page=7-1">width</a></td>
-                    <td>number</td>
-                    <td>200</td>
-                    <td>Default menu bar width</td>
-                </tr>
-
-                <tr>
-                    <td data-d={1}><a href="#page=7-1">minWidth</a></td>
-                    <td>number</td>
-                    <td>50</td>
-                    <td>Collapsed menu bar width</td>
-                </tr>
-
-                <tr>
-                    <td data-d={1}><a href="#page=7-1">items</a></td>
-                    <td>MenuItem[]</td>
-                    <td>[]</td>
-                    <td>Array ItemMenu</td>
-                </tr>
-
-                <tr>
-                    <td data-d={1}><a href="#page=7-1">header</a></td>
-                    <td>ReactElement</td>
-                    <td>undefined</td>
-                    <td>Top of the menu bar</td>
-                </tr>
-
-                <tr>
-                    <td data-d={1}><a href="#page=7-1">footer</a></td>
-                    <td>ReactElement</td>
-                    <td>undefined</td>
-                    <td>Bottom of menu bar</td>
-                </tr>
-
-                <tr>
-                    <td data-d={1}><a href="#page=7-1">style</a></td>
-                    <td>React.CSSProperties</td>
-                    <td>undefined</td>
-                    <td>Menu style</td>
-                </tr>
-
-                <tr>
-                    <td data-d={1}><a href="#page=7-1">style</a></td>
-                    <td>React.CSSProperties</td>
-                    <td>undefined</td>
-                    <td>Menu style</td>
-                </tr>
-
-                <tr>
                     <td data-d={1}><a href="#page=7-1">className</a></td>
-                    <td>string</td>
+                    <td>string|undefined</td>
                     <td>undefined</td>
-                    <td>Menu css class style</td>
+                    <td>Table container css class style</td>
                 </tr>
 
                 <tr>
-                    <td data-d={1}><a href="#page=7-1">iconToggle</a></td>
-                    <td>any</td>
+                    <td data-d={1}><a href="#page=7-1">style</a></td>
+                    <td>React.CSSProperties|undefined</td>
                     <td>undefined</td>
-                    <td>Icon button toggle menu</td>
+                    <td>Table container style</td>
                 </tr>
 
 
                 <tr>
-                    <td data-d={1}><a href="#page=7-1">paddingItem</a></td>
-                    <td>number</td>
-                    <td>20</td>
-                    <td>Padding value for child item</td>
-                </tr>
-
-                <tr>
-                    <td data-d={1}><a href="#page=7-1">iconOpen</a></td>
-                    <td>any</td>
+                    <td data-d={1}><a href="#page=7-1">styleHeader</a></td>
+                    <td>React.CSSProperties|undefined</td>
                     <td>undefined</td>
-                    <td>Icon for open item</td>
-                </tr>
-                <tr>
-                    <td data-d={1}><a href="#page=7-1">iconClose</a></td>
-                    <td>any</td>
-                    <td>undefined</td>
-                    <td>Icon for close item</td>
-                </tr>
-                <tr>
-                    <td data-d={1}><a href="#page=7-1">iconTree</a></td>
-                    <td>any</td>
-                    <td>undefined</td>
-                    <td>Icon for child item</td>
+                    <td>Table Header Style</td>
                 </tr>
 
+                <tr>
+                    <td data-d={1}><a href="#page=7-1">styleBody</a></td>
+                    <td>React.CSSProperties|undefined</td>
+                    <td>undefined</td>
+                    <td>Table Body Style</td>
+                </tr>
 
                 <tr>
-                    <td data-d={1}><a href="#page=7-1">onClickMenuItem</a></td>
+                    <td data-d={1}><a href="#page=7-1">styleCaption</a></td>
+                    <td>React.CSSProperties|undefined</td>
+                    <td>undefined</td>
+                    <td>Table Caption Style</td>
+                </tr>
+
+                <tr>
+                    <td data-d={1}><a href="#page=7-1">caption</a></td>
+                    <td>string|ReactElement|undefined</td>
+                    <td>undefined</td>
+                    <td>Table Caption</td>
+                </tr>
+
+                <tr>
+                    <td data-d={1}><a href="#page=7-1">rowItems</a></td>
+                    <td>DataRow[]|undefined</td>
+                    <td>undefined</td>
+                    <td>Array of data to display table rows</td>
+                </tr>
+
+                <tr>
+                    <td data-d={1}><a href="#page=7-1">onClickRow</a></td>
                     <td>
-                        <pre>((sender: LeftMenu, obj: ParamsClick))=&#62;void <br/>
-                         ParamsClick = &#123; <br/>
-                            &nbsp;&nbsp;path: MenuItem[] <br/>
-                            &nbsp;&nbsp;items: MenuItem <br/>
-                            &nbsp;&nbsp;element: HTMLAnchorElement <br/>
-                            &#125; <br/>
+                        <pre>
+                            (dataRow:DataRow,e: HTMLTableRowElement)=&#62;void|undefined
                         </pre>
                     </td>
                     <td>undefined</td>
-                    <td>Item click event</td>
+                    <td>Table Row Click Event</td>
                 </tr>
 
                 <tr>
-                    <td data-d={1}><a href="#page=7-1">onChangeMenuWidth</a></td>
-                    <td>(width: number) =&#62; void</td>
-                    <td>undefined</td>
-                    <td>Event of changing the width of the menu bar by dragging the mouse</td>
-                </tr>
-
-                <tr>
-                    <td data-d={1}><a href="#page=7-1">onClickToggle</a></td>
+                    <td data-d={1}><a href="#page=7-1">onClickColumn</a></td>
                     <td>
-                        <pre>(state:boolean)=&#62;void</pre>
+                        <pre>
+                            (nameProperty: string,<br/>
+                             eventTarget: EventTarget,<br/>
+                             eventKey?:string,)=&#62;void|undefined
+                        </pre>
                     </td>
                     <td>undefined</td>
-                    <td>Event toggle menu</td>
+                    <td>Table Column Header Click Event</td>
+                </tr>
+                <tr>
+                    <td data-d={1}><a href="#page=7-1">onClickCell</a></td>
+                    <td>
+                        <pre>
+                            (nameProperty: string,<br/>
+                            props: DataRow,<br/>
+                            target: EventTarget)=&#62;void|undefined
+                        </pre>
+                    </td>
+                    <td>undefined</td>
+                    <td>Table cell click event</td>
+                </tr>
+                <tr>
+                    <td data-d={1}><a href="#page=7-1">useRowSelection</a></td>
+                    <td>boolean|undefined</td>
+                    <td>false</td>
+                    <td>Enables selection and multi selection of a table row and generates click events</td>
+                </tr>
+
+                <tr>
+                    <td data-d={1}><a href="#page=7-1">classNameSelection</a></td>
+                    <td>string</td>
+                    <td>undefined</td>
+                    <td>Class css selected row</td>
+                </tr>
+
+                <tr>
+                    <td data-d={1}><a href="#page=7-1">onSelect</a></td>
+                    <td><pre>
+                        (map:Map&#60;number,DataRow&#62;)=&#62;void
+                    </pre></td>
+                    <td>undefined</td>
+                    <td>Event of multiple selection of table rows</td>
+                </tr>
+                <tr>
+                    <td data-d={1}><a href="#page=7-1">height</a></td>
+                    <td>number|undefined</td>
+                    <td>undefined</td>
+                    <td>Sets the height of the table body, adding the ability to scroll rows</td>
                 </tr>
                 </tbody>
             </table>
@@ -149,7 +141,7 @@ export default function IndexBsrTable() {
                 </caption>
                 <tbody>
                 <tr>
-                    <th style={{width: "20%"}}>Name</th>
+                <th style={{width: "20%"}}>Name</th>
                     <th style={{width: "30%"}}>Type</th>
                     <th style={{width: "50%"}}>Description</th>
                 </tr>

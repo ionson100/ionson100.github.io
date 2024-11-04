@@ -16,7 +16,7 @@ type User = {
     age: number
 }
 const list: DataRow<User, User>[] = []
-function fid(count: number) {
+function fill(count: number) {
     list.length=0
     for (let i = 0; i < count; i++) {
         const user: User = {
@@ -39,15 +39,15 @@ export default function App(){
    const refTable=useRef<Table>(null)
 
     return (
-        <Table ref={refTable} rowItems={fid(100)} style={{width:"50%",paddingTop:20}}  height={300}>
+        <Table ref={refTable} rowItems={fill(100)} style={{width:"50%",paddingTop:20}}  height={300}>
            <Column nameProperty={'firstName'}>First Name</Column>
            <Column nameProperty={'lastName'}>Last Name</Column>
            <Column nameProperty={'age'} style={{width:"50px"}}>Age</Column>
            <Column nameProperty={'email'}>Email</Column>
-              <RowFooter>
-                 <CellFooter colspan={3}>total:</CellFooter>
-                 <CellFooter >{list.length}</CellFooter>
-              </RowFooter>
+           <RowFooter>
+              <CellFooter colspan={3}>total:</CellFooter>
+              <CellFooter >{list.length}</CellFooter>
+           </RowFooter>
         </Table>    
     )
 }`
@@ -68,7 +68,7 @@ type User = {
     age: number
 }
 const list: DataRow<User, User>[] = []
-function fid(count: number) {
+function fill(count: number) {
     list.length=0
     for (let i = 0; i < count; i++) {
         const user: User = {
@@ -92,7 +92,7 @@ export default function P19_4(){
 
     return (
         <>
-            <Table ref={refTable} rowItems={fid(100)} style={{width:"50%",paddingTop:20}} height={300}>
+            <Table ref={refTable} rowItems={fill(100)} style={{width:"50%",paddingTop:20}} height={300}>
                 <Column nameProperty={'firstName'}>First Name</Column>
                 <Column nameProperty={'lastName'}>Last Name</Column>
                 <Column nameProperty={'age'} style={{width:"50px"}}>Age</Column>

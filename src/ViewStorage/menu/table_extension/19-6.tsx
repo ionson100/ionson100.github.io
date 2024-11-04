@@ -15,7 +15,7 @@ type User = {
         id: string
     }
 
-    function fid(count: number) {
+    function fill(count: number) {
         const list: DataRow<User, any>[] = []
         for (let i = 0; i < count; i++) {
             const user: User = {
@@ -50,7 +50,7 @@ type User = {
     
 export function App() {
     return(
-     <Table caption={"see log"} rowItems={fid(5)} style={{width: "50%"}} useRowSelection>
+     <Table caption={"see log"} rowItems={fill(5)} style={{width: "50%"}} useRowSelection>
         <Column nameProperty={'firstName'}>First Name:</Column>
         <Column nameProperty={'lastName'}>Last Name:</Column>
         <Column style={{width: 50}} nameProperty={'age'}>Age:</Column>
@@ -71,7 +71,7 @@ export function P19_6() {
         id: string
     }
 
-    function fid(count: number) {
+    function fill(count: number) {
         const list: DataRow<User, any>[] = []
         for (let i = 0; i < count; i++) {
             const user: User = {
@@ -149,7 +149,7 @@ export function P19_6() {
 
 
             </div>
-            <Table caption={"see log"} rowItems={fid(5)} style={{width: "50%"}} useRowSelection>
+            <Table caption={"see log"} rowItems={fill(5)} style={{width: "50%"}} useRowSelection>
                 <Column nameProperty={'firstName'}>First Name:</Column>
                 <Column nameProperty={'lastName'}>Last Name:</Column>
                 <Column style={{width: 50}} nameProperty={'age'}>Age:</Column>

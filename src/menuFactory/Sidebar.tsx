@@ -388,9 +388,11 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "ColumnGroup", url: '#page=19-5', id: "19-5"}))
 
         m.items!.push(CreateItem({content: "DataRow", url: '#page=19-6', id: "19-6"}))
-        m.items!.push(CreateItem({content: "HeaderGroup", url: '#page=19-11', id: "19-11"}))
-        m.items!.push(CreateItem({content: "HeaderGroup && ColumnGroup", url: '#page=19-12', id: "19-12"}))
-        m.items!.push(CreateItem({content: "RowProperty", url: '#page=19-14', id: "19-14"}))
+        m.items!.push(CreateItem({content: "Filler rows", url: '#page=19-7', id: "19-7"}))
+        m.items!.push(CreateItem({content: "Events Table", url: '#page=19-8', id: "19-8"}))
+        m.items!.push(CreateItem({content: "Example of editing", url: '#page=19-9', id: "19-9"}))
+
+
 
         list.push(m)
     }
