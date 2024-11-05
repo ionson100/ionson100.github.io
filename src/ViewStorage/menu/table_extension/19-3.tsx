@@ -1,11 +1,11 @@
-import {Table, Column, ColumnGroup, HeaderGroup, DataRow, RowFooter, CellFooter} from 'bsr-table-extension'
+import {Table, Column, DataRow, } from 'bsr-table-extension'
 import 'bsr-table-extension/dist/index.css'
 import './index.css'
 import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 import React from "react";
 
 const code = `import React from "react";
-import {Table, Column} from 'bsr-table-extension'
+import {Table, Column,DataRow} from 'bsr-table-extension'
 import 'bsr-table-extension/dist/index.css'
 
 type User = {
@@ -71,7 +71,7 @@ function fill(count: number) {
     return list
 }
 
-export function P19_3() {
+export default function P19_3() {
     return (
         <>
             <Table rowItems={fill(100)} style={{width: "50%", paddingTop: 20}} height={200}>

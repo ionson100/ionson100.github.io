@@ -1,6 +1,6 @@
 import React, {useRef} from "react";
 import {Column, DataRow, Table} from "bsr-table-extension";
-import 'bsr-table-extension'
+import 'bsr-table-extension/dist/index.css'
 import {v4 as uuid} from 'uuid'
 import {BiSolidEdit} from "react-icons/bi";
 import {codeEdit, EditUserDialog} from "./EditUser";
@@ -8,7 +8,7 @@ import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 
 const code = `import React, {useRef} from "react";
 import {Column, DataRow, Table} from "bsr-table-extension";
-import 'bsr-table-extension'
+import 'bsr-table-extension/dist/index.css'
 import {v4 as uuid} from 'uuid'
 import {BiSolidEdit} from "react-icons/bi";
 import {EditUserDialog} from "./EditUser";

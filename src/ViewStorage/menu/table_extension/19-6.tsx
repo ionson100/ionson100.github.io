@@ -61,7 +61,7 @@ export function App() {
 
 `
 
-export function P19_6() {
+export default function P19_6() {
 
     type User = {
         firstName: string

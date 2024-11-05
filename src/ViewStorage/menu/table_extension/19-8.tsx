@@ -1,11 +1,11 @@
 import React, {useRef} from "react";
 import {CellFooter, Column, ColumnGroup, DataRow, RowFooter, Table} from "bsr-table-extension";
-import 'bsr-table-extension'
+import 'bsr-table-extension/dist/index.css'
 import {CodeSnippetJavaScript} from "../../codeSnippetJavaScript";
 
 const code=`import React, {useRef} from "react";
 import {CellFooter, Column, ColumnGroup, DataRow, RowFooter, Table} from "bsr-table-extension";
-import 'bsr-table-extension'
+import 'bsr-table-extension/dist/index.css'
 
 type User = {
     firstName: string

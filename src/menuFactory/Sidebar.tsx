@@ -391,6 +391,8 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "Filler rows", url: '#page=19-7', id: "19-7"}))
         m.items!.push(CreateItem({content: "Events Table", url: '#page=19-8', id: "19-8"}))
         m.items!.push(CreateItem({content: "Example of editing", url: '#page=19-9', id: "19-9"}))
+        m.items!.push(CreateItem({content: "HeaderGroup", url: '#page=19-10', id: "19-10"}))
+        m.items!.push(CreateItem({content: "ColumnGroup", url: '#page=19-11', id: "19-11"}))
 
 
 

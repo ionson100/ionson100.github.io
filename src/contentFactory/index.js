@@ -6,16 +6,20 @@ import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
 import IndexBsrTable from "../ViewStorage/menu/table-ex";
-import P19_1 from "../ViewStorage/menu/table_extension/19-1";
-import P19_2 from "../ViewStorage/menu/table_extension/19-2";
-import {P19_3} from "../ViewStorage/menu/table_extension/19-3";
-import P19_4 from "../ViewStorage/menu/table_extension/19-4";
-import P19_5 from "../ViewStorage/menu/table_extension/19-5";
-import {P19_6} from "../ViewStorage/menu/table_extension/19-6";
-import P19_7 from "../ViewStorage/menu/table_extension/19-7";
-import P19_8 from "../ViewStorage/menu/table_extension/19-8";
-import P19_9 from "../ViewStorage/menu/table_extension/19-9";
 
+
+
+const P19_1 = lazy(() => import("../ViewStorage/menu/table_extension/19-1"));
+const P19_2 = lazy(() => import("../ViewStorage/menu/table_extension/19-2"));
+const P19_3 = lazy(() => import("../ViewStorage/menu/table_extension/19-3"));
+const P19_4 = lazy(() => import("../ViewStorage/menu/table_extension/19-4"));
+const P19_5 = lazy(() => import("../ViewStorage/menu/table_extension/19-5"));
+const P19_6 = lazy(() => import("../ViewStorage/menu/table_extension/19-6"));
+const P19_7 = lazy(() => import("../ViewStorage/menu/table_extension/19-7"));
+const P19_8 = lazy(() => import("../ViewStorage/menu/table_extension/19-8"));
+const  P19_9= lazy(() => import("../ViewStorage/menu/table_extension/19-9"));
+const P19_10 = lazy(() => import("../ViewStorage/menu/table_extension/19-10"));
+const P19_11 = lazy(() => import("../ViewStorage/menu/table_extension/19-11"));
 
 
 
@@ -833,6 +837,14 @@ export function ContentFactory(tag) {
         }
         case '19-9':{
             data=<P19_9/>
+            break
+        }
+        case '19-10':{
+            data=<P19_10/>
+            break
+        }
+        case '19-11':{
+            data=<P19_11/>
             break
         }
 
