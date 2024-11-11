@@ -21,6 +21,7 @@ import { BsMenuUp } from "react-icons/bs";
 import { GrTooltip } from "react-icons/gr";
 import { FaRegCheckSquare } from "react-icons/fa";
 import { RxButton } from "react-icons/rx";
+import { FaMapLocationDot } from "react-icons/fa6";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -464,6 +465,19 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "isMoreSends", url: '#page=15-5', id: "15-5"}))
         m.items!.push(CreateItem({content: "mode", url: '#page=15-6', id: "15-6"}))
         m.items!.push(CreateItem({content: "Fetching data", url: '#page=15-7', id: "15-7"}))
+
+        list.push(m)
+    }
+
+    {
+        const m = new MenuItem();
+        m.icon = <FaMapLocationDot size={25}/>
+        m.content = "bsr-osm"
+        m.id = 'osm'
+
+
+        m.items!.push(CreateItem({content: "Quick start", url: '#page=20-1', id: "20-1"}))
+
 
         list.push(m)
     }

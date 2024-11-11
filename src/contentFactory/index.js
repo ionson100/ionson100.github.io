@@ -6,6 +6,7 @@ import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
 import IndexBsrTable from "../ViewStorage/menu/table-ex";
+import P20_1 from "../ViewStorage/menu/osm/20-1";
 
 
 
@@ -845,6 +846,10 @@ export function ContentFactory(tag) {
         }
         case '19-11':{
             data=<P19_11/>
+            break
+        }
+        case '20-1':{
+            data=<P20_1/>
             break
         }
 
