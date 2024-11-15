@@ -7,6 +7,11 @@ import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
 import IndexBsrTable from "../ViewStorage/menu/table-ex";
 import P20_1 from "../ViewStorage/menu/osm/20-1";
+import P20_2 from "../ViewStorage/menu/osm/20-2";
+import P20_3 from "../ViewStorage/menu/osm/20-3";
+import P20_4 from "../ViewStorage/menu/osm/20-4";
+import AppExample from "../ViewStorage/menu/osm/example/App";
+import P20_6 from "../ViewStorage/menu/osm/20-6";
 
 
 
@@ -850,6 +855,26 @@ export function ContentFactory(tag) {
         }
         case '20-1':{
             data=<P20_1/>
+            break
+        }
+        case '20-2':{
+            data=<P20_2/>
+            break
+        }
+        case '20-3':{
+            data=<P20_3/>
+            break
+        }
+        case '20-4':{
+            data=<P20_4/>
+            break
+        }
+        case '20-5':{
+            data=<AppExample/>
+            break
+        }
+        case '20-6':{
+            data=<P20_6/>
             break
         }
 

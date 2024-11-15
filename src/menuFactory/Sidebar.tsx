@@ -477,6 +477,11 @@ function GetItems(): Array<MenuItem> {
 
 
         m.items!.push(CreateItem({content: "Quick start", url: '#page=20-1', id: "20-1"}))
+        m.items!.push(CreateItem({content: "UseSynchronizationUrl and cookies", title:'useSynchronizationUrl and cookies', url: '#page=20-2', id: "20-2"}))
+        m.items!.push(CreateItem({content: "Start coordinates",  url: '#page=20-3', id: "20-3"}))
+        m.items!.push(CreateItem({content: "Start add features",  url: '#page=20-4', id: "20-4"}))
+        m.items!.push(CreateItem({content: "Use Context Menu",  url: '#page=20-6', id: "20-6"}))
+        m.items!.push(CreateItem({content: "Example",  url: '#page=20-5', id: "20-5"}))
 
 
         list.push(m)
