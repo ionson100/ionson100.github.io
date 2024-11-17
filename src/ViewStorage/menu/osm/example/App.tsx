@@ -14,7 +14,8 @@ const styleSettings: StyleSettings = {
     widthCircle: 2,
     colorPolygon: "#52a309",
     fillPolygon: "#8fe56d",
-    radiusPoint: 10
+    radiusPoint: 10,
+    radiusPointSelect:10
 }
 
 export default function AppExample() {
@@ -39,7 +40,7 @@ export default function AppExample() {
             }
 
         })
-        //refBsrMap.current?.DeleteAllFeatures()
+        refBsrMap.current?.GetVectorSource().clear()
 
 
         const json = localStorage.getItem('123-1')
@@ -70,8 +71,6 @@ export default function AppExample() {
         useSynchronizationUrl: true,
         useDrawBox: true,
         onShowContextMenu: (map: BsrMap, feature: Feature<Geometry> | undefined, e: MouseEvent) => {
-
-
             setTimeout(() => {
                 if (map.IsCreate) return
                 if (feature) {
@@ -86,9 +85,15 @@ export default function AppExample() {
 
         onClick: (map, feature, e) => {
 
-            if (!feature) return
+
+            console.log(feature)
+            if (!feature||map.IsCreate) return
+
             map.EndEditFeature()
             map.SelectFeature(feature)
+            const id=feature.get("row")
+
+            myState.selectRowTable!(id)
         },
         onDrawEnd: (map: BsrMap, feature: Feature) => {
             console.log('onDrawEnd:', feature)
@@ -111,5 +116,5 @@ export default function AppExample() {
     }
 
 
-    return <BsrMap ref={refBsrMap} option={option} style={{width: "100%", height: "100%"}}/>
+    return <BsrMap id={'12-bsr=map'} ref={refBsrMap} option={option} style={{width: "100%", height: "100%"}}/>
 }

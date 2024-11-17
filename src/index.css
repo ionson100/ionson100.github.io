@@ -429,5 +429,9 @@ canvas{
     padding: 10px;
     width: fit-content;
 }
+.select-row td{
+    background-color: #a9f4a2;
+}
+
 
 

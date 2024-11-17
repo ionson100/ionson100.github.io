@@ -1,6 +1,6 @@
 import {myState} from "../state";
 import {useEffect, useRef} from "react";
-import {Table, Column, DataRow} from 'bsr-table-extension'
+import {Column, DataRow, Table} from 'bsr-table-extension'
 import 'bsr-table-extension/dist/index.css'
 import {Feature} from "ol";
 import {BsrMap} from "bsr-osm";
@@ -23,6 +23,10 @@ export function BaseControl() {
     useEffect(() => {
 
 
+        myState.selectRowTable = (id: string) => {
+            refTable.current!.SelectRowById([id])
+        }
+
         myState.actionListFeatures = (f: Feature[]) => {
 
             refresh(f)
@@ -39,14 +43,14 @@ export function BaseControl() {
             }
         }
     })
-    const compareF=(a:Feature,b:Feature)=>{
-        const a1=a.get('index') as number
-        const b1=b.get('index') as number
-        if(a1>b1 ){
+    const compareF = (a: Feature, b: Feature) => {
+        const a1 = a.get('index') as number
+        const b1 = b.get('index') as number
+        if (a1 > b1) {
             return 1
-        }else if(a1===b1){
+        } else if (a1 === b1) {
             return 0
-        }else {
+        } else {
             return -1
         }
     }
@@ -66,6 +70,7 @@ export function BaseControl() {
                 return
             }
             list.push({
+                id: c.get("row"),
                 onClick: () => {
                     myState.bsrMap?.EndEditFeature()
                     myState.bsrMap?.SelectFeature(c)
@@ -77,7 +82,9 @@ export function BaseControl() {
                 },
                 getView: () => {
                     return {
-                        b1: <div onClick={e => {e.stopPropagation()}}><FaEdit color={"green"} onClick={(e) => {
+                        b1: <div onClick={e => {
+                            e.stopPropagation()
+                        }}><FaEdit color={"green"} onClick={(e) => {
                             myState.bsrMap?.EndEditFeature()
                             myState.bsrMap?.SelectFeature(c)
                             setTimeout(() => {
@@ -86,10 +93,12 @@ export function BaseControl() {
 
                         }
                         }/></div>,
-                        b2:<div onClick={e => {e.stopPropagation()}}><RiDeleteBin6Line color={"green"} onClick={() => {
+                        b2: <div onClick={e => {
+                            e.stopPropagation()
+                        }}><RiDeleteBin6Line color={"green"} onClick={() => {
                             myState.bsrMap?.DeleteFeature(c)
                             RewriteLocalStorage(myState.bsrMap!)
-                        }}/></div> ,
+                        }}/></div>,
                         geometry: c.getGeometry()!.getType().toString(),
 
                     }
@@ -101,8 +110,13 @@ export function BaseControl() {
     return (
 
         <div style={{width: "fit-content"}}>
-            <div ref={refTableHost} style={{display:'none'}}>
-                <Table ref={refTable} style={{width: 300}} rowItems={list}>
+            <div ref={refTableHost} style={{display: 'none'}}>
+                <Table
+                    classNameSelection={'select-row'}
+                    ref={refTable}
+                    style={{width: 300}}
+                    rowItems={list}
+                    useRowSelection>
                     <Column nameProperty={'b1'} style={{width: 10}}></Column>
                     <Column nameProperty={'b2'} style={{width: 10}}></Column>
                     <Column nameProperty={'geometry'} style={{width: 170}}>Geometry</Column>

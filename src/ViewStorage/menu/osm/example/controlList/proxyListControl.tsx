@@ -16,7 +16,7 @@ import {Control} from "ol/control";
 
 
 
-class ControlList extends Control {
+ export class ControlList extends Control {
     /**
      * @param {Object} [opt_options] Control options.
      */
