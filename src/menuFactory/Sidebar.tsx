@@ -475,7 +475,7 @@ function GetItems(): Array<MenuItem> {
         m.content = "bsr-osm"
         m.id = 'osm'
 
-
+        m.items!.push(CreateItem({content: "Props, functions",  url: '#page=20-7', id: "20-7"}))
         m.items!.push(CreateItem({content: "Quick start", url: '#page=20-1', id: "20-1"}))
         m.items!.push(CreateItem({content: "UseSynchronizationUrl and cookies", title:'useSynchronizationUrl and cookies', url: '#page=20-2', id: "20-2"}))
         m.items!.push(CreateItem({content: "Start coordinates",  url: '#page=20-3', id: "20-3"}))

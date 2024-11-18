@@ -9,6 +9,8 @@ import {myState} from "./state";
 import {useEffect, useRef} from "react";
 import {controlList} from "./controlList/proxyListControl";
 import './index.css'
+import {ShowBsrDialog} from "bsr-modaldialog";
+import { PiMapPinLineFill } from "react-icons/pi";
 
 const styleSettings: StyleSettings = {
     widthCircle: 2,
@@ -53,10 +55,27 @@ export default function AppExample() {
             }
         }
 
-        if (myState.actionListFeatures) {
-            myState.actionListFeatures!(myState.bsrMap.GetFeatures(undefined))
+        setTimeout(()=>{
+            if (myState.actionListFeatures) {
+                myState.actionListFeatures!(myState.bsrMap!.GetFeatures(undefined))
 
-        }
+            }
+            ShowBsrDialog({
+                className: 'main-dialog-alert',
+                modal: false,
+                timeOut: 2000,
+
+
+                classNameBody: "m-body-alert",
+
+                body: <div className={'body-test'}>
+                    <PiMapPinLineFill size={50} color={"green"}/>
+                    <div style={{paddingLeft: 20,fontSize:25}}>Use the context menu option</div>
+                </div>,
+
+            }).then()
+        })
+
 
 
         return () => {
