@@ -9,6 +9,7 @@
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
     "bsr-context-menu": "github:ionson100/bsr-contextMenu",
+    "bsr-horizontal-menu": "github:ionson100/bsr-horizontal-menu",
     "bsr-left-sidebar": "github:ionson100/bsr-left-sidebar",
     "bsr-menu": "github:ionson100/bsr-menu",
     "bsr-modaldialog": "github:ionson100/bsr-modaldialog",

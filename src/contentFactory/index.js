@@ -15,6 +15,7 @@ import P20_4 from "../ViewStorage/menu/osm/20-4";
 import AppExample from "../ViewStorage/menu/osm/example/App";
 import P20_6 from "../ViewStorage/menu/osm/20-6";
 import P20_7 from "../ViewStorage/menu/osm/20-7";
+import P21_2 from "../ViewStorage/menu/hmenu/21-2";
 
 
 
@@ -882,6 +883,10 @@ export function ContentFactory(tag) {
         }
         case '20-7':{
             data=<P20_7/>
+            break
+        }
+        case '21-2':{
+            data=<P21_2/>
             break
         }
 

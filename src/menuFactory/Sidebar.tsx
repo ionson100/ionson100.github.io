@@ -22,6 +22,7 @@ import { GrTooltip } from "react-icons/gr";
 import { FaRegCheckSquare } from "react-icons/fa";
 import { RxButton } from "react-icons/rx";
 import { FaMapLocationDot } from "react-icons/fa6";
+import { MdMenu } from "react-icons/md";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -486,6 +487,21 @@ function GetItems(): Array<MenuItem> {
 
         list.push(m)
     }
+
+    {
+        const m = new MenuItem();
+        m.icon = <MdMenu size={25}/>
+        m.content = "bsr-horizontal-menu"
+        m.id = 'bhmenu'
+
+        m.items!.push(CreateItem({content: "Props, functions",  url: '#page=21-1', id: "21-1"}))
+        m.items!.push(CreateItem({content: "Quick start", url: '#page=21-2', id: "21-2"}))
+        m.items!.push(CreateItem({content: "Example",  url: '#page=21-3', id: "21-3"}))
+
+
+        list.push(m)
+    }
+
 
 
     {
