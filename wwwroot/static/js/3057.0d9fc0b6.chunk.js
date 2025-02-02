@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkionson100_github_io=self.webpackChunkionson100_github_io||[]).push([[3057],{76767:(s,n,t)=>{t.r(n),t.d(n,{default:()=>u});var r=t(42324),e=(t(32568),t(61225)),i=t(70579);const o="import {BsrMap} from 'bsr-osm'\nimport 'bsr-osm/dist/index.css'\n\nexport default function App(){\n    return <BsrMap/>\n}";function u(){return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(r.m,{style:{width:"95%",height:400}}),(0,i.jsx)(e.L8,{code:o})]})}}}]);
+//# sourceMappingURL=3057.0d9fc0b6.chunk.js.map

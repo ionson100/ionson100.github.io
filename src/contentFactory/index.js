@@ -8,15 +8,18 @@ import IndexTable from "../ViewStorage/menu/table";
 import IndexBsrTable from "../ViewStorage/menu/table-ex";
 
 
-import P20_1 from "../ViewStorage/menu/osm/20-1";
-import P20_2 from "../ViewStorage/menu/osm/20-2";
-import P20_3 from "../ViewStorage/menu/osm/20-3";
-import P20_4 from "../ViewStorage/menu/osm/20-4";
-import AppExample from "../ViewStorage/menu/osm/example/App";
-import P20_6 from "../ViewStorage/menu/osm/20-6";
-import P20_7 from "../ViewStorage/menu/osm/20-7";
-import P21_2 from "../ViewStorage/menu/hmenu/21-2";
 
+
+const P20_1 = lazy(() => import("../ViewStorage/menu/osm/20-1"));
+const P20_2 = lazy(() => import("../ViewStorage/menu/osm/20-2"));
+const P20_3 = lazy(() => import("../ViewStorage/menu/osm/20-3"));
+const P20_4 = lazy(() => import("../ViewStorage/menu/osm/20-4"));
+const AppExample = lazy(() => import("../ViewStorage/menu/osm/example/App"));
+const P20_6 = lazy(() => import("../ViewStorage/menu/osm/20-6"));
+const P20_7 = lazy(() => import("../ViewStorage/menu/osm/20-7"));
+const P21_2 = lazy(() => import("../ViewStorage/menu/hmenu/21-2"));
+const P21_3 = lazy(() => import("../ViewStorage/menu/hmenu/21-3"));
+const P21_1 = lazy(() => import("../ViewStorage/menu/hmenu/21-1"));
 
 
 const P19_1 = lazy(() => import("../ViewStorage/menu/table_extension/19-1"));
@@ -887,6 +890,14 @@ export function ContentFactory(tag) {
         }
         case '21-2':{
             data=<P21_2/>
+            break
+        }
+        case '21-3':{
+            data=<P21_3/>
+            break
+        }
+        case '21-1':{
+            data=<P21_1/>
             break
         }
 
