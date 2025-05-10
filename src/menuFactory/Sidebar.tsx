@@ -23,6 +23,7 @@ import { FaRegCheckSquare } from "react-icons/fa";
 import { RxButton } from "react-icons/rx";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { MdMenu } from "react-icons/md";
+import { TbBrandRedux } from "react-icons/tb";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -413,6 +414,20 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "useContextMenu example", url: '#page=10-2', id: "10-2"}))
         m.items!.push(CreateItem({content: "class example", url: '#page=10-3', id: "10-3"}))
         m.items!.push(CreateItem({content: "useEffect example", url: '#page=10-4', id: "10-4"}))
+
+        list.push(m)
+    }
+    {
+        const m = new MenuItem();
+        m.icon = <TbBrandRedux size={25}/>
+        m.content = "bsr-observer"
+        m.id = 'observer'
+
+
+        m.items!.push(CreateItem({content: "Quick Start", url: '#page=30-1', id: "30-1"}))
+        m.items!.push(CreateItem({content: "use CreateObserver", url: '#page=30-2', id: "30-2"}))
+        m.items!.push(CreateItem({content: "use class", url: '#page=30-3', id: "30-3"}))
+
 
         list.push(m)
     }

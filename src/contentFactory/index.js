@@ -155,6 +155,11 @@ const P4_15 = lazy(() => import('../ViewStorage/menu/dialog/4-15'));
 const P4_16 = lazy(() => import('../ViewStorage/menu/dialog/4-16'));
 const P5_1 = lazy(() => import('../ViewStorage/menu/bsrtree/5-1'));
 
+const P30_1 = lazy(() => import('../ViewStorage/menu/observer-2/30-1'));
+
+const P30_2 = lazy(() => import('../ViewStorage/menu/observer-2/30-2'));
+const P30_3 = lazy(() => import('../ViewStorage/menu/observer-2/30-3'));
+
 
 const ContentHub = {
     content: undefined
@@ -898,6 +903,18 @@ export function ContentFactory(tag) {
         }
         case '21-1':{
             data=<P21_1/>
+            break
+        }
+        case '30-1':{
+            data=<P30_1/>
+            break
+        }
+        case '30-2':{
+            data=<P30_2/>
+            break
+        }
+        case '30-3':{
+            data=<P30_3/>
             break
         }
 
