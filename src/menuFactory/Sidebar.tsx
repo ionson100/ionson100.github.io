@@ -24,6 +24,8 @@ import { RxButton } from "react-icons/rx";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { MdMenu } from "react-icons/md";
 import { TbBrandRedux } from "react-icons/tb";
+import { MdOutlineCloudUpload } from "react-icons/md";
+import { IoVolumeHighOutline } from "react-icons/io5";
 
 
 export function header(callback: () => (InstanceType<typeof LeftMenu>) | null) {
@@ -427,6 +429,35 @@ function GetItems(): Array<MenuItem> {
         m.items!.push(CreateItem({content: "Quick Start", url: '#page=30-1', id: "30-1"}))
         m.items!.push(CreateItem({content: "use CreateObserver", url: '#page=30-2', id: "30-2"}))
         m.items!.push(CreateItem({content: "use class", url: '#page=30-3', id: "30-3"}))
+
+
+        list.push(m)
+    }
+    {
+        const m = new MenuItem();
+        m.icon = <MdOutlineCloudUpload size={25}/>
+        m.content = "bsr-fileupload"
+        m.id = 'fileupload'
+
+
+        m.items!.push(CreateItem({content: "Props", url: '#page=31-1', id: "31-1"}))
+        m.items!.push(CreateItem({content: "code examples", url: '#page=31-2', id: "31-2"}))
+
+
+
+        list.push(m)
+    }
+
+    {
+        const m = new MenuItem();
+        m.icon = <IoVolumeHighOutline size={25}/>
+        m.content = "bsr-audio"
+        m.id = 'audio'
+
+
+        m.items!.push(CreateItem({content: "Props", url: '#page=32-1', id: "32-1"}))
+        m.items!.push(CreateItem({content: "code examples", url: '#page=32-2', id: "32-2"}))
+
 
 
         list.push(m)

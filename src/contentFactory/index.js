@@ -6,6 +6,10 @@ import IndexBsrSidebar from "../ViewStorage/menu/sidebar";
 import IndexTabs from "../ViewStorage/menu/tabs";
 import IndexTable from "../ViewStorage/menu/table";
 import IndexBsrTable from "../ViewStorage/menu/table-ex";
+import P31_2 from "../ViewStorage/menu/fileupload/31-2";
+import P32_2 from "../ViewStorage/menu/audio/32-2";
+import P32_1 from "../ViewStorage/menu/audio/32-1";
+import P31_1 from "../ViewStorage/menu/fileupload/31-1";
 
 
 
@@ -915,6 +919,22 @@ export function ContentFactory(tag) {
         }
         case '30-3':{
             data=<P30_3/>
+            break
+        }
+        case '31-2':{
+            data=<P31_2/>
+            break
+        }
+        case '32-2':{
+            data=<P32_2/>
+            break
+        }
+        case '32-1':{
+            data=<P32_1/>
+            break
+        }
+        case '31-1':{
+            data=<P31_1/>
             break
         }
 

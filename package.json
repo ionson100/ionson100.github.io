@@ -1,6 +1,6 @@
 {
   "name": "ionson100.github.io",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -8,7 +8,9 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
+    "bsr-audio": "github:ionson100/bsr-audio",
     "bsr-context-menu": "github:ionson100/bsr-contextMenu",
+    "bsr-fileupload": "github:ionson100/bsr-fileupload",
     "bsr-horizontal-menu": "github:ionson100/bsr-horizontal-menu",
     "bsr-left-sidebar": "github:ionson100/bsr-left-sidebar",
     "bsr-menu": "github:ionson100/bsr-menu",
